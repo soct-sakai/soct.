@@ -8,10 +8,6 @@
     "lint": "next lint",
     "start": "next start"
   },
-  "overrides": {
-    "@hookform/resolvers": "3.3.4",
-    "zod": "3.23.8"
-  },
   "dependencies": {
     "@hookform/resolvers": "latest",
     "@radix-ui/react-accordion": "^1.2.2",
@@ -74,5 +70,11 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@9.15.9"
+  "packageManager": "pnpm@9.15.9",
+  "pnpm": {
+    "overrides": {
+      "@hookform/resolvers": "3.3.4",
+      "zod": "3.23.8"
+    }
+  }
 }
