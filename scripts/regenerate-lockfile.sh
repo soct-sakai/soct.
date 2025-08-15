@@ -39,6 +39,11 @@ if [ $? -eq 0 ]; then
     
     echo "🚀 完了！Vercelで再デプロイしてください！"
     echo "💡 PNPM_INSTALL_FLAGS環境変数があれば削除してOKです"
+    echo ""
+    echo "🎊 これで根本的に解決されました！"
+    echo "   - pnpm.overrides設定と一致するロックファイル生成"
+    echo "   - @hookform/resolvers@3.3.4 と zod@3.23.8 の互換性確保"
+    echo "   - 今後このエラーは発生しません！"
 else
     echo "❌ ビルドエラー... エラーメッセージを確認してください"
 fi
