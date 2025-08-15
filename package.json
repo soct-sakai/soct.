@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "tv-mounting-service",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -70,8 +70,21 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   },
-  "packageManager": "npm@10.8.1",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
-    "node": ">=18 <21"
+    "node": ">=18 <21",
+    "pnpm": ">=9.0.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom"
+      ]
+    },
+    "overrides": {
+      "@hookform/resolvers": "3.3.4",
+      "zod": "3.23.8"
+    }
   }
 }
