@@ -67,4 +67,3 @@ export function CEOMessage() {
     </section>
   )
 }
-

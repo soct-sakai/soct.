@@ -92,3 +92,89 @@
   }
 }
 
+/* 固定フッターCTA（スマホ用） */
+.soct-fixed-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px env(safe-area-inset-left) calc(10px + env(safe-area-inset-bottom)) env(safe-area-inset-right);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 30%);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.soct-fixed-cta .cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  min-height: 56px; /* タッチ領域 */
+  transition: all 0.2s ease;
+}
+
+.soct-fixed-cta .cta-btn .ico {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.soct-fixed-cta .cta-btn .label {
+  font-size: 14px;
+  font-family: "Meiryo", "メイリオ", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+
+.soct-fixed-cta .cta-btn.plan {
+  background: #1565ff;
+  color: #fff;
+}
+
+.soct-fixed-cta .cta-btn.contact {
+  background: #e53935;
+  color: #fff;
+}
+
+.soct-fixed-cta .cta-btn:active {
+  transform: translateY(1px);
+}
+
+.soct-fixed-cta .cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 初回だけ軽い注目アニメ（ページロード後一度） */
+@keyframes soct-pop {
+  0% {
+    transform: scale(0.98);
+  }
+  60% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.soct-fixed-cta .cta-btn {
+  animation: soct-pop 0.6s ease-out 0.3s 1 both;
+}
+
+.soct-fixed-cta .cta-btn.contact {
+  animation-delay: 0.5s;
+}
+
+/* PCでは非表示（md:hidden クラスで制御） */
+@media (min-width: 768px) {
+  .soct-fixed-cta {
+    display: none;
+  }
+}
