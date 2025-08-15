@@ -19,4 +19,3 @@ export const ScrollLink = ({ children, ...props }: React.PropsWithChildren<LinkP
     </Link>
   )
 }
-

@@ -40,4 +40,3 @@ export function AccordionInstallationExamples({ examples }: AccordionInstallatio
     </div>
   )
 }
-
