@@ -1,3 +1,5 @@
+"use client"
+
 import { SiteHeader } from "@/components/site-header"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { PasonaLaw } from "@/components/pasona-law"
@@ -34,20 +36,20 @@ const RoomSimulatorIcon = () => {
     <>
       {/* スマホ用固定フッターCTA */}
       <nav className="soct-fixed-cta md:hidden" role="navigation" aria-label="主要アクション">
-        <a className="cta-btn plan" href="#package-plans" aria-label="プランを見る">
+        <a className="cta-btn plan" href="#package-plans" aria-label="料金プランを見る">
           <span className="ico">📺</span>
-          <span className="label">プラン</span>
+          <span className="label">料金プランはこちら！</span>
         </a>
-        <a className="cta-btn contact" href="#contact-form" aria-label="お問い合わせ">
-          <span className="ico">✉️</span>
-          <span className="label">お問い合わせ</span>
+        <a className="cta-btn contact" href="#contact-form" aria-label="お問い合わせフォーム">
+          <span className="ico">📞</span>
+          <span className="label">お問い合わせはこちら！</span>
         </a>
       </nav>
 
       {/* PC用は従来通り（右下の小さいアイコン） */}
       <div className="hidden md:block fixed right-4 bottom-4 z-50 flex flex-col gap-2">
         <a href="#contact-form" className="group">
-          <div className="bg-white text-gray-800 px-4 py-3 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-pulse flex items-center gap-2 min-w-[140px]">
+          <div className="bg-white text-gray-800 px-4 py-3 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 min-w-[140px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -67,10 +69,7 @@ const RoomSimulatorIcon = () => {
         </a>
 
         <a href="#package-plans" className="group">
-          <div
-            className="bg-white text-gray-800 px-4 py-3 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-pulse flex items-center gap-2 min-w-[140px]"
-            style={{ animationDelay: "0.5s" }}
-          >
+          <div className="bg-white text-gray-800 px-4 py-3 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 min-w-[140px]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -512,6 +511,7 @@ export default function Page() {
         <CompanyInfo />
       </main>
       <SiteFooter />
+      <RoomSimulatorIcon />
     </div>
   )
 }

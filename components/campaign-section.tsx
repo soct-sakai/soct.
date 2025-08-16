@@ -9,9 +9,9 @@ export function CampaignSection() {
     <section className="py-12 bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-8">
-          <Badge className="mb-4 bg-red-500 text-white">期間限定</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">新生活応援キャンペーン</h2>
-          <p className="text-xl text-gray-600">5月末まで特別価格でご提供！</p>
+          <Badge className="mb-4 bg-blue-500 text-white">新品テレビ販売</Badge>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
+          <p className="text-xl text-gray-600">高品質なテレビと壁掛け施工をセットでご提供</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
@@ -19,7 +19,7 @@ export function CampaignSection() {
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl">TCL 75型 ゲーミングTV</CardTitle>
-              <p className="text-3xl font-bold text-red-500">298,000円〜</p>
+              <p className="text-3xl font-bold text-blue-500">新品テレビ + 施工セット</p>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -48,7 +48,7 @@ export function CampaignSection() {
           <Card>
             <CardHeader>
               <CardTitle className="text-2xl">TCL 85型 ミニLED</CardTitle>
-              <p className="text-3xl font-bold text-red-500">398,000円〜</p>
+              <p className="text-3xl font-bold text-blue-500">新品テレビ + 施工セット</p>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -76,8 +76,8 @@ export function CampaignSection() {
 
         <div className="mt-8 text-center">
           <ScrollLink href="#contact-form">
-            <Button size="lg" className="bg-red-500 hover:bg-red-600">
-              キャンペーンについて問い合わせる
+            <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
+              新品テレビについて問い合わせる
             </Button>
           </ScrollLink>
         </div>
