@@ -89,3 +89,4 @@ export function InstallationExample({ title, description, beforeImage, afterImag
     </div>
   )
 }
+
