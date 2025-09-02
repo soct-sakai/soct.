@@ -10,8 +10,8 @@ export function CompanyInfo() {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <Image
-                  src="https://sjc.microlink.io/HcAN3t83wNsghCvaBmguonod8ZpYJHvLx8U-QPYEs0CMp7Aoqc1ypgqn9GemRSwKJgGsMIOjXapBh6Ay1K5CcA.jpeg"
-                  alt="壁掛けテレビ施工の様子"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-ZK1sY89U692KBIdB7MsKa85cU4z6yJ.jpeg"
+                  alt="ソクトの壁掛けテレビ施工サービス - プロの技術者による安心・安全な施工"
                   width={600}
                   height={400}
                   className="rounded-lg object-cover"

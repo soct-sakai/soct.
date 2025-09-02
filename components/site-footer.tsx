@@ -51,13 +51,12 @@ export function SiteFooter() {
               <li>kabekaketv@soct.jp.net</li>
               <li>052-433-2799</li>
               <li>営業時間: 平日 9:00-18:00</li>
+              <li className="text-blue-300 font-semibold">LINE登録から連絡の場合は、24時間受付可能です！</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 md:mt-10 pt-8 md:pt-10">
           <div className="text-center mb-6 md:mb-8">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">シェアして特典をゲット！</h3>
-            <p className="text-gray-400 text-base md:text-lg mb-5">イイナ！と思ったらシェアしてね c(＞ω＜)ゞ</p>
             <div className="flex justify-center gap-6">
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(

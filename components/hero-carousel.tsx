@@ -3,7 +3,7 @@ import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 import { useEffect, useState } from "react"
 
-// 画像のデータ配列を修正し、3枚目を4番目に移動
+// 画像のデータ配列（2枚目と4枚目を削除）
 const heroImages = [
   {
     image:
@@ -11,21 +11,12 @@ const heroImages = [
     alt: "壁掛けテレビ施工例1",
   },
   {
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_0345.jpg-OyaAQdMwXv4Q6uDDp2cAtogYLk95U4.jpeg",
-    alt: "壁掛けテレビ施工例2",
-  },
-  {
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3791.jpg-GLatnRHGk9mWuAOWGfTnj3sPD1mwmV.jpeg",
-    alt: "壁掛けテレビ施工例4",
-  },
-  {
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%BC%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%201.jpg-nSZicg2uRZEtrzHQSrx5I3X3Sg5u5d.jpeg",
-    alt: "壁掛けテレビ施工例3",
+    alt: "壁掛けテレビ施工例2",
   },
 ]
 
-// HeroCarousel関数を完全に書き換え
+// HeroCarousel関数
 export function HeroCarousel() {
   // スクロール処理を管理するための状態
   const [atBottom, setAtBottom] = useState(false)
@@ -68,9 +59,45 @@ export function HeroCarousel() {
               src={image.image || "/placeholder.svg"}
               alt={image.alt}
               fill
-              className="object-contain md:object-cover"
+              className="object-cover"
               priority={index === 0}
             />
+
+            {/* 1枚目の画像にのみキャッチコピーを表示 */}
+            {index === 0 && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 mx-4 max-w-4xl">
+                  <h1 className="text-white text-xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
+                    壁掛けテレビ設置なら、プロの技術で安心・安全！
+                    <br className="hidden md:block" />
+                    <span className="text-orange-400">ソクトノカベカケ</span>があなたの暮らしを変えます！
+                  </h1>
+                </div>
+              </div>
+            )}
+
+            {/* 2枚目の画像にキャンペーンバナーを表示 */}
+            {index === 1 && (
+              <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+                <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-full shadow-lg animate-pulse">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 relative flex-shrink-0">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27476792_3.jpg-T8VJ0izYeHpAb4bIP1zkCXKGrSO5Yy.jpeg"
+                        alt="スティック型SSD 1TB"
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-center">
+                      <div className="text-sm font-bold">🎁 9月成約限定特典！</div>
+                      <div className="text-lg font-black">スティック型SSD 1TB プレゼント！</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {image.comment && (
               <div className="absolute bottom-4 right-4 bg-black/70 text-white p-3 rounded-lg max-w-xs">
                 <p>{image.comment}</p>

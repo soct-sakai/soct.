@@ -163,6 +163,16 @@ export function ContactForm() {
               <SelectItem value="any">どの連絡方法でも可</SelectItem>
             </SelectContent>
           </Select>
+
+          {/* 注意書きを追加 */}
+          <div className="mt-2 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+            <p className="text-sm text-yellow-800">
+              <span className="font-semibold">⚠️ 重要なお知らせ</span>
+              <br />※ メールでメッセージが届かない事があります。
+              <br />
+              メールと携帯番号宛へSMSの両方でご連絡いたします。
+            </p>
+          </div>
         </div>
 
         <div>

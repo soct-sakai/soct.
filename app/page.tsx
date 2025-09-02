@@ -3,33 +3,26 @@
 import { SiteHeader } from "@/components/site-header"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { PasonaLaw } from "@/components/pasona-law"
-import { ServiceArea } from "@/components/service-area"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { AccordionInstallationExamples } from "@/components/accordion-installation-examples"
-import { WallTypes } from "@/components/wall-types"
-import { InstallationProcess } from "@/components/installation-process"
+import { InstallationProcessGallery } from "@/components/installation-process-gallery"
 import { ReviewTable } from "@/components/review-table"
-import { FAQAccordion } from "@/components/faq-accordion"
 import { CEOMessage } from "@/components/ceo-message"
 import { WarrantySlider } from "@/components/warranty-slider"
 import { ContactForm } from "@/components/contact-form"
 import { CompanyInfo } from "@/components/company-info"
-import { CompanyComparison } from "@/components/company-comparison"
 import { ScrollLink } from "@/components/scroll-link"
-import { ServiceDetails } from "@/components/service-details"
-import { TrustBadges } from "@/components/trust-badges"
-import { CustomerReasons } from "@/components/customer-reasons"
-import { CustomizationOptions } from "@/components/customization-options"
-import { Card, CardContent } from "@/components/ui/card" // Import Card and CardContent
+import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { CampaignSection } from "@/components/campaign-section"
 import { Check } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { SiteFooter } from "@/components/site-footer" // インポートを追加
+import { SiteFooter } from "@/components/site-footer"
 import { StarterPlanSelector } from "@/components/starter-plan-selector"
 import { OptionPlanSelector } from "@/components/option-plan-selector"
 import { ApplicationFlow } from "@/components/application-flow"
 import { IntroductionSection } from "@/components/introduction-section"
+import { CustomerReasons } from "@/components/customer-reasons"
 
 const RoomSimulatorIcon = () => {
   return (
@@ -108,37 +101,13 @@ export default function Page() {
           <IntroductionSection />
         </section>
 
-        {/* Main CTA */}
-        {/*
-        <section className="bg-gradient-to-r from-blue-600 to-blue-800 py-12 text-white text-center">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold mb-4">壁掛けテレビ×リフォーム×スマートホーム</h2>
-            <p className="mb-6 text-xl">見慣れたお部屋から、非日常に劇的変化！</p>
-            <p className="mb-8 text-2xl font-semibold">ソクトノカベカケで叶うあなたの理想のリビング</p>
-            <ScrollLink href="#contact-form">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-800 hover:bg-blue-100">
-                今すぐ無料見積もり
-              </Button>
-            </ScrollLink>
-          </div>
-        </section>
-        */}
-
-        <TrustBadges />
-        <ServiceDetails />
         <CEOMessage />
         <PasonaLaw />
 
-        {/* Benefits and Drawbacks */}
-        <section id="services" className="py-24 bg-gray-50">
+        {/* Customer Reasons - 施工事例の上に移動 */}
+        <section className="py-12 bg-gray-50">
           <div className="container px-4 md:px-6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">
-              壁掛けテレビのメリット・デメリット
-            </h2>
-            <WallTypes />
-            <div className="space-y-8 mt-12" id="installation-process">
-              <InstallationProcess />
-            </div>
+            <CustomerReasons />
           </div>
         </section>
 
@@ -209,90 +178,21 @@ export default function Page() {
           </div>
         </section>
 
+        {/* Installation Process Gallery - 動画の代わりに画像ギャラリー */}
+        <InstallationProcessGallery />
+
         {/* Updated Customer Reviews */}
         <section className="py-24">
           <div className="container px-4 md:px-6">
-            <CustomerReasons />
-            <div className="mt-16">
-              <ReviewTable />
+            <div className="text-center mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">お客様の声</h2>
             </div>
+            <ReviewTable />
           </div>
         </section>
 
         {/* Application Flow */}
         <ApplicationFlow />
-
-        {/* Staff Introduction */}
-        <section className="py-24">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">スタッフのご紹介</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {[
-                {
-                  name: "坂井 社長",
-                  role: "代表取締役 工事総責任者",
-                  experience: "経験15年",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%87%AA%E5%88%86%E3%81%AE%E7%94%BB%E5%83%8F%E5%88%87%E3%82%8A%E6%8A%9C%E3%81%8D01.jpg-Lxke7zyE0dbgcP1e5lIxESxMaEqMIn.jpeg",
-                  comment: "心は赤く熱い、頭は青くクールに",
-                },
-                {
-                  name: "鈴木 大介",
-                  role: "頼れるチームリーダー",
-                  experience: "経験3年",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%BF%E3%83%83%E3%83%9502.jpg-GIMZRRnSwpDnYAYf9wdQjqyyn3siEW.jpeg",
-                },
-                {
-                  name: "エリちゃん",
-                  role: "HPLP製作デザイナー\nたまに施工補助入ります。\n女性スタッフが欲しい時は希望してね。",
-                  experience: "経験2年",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%BF%E3%83%83%E3%83%9501.jpg-mYk1icvxR8SlcbiPcsph48BOsnK8BA.jpeg",
-                },
-              ].map((staff, index) => (
-                <Card key={index}>
-                  <CardContent className="pt-6 text-center">
-                    <div className="w-24 h-24 md:w-32 md:h-32 relative mx-auto mb-4 rounded-full overflow-hidden">
-                      <Image src={staff.image || "/placeholder.svg"} alt={staff.name} fill className="object-cover" />
-                    </div>
-                    <h3 className="font-bold text-xl md:text-2xl mb-2">{staff.name}</h3>
-                    <div className="text-gray-600 mb-2 whitespace-pre-line">{staff.role}</div>
-                    <p className="text-sm text-gray-500">{staff.experience}</p>
-                    {staff.comment && (
-                      <p className="mt-4 text-sm italic text-blue-600 font-semibold">&quot;{staff.comment}&quot;</p>
-                    )}
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Custom Options Section */}
-        <CustomizationOptions />
-
-        {/* Company Comparison Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">サービス比較</h2>
-            <CompanyComparison />
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section id="support" className="py-24 bg-gray-50">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">よくある質問</h2>
-            <FAQAccordion />
-          </div>
-        </section>
-
-        <section className="py-24">
-          <div className="container px-4 md:px-6">
-            <ServiceArea />
-          </div>
-        </section>
 
         {/* キャンペーンセクションを追加（パッケージプランの前に） */}
         <CampaignSection />
@@ -455,37 +355,6 @@ export default function Page() {
               ※ 価格は目安です。実際の費用は現地調査後に正確に算出いたします。TV
               サイズや追加サービスにより変動する場合があります。
             </p>
-          </div>
-        </section>
-
-        {/* 支払い方法セクション */}
-        <section className="py-24 bg-gray-50">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">ご利用可能なお支払い方法</h2>
-            <div className="max-w-3xl mx-auto">
-              <Card>
-                <CardContent className="p-8">
-                  <div className="space-y-8">
-                    {/* Credit Card Announcement */}
-                    <div className="text-center space-y-4">
-                      <h3 className="text-2xl md:text-3xl font-bold">※ソクトからのお知らせ※</h3>
-                      <div className="relative">
-                        <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A303.JPG-bfPUV3iS9D9RtXGhna1dz2nyXIt2BW.jpeg"
-                          alt="クレジットカード決済対応のお知らせ"
-                          width={600}
-                          height={400}
-                          className="mx-auto"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Payment Methods List */}
-                    <div className="grid gap-6">{/* ... 既存の支払い方法リスト ... */}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
           </div>
         </section>
 
