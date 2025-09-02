@@ -1,9 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import { InstallationExample } from "@/components/installation-example"
-import { Button } from "@/components/ui/button"
-import { ChevronDown, ChevronUp } from "lucide-react"
+import { BeforeAfterSlider } from "@/components/before-after-slider"
 
 interface AccordionInstallationExamplesProps {
   examples: {
@@ -15,28 +12,18 @@ interface AccordionInstallationExamplesProps {
 }
 
 export function AccordionInstallationExamples({ examples }: AccordionInstallationExamplesProps) {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
-    <div className="space-y-8">
+    <div className="space-y-16">
       {examples.map((example, index) => (
-        <div key={index} className={isOpen ? "block" : "hidden"}>
-          <InstallationExample {...example} />
-        </div>
+        <BeforeAfterSlider
+          key={index}
+          caseId={`case-${index + 3}`} // case-01, case-02は既に使用済みなので3から開始
+          title={example.title}
+          description={example.description}
+          beforeImage={example.beforeImage}
+          afterImages={example.afterImages}
+        />
       ))}
-      <div className="text-center">
-        <Button onClick={() => setIsOpen(!isOpen)} variant="outline" className="flex items-center gap-2">
-          {isOpen ? (
-            <>
-              閉じる <ChevronUp className="h-4 w-4" />
-            </>
-          ) : (
-            <>
-              もっと見る <ChevronDown className="h-4 w-4" />
-            </>
-          )}
-        </Button>
-      </div>
     </div>
   )
 }

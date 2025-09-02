@@ -68,7 +68,7 @@ export function HeroCarousel() {
               src={image.image || "/placeholder.svg"}
               alt={image.alt}
               fill
-              className="object-cover"
+              className="object-contain md:object-cover"
               priority={index === 0}
             />
             {image.comment && (

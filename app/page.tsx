@@ -4,7 +4,7 @@ import { SiteHeader } from "@/components/site-header"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { PasonaLaw } from "@/components/pasona-law"
 import { ServiceArea } from "@/components/service-area"
-import { InstallationExample } from "@/components/installation-example"
+import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { AccordionInstallationExamples } from "@/components/accordion-installation-examples"
 import { WallTypes } from "@/components/wall-types"
 import { InstallationProcess } from "@/components/installation-process"
@@ -147,7 +147,8 @@ export default function Page() {
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">施工事例</h2>
             <div className="space-y-16">
-              <InstallationExample
+              <BeforeAfterSlider
+                caseId="case-01"
                 title="モダンな壁面へのTV取り付け"
                 description="スタイリッシュな石目調の壁面に、配線を完全に隠蔽したスッキリとした取り付けを実現。テレビ周りがすっきりとし、高級感のある仕上がりに。"
                 beforeImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%93%E3%83%95%E3%82%A9%E3%83%BC001.jpg-Sj6CExf7btsJccfMK2iPGA2Bzo60Fj.jpeg"
@@ -157,7 +158,8 @@ export default function Page() {
                 ]}
               />
 
-              <InstallationExample
+              <BeforeAfterSlider
+                caseId="case-02"
                 title="75インチ大型テレビの壁掛け施工"
                 description="SONY BRAVIA 75インチの大型テレビを美しく設置。アクセントウォールと浮遊式の収納を組み合わせた、上質なリビング空間を実現。配線は全て隠蔽し、スマートな仕上がりに。"
                 beforeImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%93%E3%83%95%E3%82%A9%E3%83%BC002.jpg-N1wJ4SaOadPw7uA6nriL2jroak7Jhm.jpeg"
