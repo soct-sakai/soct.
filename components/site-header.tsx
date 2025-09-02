@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Home, Briefcase, Phone, HelpCircle, Menu } from "lucide-react"
+import { Home, Briefcase, Phone, HelpCircle, Menu, Star } from "lucide-react"
 import { ScrollLink } from "@/components/scroll-link"
 import { useState } from "react"
 
@@ -61,6 +61,13 @@ export function SiteHeader() {
             <HelpCircle className="h-5 w-5 text-blue-600" />
             <span className="text-sm mt-1">サポート</span>
           </ScrollLink>
+          <ScrollLink
+            href="#company-info"
+            className="flex flex-col items-center px-2 py-1 rounded-md hover:bg-gray-100 transition-colors"
+          >
+            <Star className="h-5 w-5 text-blue-600" />
+            <span className="text-sm mt-1">口コミ</span>
+          </ScrollLink>
         </div>
       </div>
 
@@ -99,6 +106,14 @@ export function SiteHeader() {
             >
               <HelpCircle className="h-5 w-5 text-blue-600" />
               <span>サポート</span>
+            </ScrollLink>
+            <ScrollLink
+              href="#company-info"
+              className="flex items-center space-x-3 px-3 py-2 rounded-md hover:bg-gray-100 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Star className="h-5 w-5 text-blue-600" />
+              <span>口コミ</span>
             </ScrollLink>
           </div>
         </div>

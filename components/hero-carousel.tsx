@@ -63,22 +63,50 @@ export function HeroCarousel() {
               priority={index === 0}
             />
 
-            {/* 1枚目の画像にのみキャッチコピーを表示 */}
+            {/* 1枚目の画像にアニメキャラクターと吹き出しを表示 */}
             {index === 0 && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-6 md:p-8 mx-4 max-w-4xl">
-                  <h1 className="text-white text-xl md:text-3xl lg:text-4xl font-bold text-center leading-tight">
-                    壁掛けテレビ設置なら、プロの技術で安心・安全！
-                    <br className="hidden md:block" />
-                    <span className="text-orange-400">ソクトノカベカケ</span>があなたの暮らしを変えます！
-                  </h1>
+              <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4">
+                <div className="flex items-end gap-4 max-w-5xl">
+                  {/* アニメキャラクター */}
+                  <div className="flex-shrink-0 mb-4">
+                    <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%94%BB%E5%83%8F%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B33.jpg-or8TyykVK3wZLWNqi6vodl7mC8gVmq.jpeg"
+                        alt="ソクトちゃん"
+                        fill
+                        className="object-cover rounded-full border-4 border-white shadow-lg"
+                      />
+                    </div>
+                  </div>
+
+                  {/* 吹き出し */}
+                  <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl max-w-2xl">
+                    {/* 吹き出しの尻尾 */}
+                    <div className="absolute bottom-6 left-0 transform -translate-x-3">
+                      <div className="w-0 h-0 border-t-[20px] border-t-white/80 border-r-[30px] border-r-transparent"></div>
+                    </div>
+
+                    <h1 className="text-gray-800 text-lg md:text-2xl lg:text-3xl font-bold leading-tight">
+                      <span className="text-blue-600">ソクトノカベカケ</span>があなたの暮らしを
+                      <span className="text-pink-500">素敵にメイク</span>する。
+                      <br />
+                      <span className="text-orange-500">壁掛けテレビ専門店</span>だから、
+                      <br />
+                      プロの技術で<span className="text-green-600">安心・安全</span>！
+                    </h1>
+
+                    {/* キラキラエフェクト */}
+                    <div className="absolute top-2 right-4 text-yellow-400 text-2xl animate-pulse">✨</div>
+                    <div className="absolute top-8 right-12 text-pink-400 text-lg animate-bounce">💖</div>
+                    <div className="absolute bottom-4 right-6 text-blue-400 text-xl animate-pulse">⭐</div>
+                  </div>
                 </div>
               </div>
             )}
 
             {/* 2枚目の画像にキャンペーンバナーを表示 */}
             {index === 1 && (
-              <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
                 <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-full shadow-lg animate-pulse">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 relative flex-shrink-0">

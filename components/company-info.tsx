@@ -68,7 +68,7 @@ export function CompanyInfo() {
             </div>
             <div className="mt-8 w-full aspect-[16/9] md:aspect-[21/9]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3260.5578433146856!2d136.93385277677445!3d35.19061197280084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600369c8c2c6e801%3A0x91d4fa7712b39c85!2z44CSNDYyLTA4MjUg5oSb55-l55yM5ZCN5Y-k5bGL5biC5YyX5Yy65aSn5pm-5qC35LiJ5LiB55uu77yR77yQ4oiS77yX!5e0!3m2!1sja!2sjp!4v1705232391330!5m2!1sja!2sjp"
+                src="https://www.google.com/maps?q=株式会社速人+愛知県名古屋市北区大曽根3丁目10-7+リニアビル206号&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -76,7 +76,7 @@ export function CompanyInfo() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-lg"
-                title="Google Maps - 株式会社速人の所在地"
+                title="Google Maps - 株式会社速人の検索結果"
               />
             </div>
           </CardContent>

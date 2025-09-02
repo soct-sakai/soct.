@@ -379,7 +379,10 @@ export default function Page() {
           </div>
         </section>
 
-        <CompanyInfo />
+        {/* Company Info Section */}
+        <section id="company-info">
+          <CompanyInfo />
+        </section>
       </main>
       <SiteFooter />
       <RoomSimulatorIcon />

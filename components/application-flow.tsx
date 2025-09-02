@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Phone, ClipboardCheck, CreditCard, WrenchIcon, MessageSquare } from "lucide-react"
+import Image from "next/image"
 
 export function ApplicationFlow() {
   return (
@@ -66,9 +67,28 @@ export function ApplicationFlow() {
         </div>
 
         <div className="mt-8 text-center bg-blue-50 p-6 rounded-lg">
-          <div className="flex items-center justify-center gap-2 text-blue-600">
-            <MessageSquare className="w-6 h-6" />
-            <p className="font-semibold">現調でなく、LINEで画像のやり取りなら更にスムーズに！</p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+            <div className="flex items-center justify-center gap-2 text-blue-600">
+              <MessageSquare className="w-6 h-6" />
+              <p className="font-semibold">現調でなく、LINEで画像のやり取りなら更にスムーズに！</p>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <a
+                href="https://lin.ee/JWfPvbcB"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:scale-105 transition-transform duration-200"
+              >
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/S_gainfriends_2dbarcodes_GW-L8z3DQmMuv2FPMxsYC4NueKmYV34HX.png"
+                  alt="LINE友だち追加QRコード"
+                  width={120}
+                  height={120}
+                  className="rounded-lg shadow-md"
+                />
+              </a>
+              <p className="text-sm text-blue-600 font-medium">QRコードでLINE友だち追加</p>
+            </div>
           </div>
         </div>
       </div>
