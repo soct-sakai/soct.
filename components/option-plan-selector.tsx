@@ -19,7 +19,7 @@ export function OptionPlanSelector() {
   // コンテキストを取得
   const planSelection = usePlanSelection()
 
-  // オプションのリスト
+  // オプションのリスト（金具オプションを削除）
   const optionItems: OptionItem[] = [
     // 一般オプション
     { name: "Wifi設定 1台毎", price: "3,300円", priceValue: 3300, allowQuantity: true, quantityLabel: "台数" },
@@ -88,17 +88,23 @@ export function OptionPlanSelector() {
     { name: "4K8K分配器", price: "4,400円", priceValue: 4400, allowQuantity: true, quantityLabel: "個数" },
     { name: "4K8K分波器", price: "2,750円", priceValue: 2750, allowQuantity: true, quantityLabel: "個数" },
 
-    // 下地補強オプション（900×450サイズ）
-    { name: "下地補強厚さ12㎜(～55インチまで)　900×450×12㎜", price: "11,000円", priceValue: 11000 },
-    { name: "下地補強厚さ18㎜(65～75インチまで)　900×450×18㎜", price: "16,500円", priceValue: 16500 },
-    { name: "下地補強厚さ24㎜(65～85インチまで)　900×450×24㎜", price: "22,000円", priceValue: 22000 },
-    { name: "下地補強厚さ36㎜(85～100インチまで)　900×450×36㎜", price: "33,000円", priceValue: 33000 },
+    // 前出し下地補強オプション（900×450サイズ）
+    { name: "前出し下地補強厚さ12㎜(～55インチまで)　900×450×12㎜", price: "11,000円", priceValue: 11000 },
+    { name: "前出し下地補強厚さ18㎜(65～75インチまで)　900×450×18㎜", price: "16,500円", priceValue: 16500 },
+    { name: "前出し下地補強厚さ24㎜(65～85インチまで)　900×450×24㎜", price: "22,000円", priceValue: 22000 },
+    { name: "前出し下地補強厚さ36㎜(85～100インチまで)　900×450×36㎜", price: "33,000円", priceValue: 33000 },
 
-    // 下地補強オプション（1800×900サイズ）
-    { name: "下地補強厚さ12㎜(～55インチまで)　1800×900×12㎜", price: "33,000円", priceValue: 33000 },
-    { name: "下地補強厚さ18㎜(65～75インチまで)　1800×900×18㎜", price: "44,000円", priceValue: 44000 },
-    { name: "下地補強厚さ24㎜(65～85インチまで)　1800×900×24㎜", price: "59,800円", priceValue: 59800 },
-    { name: "下地補強厚さ36㎜(85～100インチまで)　1800×900×36㎜", price: "77,000円", priceValue: 77000 },
+    // 壁内下地補強オプション（1800×900サイズ）
+    { name: "壁内下地補強厚さ12㎜(～55インチまで)　1800×900×12㎜", price: "110,000円", priceValue: 110000 },
+    { name: "壁内下地補強厚さ18㎜(65～75インチまで)　1800×900×18㎜", price: "165,000円", priceValue: 165000 },
+    { name: "壁内下地補強厚さ24㎜(65～85インチまで)　1800×900×24㎜", price: "198,000円", priceValue: 198000 },
+    { name: "壁内下地補強厚さ36㎜(85～100インチまで)　1800×900×36㎜", price: "220,000円", priceValue: 220000 },
+
+    // 壁内下地補強オプション（1800×900サイズ）：2枚横並びに取付設置工事
+    { name: "壁内下地補強厚さ12㎜(～55インチまで)　1800×900×12㎜×2枚", price: "165,000円", priceValue: 165000 },
+    { name: "壁内下地補強厚さ18㎜(65～75インチまで)　1800×900×18㎜×2枚", price: "247,500円", priceValue: 247500 },
+    { name: "壁内下地補強厚さ24㎜(65～85インチまで)　1800×900×24㎜×2枚", price: "297,000円", priceValue: 297000 },
+    { name: "壁内下地補強厚さ36㎜(85～100インチまで)　1800×900×36㎜×2枚", price: "330,000円", priceValue: 330000 },
 
     // 隠ぺい配線作業（数量選択可能）
     {
@@ -227,14 +233,15 @@ export function OptionPlanSelector() {
     planSelection.setOptionsTotalPrice(total)
   }
 
-  // オプションをカテゴリーごとにグループ化
+  // オプションをカテゴリーごとにグループ化（金具オプションを削除）
   const generalOptions = optionItems.slice(0, 17)
-  const reinforcement900Options = optionItems.slice(17, 21)
-  const reinforcement1800Options = optionItems.slice(21, 25)
-  const hiddenWiringOptions = optionItems.slice(25, 30)
-  const specialWallOptions = optionItems.slice(30, 35)
-  const otherOptions = optionItems.slice(35, 44)
-  const interiorOptions = optionItems.slice(44)
+  const reinforcement900Options = optionItems.slice(17, 21) // 前出し下地補強 options
+  const wallInteriorReinforcementOptions = optionItems.slice(21, 25) // 1800×900 single options
+  const wallInteriorReinforcement2Options = optionItems.slice(25, 29) // 1800×900 2枚 options
+  const hiddenWiringOptions = optionItems.slice(29, 34)
+  const specialWallOptions = optionItems.slice(34, 39)
+  const otherOptions = optionItems.slice(39, 48)
+  const interiorOptions = optionItems.slice(48)
 
   // 数量選択UIを表示する関数
   const renderQuantitySelector = (option: OptionItem, index: number) => {
@@ -288,9 +295,9 @@ export function OptionPlanSelector() {
         </div>
       </div>
 
-      {/* 下地補強オプション（900×450） */}
+      {/* 前出し下地補強オプション（900×450） */}
       <div>
-        <h4 className="font-semibold mb-3">下地補強オプション（900×450）：</h4>
+        <h4 className="font-semibold mb-3">前出し下地補強オプション（900×450）：</h4>
         <div className="space-y-3">
           {reinforcement900Options.map((option, i) => {
             const index = i + 17 // オフセットを追加
@@ -315,12 +322,41 @@ export function OptionPlanSelector() {
         </div>
       </div>
 
-      {/* 下地補強オプション（1800×900） */}
+      {/* 壁内下地補強オプション（1800×900） */}
       <div>
-        <h4 className="font-semibold mb-3">下地補強オプション（1800×900）：</h4>
+        <h4 className="font-semibold mb-3">壁内下地補強オプション（1800×900）：</h4>
+        <p className="text-sm text-gray-600 mb-3">クロスを剥がして壁の中に下地を入れます。</p>
         <div className="space-y-3">
-          {reinforcement1800Options.map((option, i) => {
-            const index = i + 21 // オフセットを追加
+          {wallInteriorReinforcementOptions.map((option, i) => {
+            const index = i + 21 // 新しいオフセット
+            return (
+              <div key={index} className="flex items-center justify-between border-b pb-2">
+                <div className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id={`option-item-${index}`}
+                    className="mr-2 h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    onChange={(e) => handleOptionChange(index, e.target.checked)}
+                    checked={selectedOptions[index] === true}
+                  />
+                  <label htmlFor={`option-item-${index}`} className="font-medium">
+                    {option.name}：{option.price}
+                  </label>
+                </div>
+                {renderQuantitySelector(option, index)}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* 壁内下地補強オプション（1800×900）：2枚横並びに取付設置工事 */}
+      <div>
+        <h4 className="font-semibold mb-3">壁内下地補強オプション（1800×900）：2枚横並びに取付設置工事</h4>
+        <p className="text-sm text-gray-600 mb-3">クロスを剥がして壁の中に下地を入れます。</p>
+        <div className="space-y-3">
+          {wallInteriorReinforcement2Options.map((option, i) => {
+            const index = i + 25 // 新しいオフセット
             return (
               <div key={index} className="flex items-center justify-between border-b pb-2">
                 <div className="flex items-center">
@@ -347,7 +383,7 @@ export function OptionPlanSelector() {
         <h4 className="font-semibold mb-3">隠ぺい配線作業：</h4>
         <div className="space-y-3">
           {hiddenWiringOptions.map((option, i) => {
-            const index = i + 25 // オフセットを追加
+            const index = i + 29 // オフセットを追加
             return (
               <div key={index} className="flex items-center justify-between border-b pb-2">
                 <div className="flex items-center">
@@ -374,7 +410,7 @@ export function OptionPlanSelector() {
         <h4 className="font-semibold mb-3">特殊壁テクニカル料金：</h4>
         <div className="space-y-3">
           {specialWallOptions.map((option, i) => {
-            const index = i + 30 // オフセットを追加
+            const index = i + 34 // オフセットを追加
             return (
               <div key={index} className="flex items-center justify-between border-b pb-2">
                 <div className="flex items-center">
@@ -402,7 +438,7 @@ export function OptionPlanSelector() {
           <h4 className="font-semibold mb-3">その他オプション：</h4>
           <div className="space-y-3">
             {otherOptions.map((option, i) => {
-              const index = i + 35 // オフセットを更新
+              const index = i + 39 // オフセットを更新
               return (
                 <div key={index} className="flex items-center justify-between border-b pb-2">
                   <div className="flex items-center">
@@ -431,7 +467,7 @@ export function OptionPlanSelector() {
           <h4 className="font-semibold mb-3">インテリアリフォームオプション：</h4>
           <div className="space-y-3">
             {interiorOptions.map((option, i) => {
-              const index = i + 44 // オフセットを更新
+              const index = i + 48 // オフセットを更新
               return (
                 <div key={index} className="flex items-center justify-between border-b pb-2">
                   <div className="flex items-center">

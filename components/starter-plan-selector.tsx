@@ -27,17 +27,19 @@ export function StarterPlanSelector({ sizeOptions }: StarterPlanSelectorProps) {
   // Context から状態と更新関数を取得
   const planSelection = usePlanSelection()
 
-  // 金具オプションのリスト
+  // 金具オプションのリスト（更新版 - 金具セット料金込み）
   const mountOptions: MountOption[] = [
-    { name: "壁のみテレビ施工のみ", price: "0円", priceValue: 0 },
+    { name: "お客様金具用意でテレビ施工のみ", price: "-10,000円", priceValue: -10000 },
     { name: "汎用壁固定式金具 小(～32)", price: "13,200円", priceValue: 13200 },
     { name: "汎用壁固定式金具 中(42～65まで)", price: "16,500円", priceValue: 16500 },
     { name: "汎用壁固定式金具 中フレームタイプ", price: "19,800円", priceValue: 19800 },
-    { name: "汎用壁固定式金具 大(75～85まで)", price: "19,800円", priceValue: 19800 },
+    { name: "汎用壁固定式金具 大(75～85まで)", price: "22,000円", priceValue: 22000 },
     { name: "汎用スイングモーション式金具 小ワンアーム(～32)", price: "16,500円", priceValue: 16500 },
-    { name: "汎用スイングモーション式金具 中(42～65まで)", price: "19,800円", priceValue: 19800 },
-    { name: "汎用スイングモーション式金具 中ワンアーム", price: "22,000円", priceValue: 22000 },
-    { name: "汎用スイングモーション式金具 大(75～85まで)", price: "29,800円", priceValue: 29800 },
+    { name: "汎用スイングモーション式金具 省(23～43まで)", price: "16,500円", priceValue: 16500 },
+    { name: "汎用スイングモーション式金具 中(42～65まで)", price: "22,000円", priceValue: 22000 },
+    { name: "汎用スイングモーション式金具 中ワンアーム(42～65まで)", price: "27,500円", priceValue: 27500 },
+    { name: "汎用スイングモーション式金具 大(75～85まで)", price: "39,800円", priceValue: 39800 },
+    { name: "上下昇降式金具　中・大(40～75まで)", price: "110,000円", priceValue: 110000 },
     { name: "その他の金具(100インチ対応や、天釣り金具等)", price: "応相談", priceValue: 0 },
   ]
 
@@ -105,7 +107,7 @@ export function StarterPlanSelector({ sizeOptions }: StarterPlanSelectorProps) {
 
     setTotalPrice(total)
 
-    // Context に選択内容を保存
+    // Context を更新
     updatePlanSelectionContext(selectedSizes, selectedMounts, total)
   }
 
@@ -149,7 +151,7 @@ export function StarterPlanSelector({ sizeOptions }: StarterPlanSelectorProps) {
   return (
     <div className="space-y-6">
       <div>
-        <h4 className="font-semibold mb-3">インチサイズ別料金：</h4>
+        <h4 className="font-semibold mb-3">スタータープラン(金具セットです)インチサイズ別料金：</h4>
         <div className="space-y-3">
           {sizeOptions.map((option, i) => (
             <div key={i} className="flex items-center justify-between border-b pb-2">

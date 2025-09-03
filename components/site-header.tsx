@@ -19,7 +19,9 @@ export function SiteHeader() {
             height={32}
             className="rounded-full"
           />
-          <span className="font-bold text-base md:text-lg">株式会社速人 『ソクトノカベカケ』</span>
+          <span className="font-bold text-base md:text-lg">
+            株式会社速人 壁掛けテレビと壁の専門店『ソクトノカベカケ』
+          </span>
         </ScrollLink>
 
         {/* モバイル用ハンバーガーメニュー */}

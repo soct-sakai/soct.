@@ -23,6 +23,7 @@ import { OptionPlanSelector } from "@/components/option-plan-selector"
 import { ApplicationFlow } from "@/components/application-flow"
 import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
+import { TVMountBrackets } from "@/components/tv-mount-brackets"
 
 const RoomSimulatorIcon = () => {
   return (
@@ -110,6 +111,9 @@ export default function Page() {
             <CustomerReasons />
           </div>
         </section>
+
+        {/* TV Mount Brackets Section */}
+        <TVMountBrackets />
 
         {/* Installation Examples */}
         <section id="installation-examples" className="py-24">
@@ -229,13 +233,13 @@ export default function Page() {
                   isDetailedPrice: true,
                   isSelectable: true,
                   sizeOptions: [
-                    { size: "40インチまで", price: "22,000円" },
-                    { size: "41-49インチ", price: "33,000円" },
-                    { size: "50-59インチ", price: "44,000円" },
-                    { size: "60-69インチ", price: "55,000円" },
-                    { size: "70-79インチ", price: "66,000円" },
-                    { size: "80-89インチ", price: "88,000円" },
-                    { size: "90-99インチ", price: "110,000円" },
+                    { size: "40インチまで", price: "33,000円" },
+                    { size: "41-49インチ", price: "44,000円" },
+                    { size: "50-59インチ", price: "55,000円" },
+                    { size: "60-69インチ", price: "66,000円" },
+                    { size: "70-79インチ", price: "77,000円" },
+                    { size: "80-89インチ", price: "110,000円" },
+                    { size: "90-99インチ", price: "165,000円" },
                     { size: "100インチ以上", price: "応相談" },
                   ],
                 },
@@ -302,28 +306,22 @@ export default function Page() {
                       <h3 className="text-xl md:text-2xl lg:text-3xl font-bold">{plan.name}プラン</h3>
                       {plan.highlighted && <Badge className="bg-blue-500">おすすめ</Badge>}
                     </div>
-                    {plan.isDetailedPrice ? (
-                      <>
-                        <div className="mb-4">
-                          {plan.isOptionSelector ? (
-                            <OptionPlanSelector />
-                          ) : (
-                            <>
-                              <h4 className="font-semibold mb-2">インチサイズ別料金：</h4>
-                              <StarterPlanSelector
-                                sizeOptions={plan.sizeOptions?.map((option) => ({
-                                  ...option,
-                                  priceValue:
-                                    option.price !== "応相談"
-                                      ? Number.parseInt(option.price.replace(/[^0-9]/g, ""))
-                                      : 0,
-                                }))}
-                              />
-                            </>
-                          )}
-                        </div>
-                      </>
-                    ) : (
+                    {plan.isDetailedPrice && (
+                      <div className="mb-4">
+                        {plan.isOptionSelector ? (
+                          <OptionPlanSelector />
+                        ) : (
+                          <StarterPlanSelector
+                            sizeOptions={plan.sizeOptions?.map((option) => ({
+                              ...option,
+                              priceValue:
+                                option.price !== "応相談" ? Number.parseInt(option.price.replace(/[^0-9]/g, "")) : 0,
+                            }))}
+                          />
+                        )}
+                      </div>
+                    )}
+                    {!plan.isDetailedPrice && (
                       <>
                         <p className="text-2xl font-bold mb-4">{plan.price}</p>
                         <p className="text-sm text-gray-600 mb-4">{plan.description}</p>
