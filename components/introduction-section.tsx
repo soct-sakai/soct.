@@ -92,7 +92,6 @@ export function IntroductionSection() {
           </h2>
           <p className="text-xl md:text-2xl mb-4 text-blue-700">✨ 見慣れたお部屋が、まるでラグジュアリー空間に！ ✨</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <p className="text-lg italic text-blue-600">(*´ω｀*)エコカラットはいいぞ～。</p>
             <div className="w-24 h-24 md:w-32 md:h-32 relative rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E5%A3%81005.jpg-JmGTVSoNDlJvE0hPIgFf7tR55XA4SW.jpeg"

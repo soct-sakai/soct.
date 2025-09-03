@@ -86,14 +86,22 @@ export function HeroCarousel() {
                       <div className="w-0 h-0 border-t-[20px] border-t-white/80 border-r-[30px] border-r-transparent"></div>
                     </div>
 
-                    <h1 className="text-gray-800 text-lg md:text-2xl lg:text-3xl font-bold leading-tight">
-                      <span className="text-blue-600">ソクトノカベカケ</span>があなたの暮らしを
-                      <span className="text-pink-500">素敵にメイク</span>する。
-                      <br />
-                      <span className="text-orange-500">壁掛けテレビ専門店</span>だから、
-                      <br />
-                      プロの技術で<span className="text-green-600">安心・安全</span>！
-                    </h1>
+                    <div className="text-gray-800 text-lg md:text-xl lg:text-2xl font-bold leading-tight">
+                      <p className="mb-2">テレビは、壁掛けになって</p>
+                      <p className="mb-2">
+                        あの頃みたいに、家族の<span className="text-pink-500">「笑顔の真ん中」</span>へ。
+                      </p>
+                      <p className="mb-2">ねえ、君(嫁)。</p>
+                      <p className="mb-2 text-blue-600">「今年はあと何回、一緒に映画を見れるかな？」</p>
+                      <p className="mb-2">
+                        俺たち<span className="text-blue-600">ソクトノカベカケ</span>は、知ってるんです。
+                      </p>
+                      <p className="mb-2">壁掛けテレビが、夫婦の穏やかな時間や、</p>
+                      <p className="mb-2">親子の共通の話題をくれるってことを。</p>
+                      <p className="text-green-600 font-black">
+                        さあ、リビングを家族みんなが「ホッとする」最高に特別な場所にしませんか？
+                      </p>
+                    </div>
 
                     {/* キラキラエフェクト */}
                     <div className="absolute top-2 right-4 text-yellow-400 text-2xl animate-pulse">✨</div>
@@ -104,22 +112,35 @@ export function HeroCarousel() {
               </div>
             )}
 
-            {/* 2枚目の画像にキャンペーンバナーを表示 */}
+            {/* 2枚目の画像にキャンペーンバナーとメッセージを表示 */}
             {index === 1 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-                <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-full shadow-lg animate-pulse">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 relative flex-shrink-0">
-                      <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27476792_3.jpg-T8VJ0izYeHpAb4bIP1zkCXKGrSO5Yy.jpeg"
-                        alt="スティック型SSD 1TB"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <div className="text-center">
-                      <div className="text-sm font-bold">🎁 9月成約限定特典！</div>
-                      <div className="text-lg font-black">スティック型SSD 1TB プレゼント！</div>
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl text-center">
+                  <div className="text-gray-800 text-lg md:text-xl lg:text-2xl font-bold leading-tight mb-4">
+                    <span className="text-blue-600">ソクトノカベカケ</span>があなたの暮らしを
+                    <span className="text-pink-500">素敵にメイク</span>する。
+                    <br />
+                    <span className="text-orange-500">壁掛けテレビ専門店</span>だから、
+                    <br />
+                    プロの技術で<span className="text-green-600">安心・安全</span>！
+                    <br />
+                    <span className="text-purple-600">公式LINEかお問い合わせから無料相談受付中♪</span>
+                  </div>
+
+                  {/* キャンペーンバナー */}
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-3 rounded-full shadow-lg animate-pulse">
+                    <div className="flex items-center justify-center gap-2">
+                      <div className="w-8 h-8 relative flex-shrink-0">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27476792_3.jpg-T8VJ0izYeHpAb4bIP1zkCXKGrSO5Yy.jpeg"
+                          alt="スティック型SSD 1TB"
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-sm font-black">🎁 9月中に成約のお客様にスティック型SSD1TBプレゼント！</div>
+                      </div>
                     </div>
                   </div>
                 </div>

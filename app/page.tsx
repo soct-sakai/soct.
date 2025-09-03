@@ -6,7 +6,7 @@ import { PasonaLaw } from "@/components/pasona-law"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { AccordionInstallationExamples } from "@/components/accordion-installation-examples"
 import { InstallationProcessGallery } from "@/components/installation-process-gallery"
-import { ReviewTable } from "@/components/review-table"
+import { CustomerReviewsGallery } from "@/components/customer-reviews-gallery"
 import { CEOMessage } from "@/components/ceo-message"
 import { WarrantySlider } from "@/components/warranty-slider"
 import { ContactForm } from "@/components/contact-form"
@@ -24,6 +24,7 @@ import { ApplicationFlow } from "@/components/application-flow"
 import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
 import { TVMountBrackets } from "@/components/tv-mount-brackets"
+import { WarrantyBanner } from "@/components/warranty-banner"
 
 const RoomSimulatorIcon = () => {
   return (
@@ -105,10 +106,20 @@ export default function Page() {
         <CEOMessage />
         <PasonaLaw />
 
-        {/* Customer Reasons - 施工事例の上に移動 */}
+        {/* Customer Reasons */}
         <section className="py-12 bg-gray-50">
           <div className="container px-4 md:px-6">
             <CustomerReasons />
+          </div>
+        </section>
+
+        {/* Customer Reviews - CustomerReasonsの直後に移動、新しいギャラリー形式 */}
+        <section className="py-12">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">お客様の声</h2>
+            </div>
+            <CustomerReviewsGallery />
           </div>
         </section>
 
@@ -184,16 +195,6 @@ export default function Page() {
 
         {/* Installation Process Gallery - 動画の代わりに画像ギャラリー */}
         <InstallationProcessGallery />
-
-        {/* Updated Customer Reviews */}
-        <section className="py-24">
-          <div className="container px-4 md:px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">お客様の声</h2>
-            </div>
-            <ReviewTable />
-          </div>
-        </section>
 
         {/* Application Flow */}
         <ApplicationFlow />
@@ -355,6 +356,9 @@ export default function Page() {
             </p>
           </div>
         </section>
+
+        {/* Warranty Banner - 3年保証の詳細 */}
+        <WarrantyBanner />
 
         {/* Warranty Slider */}
         <section className="py-24 bg-gray-50">
