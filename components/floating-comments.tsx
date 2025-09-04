@@ -72,14 +72,14 @@ export function FloatingComments({ section }: { section: 1 | 2 }) {
       {floatingComments.map((comment) => (
         <div
           key={comment.id}
-          className={`absolute whitespace-nowrap text-white/60 font-medium ${comment.fontSize} animate-float-right`}
+          className={`absolute whitespace-nowrap text-white/80 font-medium ${comment.fontSize} animate-float-right`}
           style={{
             top: comment.top,
             right: "-100%",
             animationDuration: `${comment.duration}s`,
             animationDelay: `${comment.delay}s`,
             animationIterationCount: "infinite",
-            textShadow: "1px 1px 2px rgba(0,0,0,0.8)",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.9), 1px 1px 2px rgba(0,0,0,0.8)",
           }}
         >
           {comment.text}

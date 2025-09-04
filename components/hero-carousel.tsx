@@ -131,41 +131,39 @@ export function HeroCarousel() {
             {/* 2枚目の画像にキャンペーンバナーとメッセージを表示 */}
             {index === 1 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 px-4">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 md:p-4 lg:p-6 shadow-xl text-center max-w-sm md:max-w-2xl lg:max-w-4xl">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 md:p-4 shadow-xl text-center max-w-xs md:max-w-lg lg:max-w-2xl">
                   <a
                     href="#package-plans"
-                    className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-xl shadow-lg mb-3 md:mb-4 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                    className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 md:px-4 md:py-3 rounded-xl shadow-lg mb-2 md:mb-3 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
-                    <div className="text-sm md:text-lg lg:text-xl font-black">
+                    <div className="text-xs md:text-base lg:text-lg font-black">
                       🎯 65インチ施工なら金具セットで66,000円！
                     </div>
-                    <div className="text-xs md:text-sm lg:text-base mt-1">くわしくはプランをご確認ください！</div>
+                    <div className="text-xs md:text-sm mt-1">くわしくはプランをご確認ください！</div>
                   </a>
 
-                  <div className="text-gray-800 text-xs md:text-sm lg:text-base font-bold leading-tight mb-3 md:mb-4">
-                    <div className="space-y-1">
-                      <div>
-                        <span className="text-blue-600">ソクトノカベカケ</span>
-                        <span>があなたの暮らしを</span>
-                        <span className="text-blue-600 font-black text-sm md:text-base">素敵にメイク</span>
-                        <span>する。</span>
-                      </div>
-                      <div>
-                        <span className="text-blue-600 font-black text-sm md:text-base">壁掛けテレビ専門店</span>
-                        <span>だから、プロの技術で</span>
-                        <span className="text-blue-600 font-black text-sm md:text-base">安心・安全</span>
-                        <span>！</span>
-                      </div>
-                      <div className="text-blue-600 font-semibold text-xs md:text-sm">
-                        公式LINEかお問い合わせから無料相談受付中♪
-                      </div>
+                  <div className="text-gray-800 text-xs md:text-sm font-bold leading-tight mb-2 md:mb-3">
+                    <div className="flex flex-wrap justify-center items-center gap-1 text-center">
+                      <span className="text-blue-600">ソクトノカベカケ</span>
+                      <span>があなたの暮らしを</span>
+                      <span className="text-blue-600 font-black">素敵にメイク</span>
+                      <span>する。</span>
+                    </div>
+                    <div className="flex flex-wrap justify-center items-center gap-1 text-center mt-1">
+                      <span className="text-blue-600 font-black">壁掛けテレビ専門店</span>
+                      <span>だから、プロの技術で</span>
+                      <span className="text-blue-600 font-black">安心・安全</span>
+                      <span>！</span>
+                    </div>
+                    <div className="text-blue-600 font-semibold text-xs mt-1">
+                      公式LINEかお問い合わせから無料相談受付中♪
                     </div>
                   </div>
 
                   {/* キャンペーンバナー */}
-                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-2 md:px-4 md:py-3 rounded-full shadow-lg animate-pulse">
-                    <div className="flex items-center justify-center gap-2">
-                      <div className="w-6 h-6 md:w-8 md:h-8 relative flex-shrink-0">
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 md:px-3 md:py-2 rounded-full shadow-lg animate-pulse">
+                    <div className="flex items-center justify-center gap-1 md:gap-2">
+                      <div className="w-4 h-4 md:w-6 md:h-6 relative flex-shrink-0">
                         <Image
                           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27476792_3.jpg-T8VJ0izYeHpAb4bIP1zkCXKGrSO5Yy.jpeg"
                           alt="スティック型SSD 1TB"
