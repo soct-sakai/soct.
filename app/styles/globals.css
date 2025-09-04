@@ -55,7 +55,7 @@
     --muted-foreground: 215 20.2% 65.1%;
 
     --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
@@ -117,7 +117,8 @@
   justify-content: center;
   gap: 4px;
   padding: 8px 6px;
-  border-radius: 12px;
+  border-radius: 16px;
+  border: 2px solid #000000;
   font-weight: 700;
   text-decoration: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -128,29 +129,26 @@
 }
 
 .soct-fixed-cta .cta-btn.phone {
-  background: linear-gradient(135deg, #e53935 0%, #d32f2f 100%);
+  background: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.2);
   grid-column: 1;
   grid-row: 1;
 }
 
 .soct-fixed-cta .cta-btn.email {
-  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  background: linear-gradient(135deg, #000000 0%, #424242 50%, #757575 100%);
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.2);
   grid-column: 2;
   grid-row: 1;
 }
 
 .soct-fixed-cta .cta-btn.line {
-  background: linear-gradient(135deg, #00c300 0%, #00b300 100%);
+  background: linear-gradient(135deg, #06c755 0%, #00b900 100%);
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.3);
   grid-column: span 3;
   grid-row: 2;
   transform: scale(1.1);
-  box-shadow: 0 8px 24px rgba(0, 195, 0, 0.4);
+  box-shadow: 0 8px 24px rgba(6, 199, 85, 0.4);
   min-height: 72px;
 }
 
@@ -164,9 +162,8 @@
 }
 
 .soct-fixed-cta .cta-btn.menu {
-  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  background: linear-gradient(135deg, #000000 0%, #424242 50%, #757575 100%);
   color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.2);
   grid-column: 3;
   grid-row: 1;
 }
@@ -214,8 +211,8 @@
 }
 
 .soct-fixed-cta .cta-btn.line:hover {
-  transform: translateY(-3px) scale(1.15);
-  box-shadow: 0 16px 40px rgba(0, 195, 0, 0.5);
+  transform: translateY(-2px) scale(1.15);
+  box-shadow: 0 16px 40px rgba(6, 199, 85, 0.5);
 }
 
 .soct-fixed-cta .cta-btn.line:active {
@@ -252,7 +249,7 @@
 
   .soct-fixed-cta .cta-btn.line:hover {
     transform: translateY(-4px) scale(1.18);
-    box-shadow: 0 20px 50px rgba(0, 195, 0, 0.5);
+    box-shadow: 0 20px 50px rgba(6, 199, 85, 0.5);
   }
 }
 
@@ -270,7 +267,7 @@
   }
 
   .soct-fixed-cta .cta-btn.line:focus {
-    box-shadow: 0 8px 24px rgba(0, 195, 0, 0.3), 0 0 0 3px rgba(0, 195, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(6, 199, 85, 0.3), 0 0 0 3px rgba(6, 199, 85, 0.3);
   }
 }
 
