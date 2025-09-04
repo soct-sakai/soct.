@@ -69,16 +69,15 @@ const regions = [
 
 export function IntroductionSection() {
   return (
-    <section className="py-16 relative text-gray-800">
+    <section className="py-16 relative text-gray-800 bg-gray-50">
       {/* 格子状背景パターン */}
-      <div className="absolute inset-0 z-0 opacity-25">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <div className="absolute inset-0 z-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" className="opacity-20">
           <defs>
             <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#666" strokeWidth="1.5" />
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" strokeWidth="1" />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="white" />
           <rect width="100%" height="100%" fill="url(#grid-pattern)" />
         </svg>
       </div>

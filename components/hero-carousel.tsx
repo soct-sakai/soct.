@@ -80,43 +80,50 @@ export function HeroCarousel() {
                   </div>
 
                   {/* 吹き出し */}
-                  <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-6 md:p-8 shadow-2xl max-w-2xl">
+                  <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-2xl">
                     {/* 吹き出しの尻尾 */}
                     <div className="absolute bottom-6 left-0 transform -translate-x-3">
-                      <div className="w-0 h-0 border-t-[20px] border-t-white/80 border-r-[30px] border-r-transparent"></div>
+                      <div className="w-0 h-0 border-t-[20px] border-t-white/90 border-r-[30px] border-r-transparent"></div>
                     </div>
 
-                    <div className="text-gray-800 text-sm md:text-base lg:text-lg font-bold leading-tight">
-                      <p className="mb-2">あなたの事を教えて下さい</p>
-                      <p className="mb-2">あなたのお家、家族、テレビの視聴スタイル。</p>
-                      <p className="mb-2">あなたの好きな事。</p>
-                      <p className="mb-3 text-blue-600">
+                    <div className="text-gray-800 text-xs md:text-sm lg:text-base font-medium leading-relaxed">
+                      <p className="mb-2 text-blue-600 font-bold text-sm md:text-base">あなたの事を教えて下さい</p>
+                      <p className="mb-2">あなたのお家、家族、テレビの視聴スタイル。あなたの好きな事。</p>
+
+                      <p className="mb-3 text-blue-600 font-semibold text-sm md:text-base">
                         「仕事を理由にして、コミュニケーションが不足して、まともに会話したのはいつだろう？」
                       </p>
-                      <p className="mb-3 text-orange-600">
+
+                      <p className="mb-3 text-blue-600 font-semibold text-sm md:text-base">
                         「帰ってきて宿題したの？って帰ってくるのは、今やるとこ！(怒)。勉強もしてほしいけど、それが大切なんじゃない。子供と話しをして、悩みを知ってあげたい勉強に躓いてるなら、一緒に考えてあげたい」
                       </p>
+
                       <p className="mb-2">
                         テレビは、壁掛けになって、あの頃みたいに家族の
-                        <span className="text-pink-500">「笑顔の真ん中」</span>へ。
+                        <span className="text-blue-600 font-bold text-base md:text-lg">「笑顔の真ん中」</span>へ。
                       </p>
-                      <p className="mb-2 text-blue-600">「今年はあと何回、一緒に映画を見れるかな？」</p>
-                      <p className="mb-3 text-purple-600">
+
+                      <p className="mb-2 text-blue-600 font-semibold text-sm md:text-base">
+                        「今年はあと何回、一緒に映画を見れるかな？」
+                      </p>
+
+                      <p className="mb-3 text-blue-600 font-semibold text-sm md:text-base">
                         「大好きな推しのMV、気兼ねなく家族にも『面白いね！』って言ってもらえて、一緒に応援できたら最高だと思いませんか？」
                       </p>
+
                       <p className="mb-2">
-                        私たち<span className="text-blue-600">ソクトノカベカケ</span>は、知っています。
+                        私たち<span className="text-blue-600 font-bold">ソクトノカベカケ</span>は、知っています。
                       </p>
                       <p className="mb-2">壁掛けテレビが、夫婦の穏やかな時間や、親子の共通の話題をくれることを。</p>
-                      <p className="text-green-600 font-black">
+
+                      <p className="text-blue-600 font-bold text-base md:text-lg animate-pulse">
                         さあ、リビングを家族みんなが「ホッとする」最高に特別な場所にしませんか？
                       </p>
                     </div>
 
                     {/* キラキラエフェクト */}
-                    <div className="absolute top-2 right-4 text-yellow-400 text-2xl animate-pulse">✨</div>
-                    <div className="absolute top-8 right-12 text-pink-400 text-lg animate-bounce">💖</div>
-                    <div className="absolute bottom-4 right-6 text-blue-400 text-xl animate-pulse">⭐</div>
+                    <div className="absolute top-2 right-4 text-yellow-400 text-xl md:text-2xl animate-pulse">✨</div>
+                    <div className="absolute bottom-4 right-6 text-blue-400 text-lg md:text-xl animate-pulse">⭐</div>
                   </div>
                 </div>
               </div>
@@ -124,36 +131,42 @@ export function HeroCarousel() {
 
             {/* 2枚目の画像にキャンペーンバナーとメッセージを表示 */}
             {index === 1 && (
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl text-center max-w-4xl">
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 px-4">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 md:p-4 lg:p-6 shadow-xl text-center max-w-sm md:max-w-2xl lg:max-w-4xl">
                   <a
                     href="#package-plans"
-                    className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-4 rounded-xl shadow-lg mb-4 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                    className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 md:px-6 md:py-4 rounded-xl shadow-lg mb-3 md:mb-4 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
-                    <div className="text-lg md:text-xl font-black">🎯 65インチ施工なら金具セットで66,000円！</div>
-                    <div className="text-sm md:text-base mt-1">くわしくはプランをご確認ください！</div>
+                    <div className="text-sm md:text-lg lg:text-xl font-black">
+                      🎯 65インチ施工なら金具セットで66,000円！
+                    </div>
+                    <div className="text-xs md:text-sm lg:text-base mt-1">くわしくはプランをご確認ください！</div>
                   </a>
 
-                  <div className="text-gray-800 text-base md:text-lg lg:text-xl font-bold leading-tight mb-4">
-                    <div className="flex flex-wrap justify-center items-center gap-1 md:gap-2">
-                      <span className="text-blue-600">ソクトノカベカケ</span>
-                      <span>があなたの暮らしを</span>
-                      <span className="text-pink-500">素敵にメイク</span>
-                      <span>する。</span>
-                      <span className="text-orange-500">壁掛けテレビ専門店</span>
-                      <span>だから、プロの技術で</span>
-                      <span className="text-green-600">安心・安全</span>
-                      <span>！</span>
-                    </div>
-                    <div className="mt-2">
-                      <span className="text-purple-600">公式LINEかお問い合わせから無料相談受付中♪</span>
+                  <div className="text-gray-800 text-xs md:text-sm lg:text-base font-bold leading-tight mb-3 md:mb-4">
+                    <div className="space-y-1">
+                      <div>
+                        <span className="text-blue-600">ソクトノカベカケ</span>
+                        <span>があなたの暮らしを</span>
+                        <span className="text-blue-600 font-black text-sm md:text-base">素敵にメイク</span>
+                        <span>する。</span>
+                      </div>
+                      <div>
+                        <span className="text-blue-600 font-black text-sm md:text-base">壁掛けテレビ専門店</span>
+                        <span>だから、プロの技術で</span>
+                        <span className="text-blue-600 font-black text-sm md:text-base">安心・安全</span>
+                        <span>！</span>
+                      </div>
+                      <div className="text-blue-600 font-semibold text-xs md:text-sm">
+                        公式LINEかお問い合わせから無料相談受付中♪
+                      </div>
                     </div>
                   </div>
 
                   {/* キャンペーンバナー */}
-                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-3 rounded-full shadow-lg animate-pulse">
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-3 py-2 md:px-4 md:py-3 rounded-full shadow-lg animate-pulse">
                     <div className="flex items-center justify-center gap-2">
-                      <div className="w-8 h-8 relative flex-shrink-0">
+                      <div className="w-6 h-6 md:w-8 md:h-8 relative flex-shrink-0">
                         <Image
                           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27476792_3.jpg-T8VJ0izYeHpAb4bIP1zkCXKGrSO5Yy.jpeg"
                           alt="スティック型SSD 1TB"
@@ -162,7 +175,9 @@ export function HeroCarousel() {
                         />
                       </div>
                       <div className="text-center">
-                        <div className="text-sm font-black">🎁 9月中に成約のお客様にスティック型SSD1TBプレゼント！</div>
+                        <div className="text-xs md:text-sm font-black">
+                          🎁 9月中に成約のお客様にスティック型SSD1TBプレゼント！
+                        </div>
                       </div>
                     </div>
                   </div>
