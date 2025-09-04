@@ -25,19 +25,34 @@ import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
 import { TVMountBrackets } from "@/components/tv-mount-brackets"
 import { WarrantyBanner } from "@/components/warranty-banner"
+import { PricingTablePopup } from "@/components/pricing-table-popup"
 
 const RoomSimulatorIcon = () => {
   return (
     <>
-      {/* スマホ用固定フッターCTA */}
+      {/* スマホ用固定フッターCTA - リッチメニュー形式 */}
       <nav className="soct-fixed-cta md:hidden" role="navigation" aria-label="主要アクション">
-        <a className="cta-btn plan" href="#package-plans" aria-label="料金プランを見る">
-          <span className="ico">📺</span>
-          <span className="label">料金プランはこちら！</span>
+        <a className="cta-btn menu" href="#package-plans" aria-label="基本メニューを見る">
+          <span className="ico">📋</span>
+          <span className="label">基本メニューはこちら</span>
         </a>
-        <a className="cta-btn contact" href="#contact-form" aria-label="お問い合わせフォーム">
-          <span className="ico">📞</span>
-          <span className="label">お問い合わせはこちら！</span>
+        <a className="cta-btn email" href="#contact-form" aria-label="メールで相談">
+          <span className="ico">✉️</span>
+          <span className="label">メールで相談</span>
+        </a>
+        <a
+          className="cta-btn line"
+          href="https://line.me/R/ti/p/@your-line-id"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LINEで相談"
+        >
+          <span className="ico">💬</span>
+          <span className="label">LINEで相談</span>
+        </a>
+        <a className="cta-btn quote" href="#contact-form" aria-label="お見積もりフォーム">
+          <span className="ico">📝</span>
+          <span className="label">※お見積もりフォーム</span>
         </a>
       </nav>
 
@@ -206,6 +221,11 @@ export default function Page() {
         <section id="package-plans" className="py-24">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">パッケージプラン</h2>
+
+            <div className="flex justify-center mb-8">
+              <PricingTablePopup />
+            </div>
+
             <div className="space-y-8 max-w-4xl mx-auto">
               <Card className="overflow-hidden">
                 <CardContent className="p-6">

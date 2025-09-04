@@ -194,7 +194,10 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
         <p className="text-sm text-gray-600 leading-relaxed">
           作業時間約2時間/見積無料/施工日から3年保証付き/
           <br className="md:hidden" />
-          <span className="text-orange-600 font-semibold">9月限定　TV録画用スティック型SSD 1TBプレゼント！</span>
+          <span className="text-orange-600 font-semibold">
+            9月限定　TV録画用スティック型SSD
+            1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
+          </span>
         </p>
       </div>
     </div>

@@ -128,8 +128,8 @@ export function OptionPlanSelector() {
       allowQuantity: true,
       quantityLabel: "本数",
     },
-    { name: "隠ぺい配線ダクト工事(石膏ボード上下2か所)", price: "22,000円", priceValue: 22000 },
-    { name: "隠ぺい配線ダクト工事(下地あり上下2か所)", price: "33,000円", priceValue: 33000 },
+    { name: "隠ぺい配線ダクト工事(石膏ボード上下2か所)", price: "33,000円", priceValue: 33000 },
+    { name: "隠ぺい配線ダクト工事(下地あり上下2か所)", price: "55,000円", priceValue: 55000 },
 
     // 特殊壁テクニカル料金
     { name: "コンクリート壁への壁掛けテレビ施工", price: "11,000円", priceValue: 11000 },
@@ -142,6 +142,13 @@ export function OptionPlanSelector() {
     { name: "電源とアンテナの増設工事(石膏ボード) 1カ所", price: "33,000円", priceValue: 33000 },
     { name: "電源とアンテナの増設工事(下地ボード加工) 1カ所", price: "55,000円", priceValue: 55000 },
     { name: "スマートホーム", price: "応相談", priceValue: 0 },
+    {
+      name: "キャットドア 1個毎個作成",
+      price: "33,000円",
+      priceValue: 33000,
+      allowQuantity: true,
+      quantityLabel: "個数",
+    },
     { name: "空中テレビボード(フロートボード)取付設置 ～1200mm", price: "44,000円", priceValue: 44000 },
     { name: "空中テレビボード(フロートボード)取付設置 ～1400mm", price: "55,000円", priceValue: 55000 },
     { name: "空中テレビボード(フロートボード)取付設置 ～1600mm", price: "77,000円", priceValue: 77000 },
@@ -172,13 +179,35 @@ export function OptionPlanSelector() {
     { name: "軟質タイルの取付 15平米(縦3ｍ横5ｍ)", price: "525,000円", priceValue: 525000 },
     { name: "軟質タイルの取付 20平米(縦3.4ｍ横6ｍ)", price: "700,000円", priceValue: 700000 },
 
-    // リブパネル
-    { name: "木製縦目桐デザインリブパネルの取付 6平米(縦3ｍ横2ｍ)", price: "238,800円", priceValue: 238800 },
-    { name: "木製縦目木目デザインリブパネルの取付 6平米(縦3ｍ横2ｍ)", price: "238,800円", priceValue: 238800 },
-    { name: "大理石調リブパネルの取付 6平米(縦3ｍ横2ｍ)", price: "238,800円", priceValue: 238800 },
+    // リブパネル - 古いリブパネル項目を削除し、新しい吸音リブパネルと大理石調パネルボードに置き換え
+    // 木製縦目桐デザイン吸音リブパネル
+    { name: "木製縦目桐デザイン吸音リブパネルの取付 2.88平米(縦2.4ｍ横1.2ｍ)", price: "99,000円", priceValue: 99000 },
+    { name: "木製縦目桐デザイン吸音リブパネルの取付 4.32平米(縦2.4ｍ横1.8ｍ)", price: "148,500円", priceValue: 148500 },
+    { name: "木製縦目桐デザイン吸音リブパネルの取付 5.76平米(縦2.4ｍ横2.4ｍ)", price: "198,000円", priceValue: 198000 },
+
+    // 木製縦目木目デザイン吸音リブパネル
+    { name: "木製縦目木目デザイン吸音リブパネルの取付 2.88平米(縦2.4ｍ横1.2ｍ)", price: "99,000円", priceValue: 99000 },
+    {
+      name: "木製縦目木目デザイン吸音リブパネルの取付 4.32平米(縦2.4ｍ横1.8ｍ)",
+      price: "148,500円",
+      priceValue: 148500,
+    },
+    {
+      name: "木製縦目木目デザイン吸音リブパネルの取付 5.76平米(縦2.4ｍ横2.4ｍ)",
+      price: "198,000円",
+      priceValue: 198000,
+    },
+
+    // 大理石調パネルボード
+    { name: "大理石調パネルボードの取付 2.928平米(縦2.4ｍ横1.2ｍ)", price: "35,640円", priceValue: 35640 },
+    { name: "大理石調パネルボードの取付 5.856平米(縦2.4ｍ横2.4ｍ)", price: "71,800円", priceValue: 71800 },
+    { name: "大理石調パネルボードの取付 8.784平米(縦2.4ｍ横3.6ｍ)", price: "106,920円", priceValue: 106920 },
+    { name: "大理石調パネルボードの取付 11.712平米(縦2.4ｍ横4.8ｍ)", price: "142,560円", priceValue: 142560 },
+    { name: "大理石調パネルボードの取付 14.64平米(縦2.4ｍ横6.0ｍ)", price: "166,320円", priceValue: 166320 },
+    { name: "大理石調パネルボードの取付 17.568平米(縦2.4ｍ横7.2ｍ)", price: "199,584円", priceValue: 199584 },
 
     // アクセントウォール
-    { name: "アクセントウォール(ふかし壁) 壁付け 12平米(縦3ｍ横4ｍ)", price: "110,000円", priceValue: 110000 },
+    { name: "アクセントウォール(ふかし壁) 壁付け 12平米(縦3ｍ横4ｍ)", price: "220,000円", priceValue: 220000 },
     { name: "アクセントウォール(ふかし壁) 壁裏収納付き 12平米(縦3ｍ横4ｍ)", price: "330,000円", priceValue: 330000 },
   ]
 
@@ -458,6 +487,15 @@ export function OptionPlanSelector() {
               )
             })}
           </div>
+          <div className="mt-3 text-sm text-gray-600">
+            <p>※ デザインクロス：デザインはサンゲツWebカタログから選択できます。</p>
+            <p>※ エコカラット：デザインはLIXILWebカタログから選択できます。</p>
+            <p>※ エコカラットOK、漆喰壁OK、コンクリート壁不可</p>
+            <p>※ キャットドア：ドアによっては取付ができないものがあります、応相談</p>
+            <p>
+              ※ アクセントウォールとクロスやエコカラット、リブパネルを組み合わせると最高のお部屋へと生まれ変わります。
+            </p>
+          </div>
         </div>
       )}
 
@@ -467,7 +505,7 @@ export function OptionPlanSelector() {
           <h4 className="font-semibold mb-3">インテリアリフォームオプション：</h4>
           <div className="space-y-3">
             {interiorOptions.map((option, i) => {
-              const index = i + 48 // オフセットを更新
+              const index = i + 48 // オフセットを追加
               return (
                 <div key={index} className="flex items-center justify-between border-b pb-2">
                   <div className="flex items-center">
@@ -486,13 +524,6 @@ export function OptionPlanSelector() {
                 </div>
               )
             })}
-          </div>
-          <div className="mt-3 text-sm text-gray-600">
-            <p>※ デザインクロス：デザインはサンゲツWebカタログから選択できます。</p>
-            <p>※ エコカラット：デザインはLIXILWebカタログから選択できます。</p>
-            <p>
-              ※ アクセントウォールとクロスやエコカラット、リブパネルを組み合わせると最高のお部屋へと生まれ変わります。
-            </p>
           </div>
         </div>
       )}

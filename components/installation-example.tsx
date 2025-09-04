@@ -28,17 +28,24 @@ export function InstallationExample({ title, description, beforeImage, afterImag
     <div className="grid md:grid-cols-2 gap-6 md:gap-8">
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg md:text-xl">Before（ビフォー）</CardTitle>
+          <CardTitle className="text-lg md:text-xl p-4">Before（ビフォー）</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="relative aspect-video">
-            <Image src={beforeImage || "/placeholder.svg"} alt="施工前" fill className="object-cover rounded-lg" />
+            <Image
+              src={beforeImage || "/placeholder.svg"}
+              alt="施工前"
+              fill
+              className="object-cover rounded-lg"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </CardContent>
       </Card>
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg md:text-xl">After（アフター）</CardTitle>
+          <CardTitle className="text-lg md:text-xl p-4">After（アフター）</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="relative aspect-video">
@@ -47,6 +54,8 @@ export function InstallationExample({ title, description, beforeImage, afterImag
               alt="施工後"
               fill
               className="object-cover rounded-lg"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
             {afterImages.length > 1 && (
               <>
@@ -81,8 +90,8 @@ export function InstallationExample({ title, description, beforeImage, afterImag
             )}
           </div>
           <div className="mt-4">
-            <h4 className="font-semibold mb-2 text-base md:text-lg">{title}</h4>
-            <p className="text-sm md:text-base text-gray-600">{description}</p>
+            <h4 className="font-semibold text-base md:text-lg p-4">{title}</h4>
+            <p className="text-sm md:text-base text-gray-600 p-4">{description}</p>
           </div>
         </CardContent>
       </Card>

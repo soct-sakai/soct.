@@ -101,12 +101,13 @@ export function HeroCarousel() {
               fill
               className="object-cover"
               priority={index === 0}
+              loading={index === 0 ? "eager" : "lazy"}
+              sizes="100vw"
             />
 
             {index === 0 && (
               <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4 z-10">
                 <div className="flex items-end gap-4 max-w-5xl">
-                  {/* アニメキャラクター */}
                   <div className="flex-shrink-0 mb-4">
                     <div className="w-32 h-32 md:w-40 md:h-40 relative">
                       <Image
@@ -114,6 +115,8 @@ export function HeroCarousel() {
                         alt="ソクトちゃん"
                         fill
                         className="object-cover rounded-full border-4 border-white shadow-lg"
+                        loading="lazy"
+                        sizes="(max-width: 768px) 128px, 160px"
                       />
                     </div>
                   </div>
@@ -183,6 +186,8 @@ export function HeroCarousel() {
                         alt="壁掛け作業員"
                         fill
                         className="object-cover rounded-full border-4 border-blue-500 shadow-lg"
+                        loading="lazy"
+                        sizes="(max-width: 768px) 128px, 160px"
                       />
                     </div>
                   </div>
@@ -249,11 +254,14 @@ export function HeroCarousel() {
                           alt="スティック型SSD 1TB"
                           fill
                           className="object-contain"
+                          loading="lazy"
+                          sizes="(max-width: 768px) 16px, 24px"
                         />
                       </div>
                       <div className="text-center">
                         <div className="text-xs md:text-sm font-black">
-                          🎁 9月中に成約のお客様にスティック型SSD1TBプレゼント！
+                          🎁
+                          9月中に成約のお客様にスティック型SSD1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
                         </div>
                       </div>
                     </div>

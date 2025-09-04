@@ -1,3 +1,5 @@
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 
@@ -15,10 +17,13 @@ export function CompanyInfo() {
                   width={600}
                   height={400}
                   className="rounded-lg object-cover"
+                  loading="lazy"
                 />
               </div>
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold">会社概要</h2>
+                <h2 className="text-3xl font-bold" style={{ marginBottom: "1.2rem" }}>
+                  会社概要
+                </h2>
                 <dl className="space-y-4">
                   <div>
                     <dt className="font-semibold">会社名</dt>
@@ -66,18 +71,24 @@ export function CompanyInfo() {
                 </dl>
               </div>
             </div>
-            <div className="mt-8 w-full aspect-[16/9] md:aspect-[21/9]">
-              <iframe
-                src="https://www.google.com/maps?q=株式会社速人+愛知県名古屋市北区大曽根3丁目10-7+リニアビル206号&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg"
-                title="Google Maps - 株式会社速人の検索結果"
-              />
+            <div
+              className="mt-8 w-full aspect-[16/9] md:aspect-[21/9] cursor-pointer"
+              onClick={() =>
+                window.open(
+                  "https://www.google.com/maps?q=株式会社速人+愛知県名古屋市北区大曽根3丁目10-7+リニアビル206号",
+                  "_blank",
+                )
+              }
+            >
+              <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-green-500/20"></div>
+                <div className="text-center z-10">
+                  <div className="text-2xl mb-2">📍</div>
+                  <div className="font-semibold text-gray-800">Google Mapsで開く</div>
+                  <div className="text-sm text-gray-600 mt-1">愛知県名古屋市北区大曽根3丁目10-7</div>
+                  <div className="text-xs text-gray-500 mt-2">タップして地図を表示</div>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>

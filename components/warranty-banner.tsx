@@ -8,6 +8,85 @@ export function WarrantyBanner() {
   return (
     <section className="py-12 bg-gradient-to-r from-green-50 to-blue-50">
       <div className="container px-4 md:px-6">
+        <Card className="overflow-hidden border-2 border-blue-200 shadow-xl mb-8">
+          <CardContent className="p-0">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 md:p-6">
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-8 w-8 md:h-10 md:w-10"
+                >
+                  <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                  <line x1="1" y1="10" x2="23" y2="10" />
+                </svg>
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+                  株式会社速人 決済方法につきまして
+                </h2>
+              </div>
+            </div>
+
+            <div className="p-6 md:p-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-green-100 p-2 rounded-full flex-shrink-0">
+                      <CheckCircle className="h-5 w-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">現金決済</h3>
+                      <p className="text-sm text-gray-600">施工開始前の決済となります</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="bg-blue-100 p-2 rounded-full flex-shrink-0">
+                      <CheckCircle className="h-5 w-5 text-blue-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">銀行振込</h3>
+                      <p className="text-sm text-gray-600">施工開始前の決済となります</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-purple-100 p-2 rounded-full flex-shrink-0">
+                      <CheckCircle className="h-5 w-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">クレジットカード決済</h3>
+                      <p className="text-sm text-gray-600 mb-2">カードの与信枠に問題が無ければ分割払いも可能です</p>
+                      <p className="text-xs text-blue-600 font-semibold">
+                        リフォームが含まれる高額工事の場合は、分割払いが人気です
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-4 md:p-6">
+                <div className="text-center">
+                  <p className="text-sm text-gray-700 mb-2">
+                    <strong>※複数回のローン払い希望の方は、要相談くださいませ。</strong>
+                  </p>
+                  <p className="text-xs text-gray-600">
+                    お支払い方法についてご不明な点がございましたら、お気軽にお問い合わせください。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         <Card className="overflow-hidden border-2 border-green-200 shadow-xl">
           <CardContent className="p-0">
             <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-4 md:p-6">
