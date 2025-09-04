@@ -90,3 +90,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes float-right {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-float-right {
+  animation: float-right linear infinite;
+}

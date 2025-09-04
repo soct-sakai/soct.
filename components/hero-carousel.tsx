@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 import { useEffect, useState } from "react"
+import { FloatingComments } from "./floating-comments"
 
 // 画像のデータ配列（2枚目と4枚目を削除）
 const heroImages = [
@@ -63,9 +64,11 @@ export function HeroCarousel() {
               priority={index === 0}
             />
 
+            <FloatingComments section={index === 0 ? 1 : 2} />
+
             {/* 1枚目の画像にアニメキャラクターと吹き出しを表示 */}
             {index === 0 && (
-              <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4">
+              <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4 z-10">
                 <div className="flex items-end gap-4 max-w-5xl">
                   {/* アニメキャラクター */}
                   <div className="flex-shrink-0 mb-4">
@@ -80,44 +83,40 @@ export function HeroCarousel() {
                   </div>
 
                   {/* 吹き出し */}
-                  <div className="relative bg-white/90 backdrop-blur-sm rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-2xl">
+                  <div className="relative bg-white/30 backdrop-blur-md rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-2xl border border-white/20">
                     {/* 吹き出しの尻尾 */}
                     <div className="absolute bottom-6 left-0 transform -translate-x-3">
-                      <div className="w-0 h-0 border-t-[20px] border-t-white/90 border-r-[30px] border-r-transparent"></div>
+                      <div className="w-0 h-0 border-t-[20px] border-t-white/30 border-r-[30px] border-r-transparent"></div>
                     </div>
 
                     <div className="text-gray-800 text-xs md:text-sm lg:text-base font-medium leading-relaxed">
-                      <p className="mb-2 text-blue-600 font-bold text-sm md:text-base">あなたの事を教えて下さい</p>
-                      <p className="mb-2">あなたのお家、家族、テレビの視聴スタイル。あなたの好きな事。</p>
-
-                      <p className="mb-3 text-blue-600 font-semibold text-sm md:text-base">
-                        「仕事を理由にして、コミュニケーションが不足して、まともに会話したのはいつだろう？」
+                      <p className="mb-3 font-bold text-sm md:text-base lg:text-lg text-blue-600">
+                        あなたの事をおしえてください
                       </p>
 
-                      <p className="mb-3 text-blue-600 font-semibold text-sm md:text-base">
-                        「帰ってきて宿題したの？って帰ってくるのは、今やるとこ！(怒)。勉強もしてほしいけど、それが大切なんじゃない。子供と話しをして、悩みを知ってあげたい勉強に躓いてるなら、一緒に考えてあげたい」
+                      <p className="mb-3 font-semibold text-sm md:text-base text-gray-800">
+                        あなたの大切なご家族の事やテレビの視聴スタイルは？
                       </p>
 
-                      <p className="mb-2">
-                        テレビは、壁掛けになって、あの頃みたいに家族の
-                        <span className="text-blue-600 font-bold text-base md:text-lg">「笑顔の真ん中」</span>へ。
+                      <p className="mb-3 font-bold text-base md:text-lg animate-pulse text-blue-600">
+                        テレビは壁掛けになって、あの頃みたいに家族の「笑顔の真ん中」へ。
                       </p>
 
-                      <p className="mb-2 text-blue-600 font-semibold text-sm md:text-base">
-                        「今年はあと何回、一緒に映画を見れるかな？」
+                      <p className="mb-3 font-semibold text-sm md:text-base text-gray-800">
+                        あなたの『<span className="text-blue-600 font-bold">好き</span>
+                        』をもっと家族に伝えたいと思いませんか？
                       </p>
 
-                      <p className="mb-3 text-blue-600 font-semibold text-sm md:text-base">
-                        「大好きな推しのMV、気兼ねなく家族にも『面白いね！』って言ってもらえて、一緒に応援できたら最高だと思いませんか？」
+                      <p className="mb-3 font-medium text-gray-800">
+                        私たち<span className="font-bold text-blue-600">ソクトノカベカケ</span>は知っています。
                       </p>
 
-                      <p className="mb-2">
-                        私たち<span className="text-blue-600 font-bold">ソクトノカベカケ</span>は、知っています。
+                      <p className="mb-3 font-medium text-gray-800">
+                        壁掛けテレビが、夫婦の穏やかな時間や、親子の共通の話題をくれることを。
                       </p>
-                      <p className="mb-2">壁掛けテレビが、夫婦の穏やかな時間や、親子の共通の話題をくれることを。</p>
 
-                      <p className="text-blue-600 font-bold text-base md:text-lg animate-pulse">
-                        さあ、リビングを家族みんなが「ホッとする」最高に特別な場所にしませんか？
+                      <p className="font-bold text-base md:text-lg animate-pulse text-blue-600">
+                        さあ、リビングを家族みんなが「ホッとする」素敵で最高でもっと特別な場所にしませんか？
                       </p>
                     </div>
 
