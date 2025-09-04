@@ -86,18 +86,28 @@ export function HeroCarousel() {
                       <div className="w-0 h-0 border-t-[20px] border-t-white/80 border-r-[30px] border-r-transparent"></div>
                     </div>
 
-                    <div className="text-gray-800 text-lg md:text-xl lg:text-2xl font-bold leading-tight">
-                      <p className="mb-2">テレビは、壁掛けになって</p>
-                      <p className="mb-2">
-                        あの頃みたいに、家族の<span className="text-pink-500">「笑顔の真ん中」</span>へ。
+                    <div className="text-gray-800 text-sm md:text-base lg:text-lg font-bold leading-tight">
+                      <p className="mb-2">あなたの事を教えて下さい</p>
+                      <p className="mb-2">あなたのお家、家族、テレビの視聴スタイル。</p>
+                      <p className="mb-2">あなたの好きな事。</p>
+                      <p className="mb-3 text-blue-600">
+                        「仕事を理由にして、コミュニケーションが不足して、まともに会話したのはいつだろう？」
                       </p>
-                      <p className="mb-2">ねえ、君(嫁)。</p>
+                      <p className="mb-3 text-orange-600">
+                        「帰ってきて宿題したの？って帰ってくるのは、今やるとこ！(怒)。勉強もしてほしいけど、それが大切なんじゃない。子供と話しをして、悩みを知ってあげたい勉強に躓いてるなら、一緒に考えてあげたい」
+                      </p>
+                      <p className="mb-3">
+                        テレビは、壁掛けになって、あの頃みたいに家族の
+                        <span className="text-pink-500">「笑顔の真ん中」</span>へ。
+                      </p>
                       <p className="mb-2 text-blue-600">「今年はあと何回、一緒に映画を見れるかな？」</p>
-                      <p className="mb-2">
-                        俺たち<span className="text-blue-600">ソクトノカベカケ</span>は、知ってるんです。
+                      <p className="mb-3 text-purple-600">
+                        「大好きな推しのMV、気兼ねなく家族にも『面白いね！』って言ってもらえて、一緒に応援できたら最高だと思いませんか？」
                       </p>
-                      <p className="mb-2">壁掛けテレビが、夫婦の穏やかな時間や、</p>
-                      <p className="mb-2">親子の共通の話題をくれるってことを。</p>
+                      <p className="mb-2">
+                        私たち<span className="text-blue-600">ソクトノカベカケ</span>は、知っています。
+                      </p>
+                      <p className="mb-2">壁掛けテレビが、夫婦の穏やかな時間や、親子の共通の話題をくれることを。</p>
                       <p className="text-green-600 font-black">
                         さあ、リビングを家族みんなが「ホッとする」最高に特別な場所にしませんか？
                       </p>
