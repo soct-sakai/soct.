@@ -4,7 +4,6 @@ import { ChevronDown } from "lucide-react"
 import { useEffect, useState } from "react"
 import { FloatingComments } from "./floating-comments"
 
-// 画像のデータ配列（2枚目と4枚目を削除）
 const heroImages = [
   {
     image:
@@ -12,8 +11,13 @@ const heroImages = [
     alt: "壁掛けテレビ施工例1",
   },
   {
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3791.jpg-GLatnRHGk9mWuAOWGfTnj3sPD1mwmV.jpeg",
-    alt: "壁掛けテレビ施工例2",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC008.jpg-KZ5el4DTHW5C7M5tl96NiDZqwMoxa8.jpeg",
+    alt: "壁掛けテレビ施工完成例 - モダンなリビング",
+  },
+  {
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3791.jpg-PkcYHd8OwCZdeoi20YSkrAPbNyAIBW.jpeg",
+    alt: "壁掛けテレビ施工完成例 - REGZAテレビ アニメキャラクター表示",
   },
 ]
 
@@ -102,34 +106,9 @@ export function HeroCarousel() {
 
             <FloatingComments section={index === 0 ? 1 : 2} />
 
-            {/* 1枚目の画像にアニメキャラクターと吹き出しを表示 */}
             {index === 0 && (
               <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4 z-10">
                 <div className="flex items-end gap-4 max-w-5xl">
-                  <div className="absolute top-0 left-1/4 transform -translate-x-1/2 -translate-y-32">
-                    <div className="relative">
-                      <div className="w-32 h-32 md:w-40 md:h-40 relative">
-                        <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%94%BB%E5%83%8F.png.jpg-enOiZlZet2SX5ivBU3UH8VykSXN5nv.jpeg"
-                          alt="壁掛け作業員"
-                          fill
-                          className="object-cover rounded-full border-4 border-blue-500 shadow-lg"
-                        />
-                      </div>
-
-                      {showComment && (
-                        <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 animate-fade-in-out">
-                          <div className="bg-blue-500 text-white px-4 py-3 rounded-lg text-xs md:text-sm font-medium max-w-xs md:max-w-md lg:max-w-lg shadow-xl whitespace-normal">
-                            <div className="leading-relaxed">{streamingComments[currentCommentIndex]}</div>
-                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
-                              <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-500"></div>
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
                   {/* アニメキャラクター */}
                   <div className="flex-shrink-0 mb-4">
                     <div className="w-32 h-32 md:w-40 md:h-40 relative">
@@ -142,42 +121,51 @@ export function HeroCarousel() {
                     </div>
                   </div>
 
-                  {/* 吹き出し */}
-                  <div className="relative bg-white/30 backdrop-blur-md rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-2xl border border-white/20">
-                    {/* 吹き出しの尻尾 */}
+                  <div className="relative bg-white/30 backdrop-blur-md rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border border-white/20 min-w-0 flex-1 max-w-3xl">
+                    {/* 吹き出しの尻尾を左下に配置して喋っているような形に */}
                     <div className="absolute bottom-6 left-0 transform -translate-x-3">
                       <div className="w-0 h-0 border-t-[20px] border-t-white/30 border-r-[30px] border-r-transparent"></div>
                     </div>
 
-                    <div className="text-gray-800 text-xs md:text-sm lg:text-base font-medium leading-relaxed">
-                      <p className="mb-3 font-bold text-sm md:text-base lg:text-lg text-blue-600">
-                        あなたの事をおしえてください
-                      </p>
+                    <div className="text-gray-800 font-medium leading-relaxed">
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
+                        <span className="font-bold text-blue-600">あなたの事をおしえてください</span>
+                        <span className="font-semibold">あなたの大切なご家族の事やテレビの視聴スタイルは？</span>
+                      </div>
 
-                      <p className="mb-3 font-semibold text-sm md:text-base text-gray-800">
-                        あなたの大切なご家族の事やテレビの視聴スタイルは？
-                      </p>
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-base md:text-lg lg:text-xl">
+                        <span className="font-bold animate-pulse text-blue-600">
+                          テレビは壁掛けになって、あの頃みたいに家族の
+                        </span>
+                        <span className="font-bold animate-pulse text-blue-600">「笑顔の真ん中」へ。</span>
+                      </div>
 
-                      <p className="mb-3 font-bold text-base md:text-lg animate-pulse text-blue-600">
-                        テレビは壁掛けになって、あの頃みたいに家族の「笑顔の真ん中」へ。
-                      </p>
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
+                        <span className="font-semibold">あなたの</span>
+                        <span className="text-blue-600 font-bold">『好き』</span>
+                        <span className="font-semibold">をもっと家族に伝えたいと思いませんか？</span>
+                      </div>
 
-                      <p className="mb-3 font-semibold text-sm md:text-base text-gray-800">
-                        あなたの『<span className="text-blue-600 font-bold">好き</span>
-                        』をもっと家族に伝えたいと思いませんか？
-                      </p>
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
+                        <span className="font-medium">私たち</span>
+                        <span className="font-bold text-blue-600">ソクトノカベカケ</span>
+                        <span className="font-medium">は知っています。</span>
+                      </div>
 
-                      <p className="mb-3 font-medium text-gray-800">
-                        私たち<span className="font-bold text-blue-600">ソクトノカベカケ</span>は知っています。
-                      </p>
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
+                        <span className="font-medium">
+                          壁掛けテレビが、夫婦の穏やかな時間や、親子の共通の話題をくれることを。
+                        </span>
+                      </div>
 
-                      <p className="mb-3 font-medium text-gray-800">
-                        壁掛けテレビが、夫婦の穏やかな時間や、親子の共通の話題をくれることを。
-                      </p>
-
-                      <p className="font-bold text-base md:text-lg animate-pulse text-blue-600">
-                        さあ、リビングを家族みんなが「ホッとする」素敵で最高でもっと特別な場所にしませんか？
-                      </p>
+                      <div className="flex flex-wrap items-center gap-1 text-base md:text-lg lg:text-xl">
+                        <span className="font-bold animate-pulse text-blue-600">
+                          さあ、リビングを家族みんなが「ホッとする」
+                        </span>
+                        <span className="font-bold animate-pulse text-blue-600">
+                          素敵で最高でもっと特別な場所にしませんか？
+                        </span>
+                      </div>
                     </div>
 
                     {/* キラキラエフェクト */}
@@ -188,8 +176,39 @@ export function HeroCarousel() {
               </div>
             )}
 
-            {/* 2枚目の画像にキャンペーンバナーとメッセージを表示 */}
             {index === 1 && (
+              <div className="absolute inset-0 z-10">
+                <div className="absolute bottom-8 left-8">
+                  <div className="relative">
+                    <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                      <Image
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%94%BB%E5%83%8F.png.jpg-enOiZlZet2SX5ivBU3UH8VykSXN5nv.jpeg"
+                        alt="壁掛け作業員"
+                        fill
+                        className="object-cover rounded-full border-4 border-blue-500 shadow-lg"
+                      />
+                    </div>
+
+                    {showComment && (
+                      <div className="absolute left-full top-1/2 transform -translate-y-1/2 ml-4 animate-fade-in-out">
+                        <div className="relative bg-white/30 backdrop-blur-md rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-md md:max-w-lg lg:max-w-xl border border-white/20">
+                          {/* 吹き出しの尻尾を左向きに変更 */}
+                          <div className="absolute left-0 top-1/2 transform -translate-x-3 -translate-y-1/2">
+                            <div className="w-0 h-0 border-t-[15px] border-t-transparent border-b-[15px] border-b-transparent border-r-[20px] border-r-white/30"></div>
+                          </div>
+
+                          <div className="text-gray-800 text-sm md:text-base lg:text-lg font-medium leading-relaxed">
+                            {streamingComments[currentCommentIndex]}
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {index === 2 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 px-4">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 md:p-4 shadow-xl text-center max-w-xs md:max-w-lg lg:max-w-2xl">
                   <a
@@ -202,7 +221,7 @@ export function HeroCarousel() {
                     <div className="text-xs md:text-sm mt-1">くわしくはプランをご確認ください！</div>
                   </a>
 
-                  <div className="text-gray-800 text-xs md:text-sm font-bold leading-tight mb-2 md:mb-3">
+                  <div className="text-gray-800 text-xs md:text-sm font-bold leading-tight mt-3">
                     <div className="flex flex-wrap justify-center items-center gap-1 text-center">
                       <span className="text-blue-600">ソクトノカベカケ</span>
                       <span>があなたの暮らしを</span>
