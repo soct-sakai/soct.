@@ -126,6 +126,14 @@ export function HeroCarousel() {
             {index === 1 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl text-center max-w-4xl">
+                  <a
+                    href="#package-plans"
+                    className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-4 rounded-xl shadow-lg mb-4 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                  >
+                    <div className="text-lg md:text-xl font-black">🎯 65インチ施工なら金具セットで66,000円！</div>
+                    <div className="text-sm md:text-base mt-1">くわしくはプランをご確認ください！</div>
+                  </a>
+
                   <div className="text-gray-800 text-base md:text-lg lg:text-xl font-bold leading-tight mb-4">
                     <div className="flex flex-wrap justify-center items-center gap-1 md:gap-2">
                       <span className="text-blue-600">ソクトノカベカケ</span>

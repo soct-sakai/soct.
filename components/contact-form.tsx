@@ -10,6 +10,8 @@ import { Checkbox } from "@/components/ui/checkbox"
 const packagePlans = [
   { id: "tcl75", label: "TCL 75インチ施工セットプラン" },
   { id: "tcl85", label: "TCL 85インチ施工セットプラン" },
+  { id: "tcl98", label: "TCL 98インチ施工セットプラン" },
+  { id: "100inch", label: "100インチ施工セットプラン" },
   { id: "starter", label: "スタータープラン" },
   { id: "diamond", label: "ダイヤモンドプラン" },
   { id: "platinum", label: "プラチナプラン" },

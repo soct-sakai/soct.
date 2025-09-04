@@ -11,15 +11,23 @@ export function CampaignSection() {
         <div className="text-center mb-8">
           <Badge className="mb-4 bg-blue-500 text-white">新品テレビ販売</Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
-          <p className="text-xl text-gray-600">高品質なテレビと壁掛け施工をセットでご提供</p>
+          <p className="text-xl text-gray-600">高品質な超大型テレビも是非ご検討ください！</p>
+          <p className="text-sm text-gray-500 mt-2">
+            ※テレビは販売時期によって内容が異なる場合がございます。現調時かお問い合わせ時にご相談くださいませ。
+          </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {/* TCL 75インチ */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">TCL 75型 ゲーミングTV</CardTitle>
-              <p className="text-3xl font-bold text-blue-500">新品テレビ + 施工セット</p>
+          <Card className="relative overflow-hidden">
+            <div className="absolute top-4 left-4 z-10">
+              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+                衝撃の！198,000円
+              </div>
+            </div>
+            <CardHeader className="pt-16">
+              <CardTitle className="text-2xl">TCL 75型 大型75インチゲーミングTV新品テレビ 単体</CardTitle>
+              <p className="text-lg font-semibold text-blue-600">SONY65インチ4Kテレビと同価格で75インチ！</p>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -45,10 +53,15 @@ export function CampaignSection() {
           </Card>
 
           {/* TCL 85インチ */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">TCL 85型 ミニLED</CardTitle>
-              <p className="text-3xl font-bold text-blue-500">新品テレビ + 施工セット</p>
+          <Card className="relative overflow-hidden">
+            <div className="absolute top-4 left-4 z-10">
+              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+                衝撃の！298,000円
+              </div>
+            </div>
+            <CardHeader className="pt-16">
+              <CardTitle className="text-2xl">TCL 85型 大型85インチミニLED新品テレビ 単体</CardTitle>
+              <p className="text-lg font-semibold text-blue-600">SONY65インチ有機ELテレビと同価格で85インチ！</p>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -67,6 +80,82 @@ export function CampaignSection() {
                     <li>十分な強度を持つ下地補強工事</li>
                     <li>配線を目立たなくする壁内配線工事</li>
                     <li>美しく安全な取り付けを実現</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2 mt-8">
+          {/* TCL 98インチ */}
+          <Card className="relative overflow-hidden">
+            <div className="absolute top-4 left-4 z-10">
+              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+                衝撃の！598,000円
+              </div>
+            </div>
+            <CardHeader className="pt-16">
+              <CardTitle className="text-2xl">TCL 98型 超大型98インチミニLED新品テレビ 単体</CardTitle>
+              <p className="text-lg font-semibold text-blue-600">
+                考えられない！？ほぼ100インチが10年前の65インチの価格帯まで下がってきました！
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="aspect-video relative bg-gray-100 rounded-lg overflow-hidden">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3TV01.JPG-samHQ0zDE7wuI0o5lEPtEYSzN65dH9.jpeg"
+                    alt="TCL 98インチテレビ"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-semibold">特徴</h4>
+                  <ul className="list-disc list-inside text-sm space-y-1">
+                    <li>98V型MiniLED量子ドット技術</li>
+                    <li>AiPQ Proプロセッサー搭載</li>
+                    <li>TCL全域ハロー制御</li>
+                    <li>精密ディミングゾーン</li>
+                    <li>Google TV、Netflix、YouTube対応</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* 100インチ */}
+          <Card className="relative overflow-hidden">
+            <div className="absolute top-4 left-4 z-10">
+              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+                衝撃の！770,000円
+              </div>
+            </div>
+            <CardHeader className="pt-16">
+              <CardTitle className="text-2xl">100型 超大型4Kテレビ新品テレビ 単体</CardTitle>
+              <p className="text-lg font-semibold text-blue-600">
+                100インチ1,000,000円以上から大きく値下げに！壁にも超強度の下地が必要ですが、映画館級なリビングは手に入る時代です！ゲーム好きはここを目指して欲しい！
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="aspect-video relative bg-gray-100 rounded-lg overflow-hidden">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3TV02.JPG-YNZURzZnGB6wCXQc0cikmO7FtHvshd.jpeg"
+                    alt="100インチテレビ"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-semibold">特徴</h4>
+                  <ul className="list-disc list-inside text-sm space-y-1">
+                    <li>100V型4K ULTRA HD HDR10対応</li>
+                    <li>Google TV搭載</li>
+                    <li>Netflix、YouTube、Prime Video対応</li>
+                    <li>hulu、Disney+、FOD、U-NEXT、ABEMA対応</li>
+                    <li>映画館級の大迫力映像体験</li>
                   </ul>
                 </div>
               </div>
