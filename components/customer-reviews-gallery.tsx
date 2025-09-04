@@ -59,6 +59,33 @@ const reviewImages = [
     rating: 5,
     timeAgo: "7週間前",
   },
+  {
+    id: 7,
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E5%8F%A3%E3%82%B3%E3%83%9F08.JPG-EG1mq3a5NZBvGouCsAVhSOUbXN2nLJ.jpeg",
+    alt: "テレビの購入自体久しぶりで、金具はどのタイプがいいのかなどよく知りませんでしたが見積もりの際に丁寧にご説明いただけて良かったです。取付作業もスムーズに取り付けていただけて仕上がりも満足しています！子供も喜んでくれそうで楽しみです♪",
+    customerName: "お客様",
+    rating: 5,
+    timeAgo: "12週間前",
+  },
+  {
+    id: 8,
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E5%8F%A3%E3%82%B3%E3%83%9F09.JPG-Y6pisQUPHHyDOddSGDBobIv9DK8ooe.jpeg",
+    alt: "75インチテレビの壁掛け施工をお願いしました。ケーブル配線と掃除までしていただけました。",
+    customerName: "アリ",
+    rating: 5,
+    timeAgo: "23週間前",
+  },
+  {
+    id: 9,
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E5%8F%A3%E3%82%B3%E3%83%9F07.JPG-9xdB5E0R0BBlNYwA7eWy5HPX7VZmTG.jpeg",
+    alt: "早くて親切な対応でした。また、保証も3年間ついているので、安心です。",
+    customerName: "黒木栄治",
+    rating: 5,
+    timeAgo: "11週間前",
+  },
 ]
 
 export function CustomerReviewsGallery() {
@@ -76,7 +103,12 @@ export function CustomerReviewsGallery() {
           <Card key={review.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
             <CardContent className="p-0">
               <div className="relative aspect-[4/3]">
-                <Image src={review.image || "/placeholder.svg"} alt={review.alt} fill className="object-cover" />
+                <Image
+                  src={review.image || "/placeholder.svg"}
+                  alt={review.alt}
+                  fill
+                  className="object-contain bg-gray-50"
+                />
               </div>
               <div className="p-4">
                 <div className="flex items-center justify-between mb-2">
@@ -96,11 +128,11 @@ export function CustomerReviewsGallery() {
 
       <div className="text-center mt-8">
         <div className="bg-blue-50 p-6 rounded-lg max-w-2xl mx-auto">
-          <h4 className="text-xl font-bold mb-2 text-blue-900">⭐ お客様満足度98%！</h4>
+          <h4 className="text-xl font-bold mb-2 text-blue-900">⭐口コミ43件、4.8点！</h4>
           <p className="text-blue-700">
-            多くのお客様から「丁寧な施工」「安心できる対応」「綺麗な仕上がり」とご評価いただいています。
+            くらしのマーケットやミツモアなど含めると500件以上の実績です♪(*´ω｀*)
             <br />
-            あなたも安心してお任せください！
+            丁寧な対応に信用が置けるという、ご意見がとても嬉しいです(*´ω｀*)
           </p>
         </div>
       </div>

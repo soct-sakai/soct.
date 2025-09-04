@@ -70,7 +70,7 @@ const regions = [
 export function IntroductionSection() {
   return (
     <section className="py-16 relative text-gray-800">
-      {/* 背景パターン */}
+      {/* 格子状背景パターン */}
       <div className="absolute inset-0 z-0 opacity-25">
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
           <defs>

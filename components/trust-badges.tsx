@@ -22,8 +22,10 @@ export function TrustBadges() {
           </div>
           <div className="flex flex-col items-center text-center">
             <Star className="h-12 w-12 text-blue-500 mb-2" />
-            <h3 className="font-bold">お客様満足度98%</h3>
-            <p className="text-sm text-gray-600">高い顧客満足度を誇ります</p>
+            <h3 className="font-bold">口コミ43件、4.8点！</h3>
+            <p className="text-sm text-gray-600">
+              くらしのマーケットやミツモアなど含めると500件以上の実績です♪(*´ω｀*)
+            </p>
           </div>
         </div>
       </div>

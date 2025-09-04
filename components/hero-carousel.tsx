@@ -96,7 +96,7 @@ export function HeroCarousel() {
                       <p className="mb-3 text-orange-600">
                         「帰ってきて宿題したの？って帰ってくるのは、今やるとこ！(怒)。勉強もしてほしいけど、それが大切なんじゃない。子供と話しをして、悩みを知ってあげたい勉強に躓いてるなら、一緒に考えてあげたい」
                       </p>
-                      <p className="mb-3">
+                      <p className="mb-2">
                         テレビは、壁掛けになって、あの頃みたいに家族の
                         <span className="text-pink-500">「笑顔の真ん中」</span>へ。
                       </p>
@@ -125,16 +125,21 @@ export function HeroCarousel() {
             {/* 2枚目の画像にキャンペーンバナーとメッセージを表示 */}
             {index === 1 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl text-center">
-                  <div className="text-gray-800 text-lg md:text-xl lg:text-2xl font-bold leading-tight mb-4">
-                    <span className="text-blue-600">ソクトノカベカケ</span>があなたの暮らしを
-                    <span className="text-pink-500">素敵にメイク</span>する。
-                    <br />
-                    <span className="text-orange-500">壁掛けテレビ専門店</span>だから、
-                    <br />
-                    プロの技術で<span className="text-green-600">安心・安全</span>！
-                    <br />
-                    <span className="text-purple-600">公式LINEかお問い合わせから無料相談受付中♪</span>
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl text-center max-w-4xl">
+                  <div className="text-gray-800 text-base md:text-lg lg:text-xl font-bold leading-tight mb-4">
+                    <div className="flex flex-wrap justify-center items-center gap-1 md:gap-2">
+                      <span className="text-blue-600">ソクトノカベカケ</span>
+                      <span>があなたの暮らしを</span>
+                      <span className="text-pink-500">素敵にメイク</span>
+                      <span>する。</span>
+                      <span className="text-orange-500">壁掛けテレビ専門店</span>
+                      <span>だから、プロの技術で</span>
+                      <span className="text-green-600">安心・安全</span>
+                      <span>！</span>
+                    </div>
+                    <div className="mt-2">
+                      <span className="text-purple-600">公式LINEかお問い合わせから無料相談受付中♪</span>
+                    </div>
                   </div>
 
                   {/* キャンペーンバナー */}
