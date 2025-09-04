@@ -32,16 +32,16 @@ const RoomSimulatorIcon = () => {
     <>
       {/* スマホ用固定フッターCTA - リッチメニュー形式 */}
       <nav className="soct-fixed-cta md:hidden" role="navigation" aria-label="主要アクション">
-        <a className="cta-btn menu" href="#package-plans" aria-label="基本メニューを見る">
-          <span className="ico">📋</span>
-          <span className="label">基本メニューはこちら</span>
+        <a className="cta-btn phone" href="tel:0524332799" aria-label="電話で相談">
+          <span className="ico">📞</span>
+          <span className="label">電話相談</span>
         </a>
         <a className="cta-btn email" href="mailto:kabekaketv@soct.jp.net" aria-label="メールで相談">
           <span className="ico">✉️</span>
-          <span className="label">メールで相談</span>
+          <span className="label">メール相談</span>
         </a>
         <a
-          className="cta-btn line"
+          className="cta-btn line line-primary"
           href="https://lin.ee/4pVYnlI"
           target="_blank"
           rel="noopener noreferrer"
@@ -50,56 +50,42 @@ const RoomSimulatorIcon = () => {
           <span className="ico">💬</span>
           <span className="label">LINEで相談</span>
         </a>
-        <a className="cta-btn quote" href="#contact-form" aria-label="お見積もりフォーム">
-          <span className="ico">📝</span>
-          <span className="label">※お見積もりフォーム</span>
+        <a className="cta-btn menu" href="#package-plans" aria-label="基本メニューを見る">
+          <span className="ico">📋</span>
+          <span className="label">基本メニュー</span>
         </a>
       </nav>
 
-      {/* PC用は従来通り（右下の小さいアイコン） */}
-      <div className="hidden md:block fixed right-4 bottom-4 z-50 flex flex-col gap-2">
-        <a href="#contact-form" className="group">
-          <div className="bg-white text-gray-800 px-4 py-3 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 min-w-[140px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-blue-600"
-            >
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-            </svg>
-            <span className="text-sm font-medium">お問い合わせ</span>
+      {/* PC用リッチメニュー */}
+      <div className="hidden md:block fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 max-w-md">
+          <div className="grid grid-cols-2 gap-3">
+            <a href="tel:0524332799" className="group">
+              <div className="bg-red-50 hover:bg-red-100 text-red-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                <span className="text-lg">📞</span>
+                <span className="text-sm font-medium">電話相談</span>
+              </div>
+            </a>
+            <a href="mailto:kabekaketv@soct.jp.net" className="group">
+              <div className="bg-gray-50 hover:bg-gray-100 text-gray-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                <span className="text-lg">✉️</span>
+                <span className="text-sm font-medium">メール相談</span>
+              </div>
+            </a>
+            <a href="https://lin.ee/4pVYnlI" target="_blank" rel="noopener noreferrer" className="group col-span-2">
+              <div className="bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                <span className="text-lg">💬</span>
+                <span className="text-sm font-medium">LINEで相談（おすすめ）</span>
+              </div>
+            </a>
+            <a href="#package-plans" className="group col-span-2">
+              <div className="bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                <span className="text-lg">📋</span>
+                <span className="text-sm font-medium">基本メニュー</span>
+              </div>
+            </a>
           </div>
-        </a>
-
-        <a href="#package-plans" className="group">
-          <div className="bg-white text-gray-800 px-4 py-3 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2 min-w-[140px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="text-green-600"
-            >
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-              <line x1="16" y1="2" x2="16" y2="6" />
-              <line x1="8" y1="2" x2="8" y2="6" />
-              <line x1="3" y1="10" x2="21" y2="10" />
-            </svg>
-            <span className="text-sm font-medium">プランはこちら</span>
-          </div>
-        </a>
+        </div>
       </div>
     </>
   )
