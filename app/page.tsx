@@ -36,13 +36,13 @@ const RoomSimulatorIcon = () => {
           <span className="ico">📋</span>
           <span className="label">基本メニューはこちら</span>
         </a>
-        <a className="cta-btn email" href="#contact-form" aria-label="メールで相談">
+        <a className="cta-btn email" href="mailto:kabekaketv@soct.jp.net" aria-label="メールで相談">
           <span className="ico">✉️</span>
           <span className="label">メールで相談</span>
         </a>
         <a
           className="cta-btn line"
-          href="https://line.me/R/ti/p/@your-line-id"
+          href="https://lin.ee/4pVYnlI"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LINEで相談"

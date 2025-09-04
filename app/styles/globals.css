@@ -92,7 +92,7 @@
   }
 }
 
-/* 固定フッターCTA（スマホ用） */
+/* 固定フッターCTA（全デバイス対応） */
 .soct-fixed-cta {
   position: fixed;
   left: 0;
@@ -193,10 +193,32 @@
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* PCでは非表示（md:hidden クラスで制御） */
+/* PC表示時のスタイル調整 */
 @media (min-width: 768px) {
   .soct-fixed-cta {
-    display: none;
+    display: grid;
+    max-width: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 16px 16px 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.15);
+  }
+
+  .soct-fixed-cta .cta-btn .label {
+    font-size: 11px;
+  }
+
+  .soct-fixed-cta .cta-btn .ico {
+    font-size: 22px;
+  }
+}
+
+/* PC用のホバー効果を追加 */
+@media (min-width: 768px) {
+  .soct-fixed-cta .cta-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
   }
 }
 
