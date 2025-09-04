@@ -17,10 +17,34 @@ const heroImages = [
   },
 ]
 
+const streamingComments = [
+  "帰宅したら、みんなスマホ越し…最後に家族で声を合わせて笑ったのはいつだろう？",
+  "休日、今日も子供が元気に走り回ってリビングが散らかって・・・もっとリラックスできる場所がほしい",
+  "最近、地震速報を見るたびにテレビの転倒が心配で夜しか眠れない…",
+  "3歳の息子がコードを引っ張ってヒヤリ…もう物投げないでよ！？",
+  "お父さんの書斎にで、友達とオンライン対戦。ゲーム音や騒いでるとお母さんがうるさい。吸音とか防音とかもっと集中したいよ",
+  "夫と向かい合って会話する時間が減った…ゆっくり映画を観たいのに",
+  "仕事は忙しいし、気分転換に部屋の模様替えもしたいけど、賃貸でも壁掛けテレビとかしちゃダメなのかなー？",
+  "スマートホームにこんな使い方があったんだ、おじいちゃんおばあちゃんでも簡単にできる、遠く離れた孫をテレビで見守り保育",
+  "DIY大好きパパ、いつか自分で壁掛けにするって言って、もう何年？友達の家はタイル壁でエレガントなのに…理想のリビングが遠のくばかり",
+  "SNSに載せる写真が撮れない…フォロワーを驚かせたい",
+  "1日中パソコンで疲れ果て、帰っても落ち着く場所がない…寝室で寝ながらテレビでYouTubeの旅動画見ながら寝たい。",
+  "スタンド式のテレビ台したけど、思ったよりスペース使って不便だった、明るい海のような水色のクロスに、壁掛けテレビ憧れるなー",
+  "漆喰壁なのに壁掛けテレビなんて、できるわけないよ",
+  "最近、子どもの笑い声を聞いてない気がする…",
+  "憧れるような人が住むような部屋にしたいけど、オシャってお金掛かるけど、モダンな雰囲気の部屋にしたら、きっと自分の感性も育つと思うのよね",
+  "仕事を理由にコミュニケーション不足...まともに会話したのはいつだろう？",
+  "帰ってきて宿題したの？って帰ってくるのは、今やるとこ！(怒)。勉強も大切だけど、子供と話しをして、悩みを知ってあげたい",
+  "今年はあと何回、君(嫁)と一緒に映画を見れるかな？",
+  "大好きな推しのMV、気兼ねなく家族にも『面白いね！』って言ってもらえたら…",
+]
+
 // HeroCarousel関数
 export function HeroCarousel() {
   // スクロール処理を管理するための状態
   const [atBottom, setAtBottom] = useState(false)
+  const [currentCommentIndex, setCurrentCommentIndex] = useState(0)
+  const [showComment, setShowComment] = useState(false)
 
   // スクロール位置を監視する効果
   useEffect(() => {
@@ -37,6 +61,18 @@ export function HeroCarousel() {
     return () => {
       window.removeEventListener("scroll", checkScrollPosition)
     }
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setShowComment(true)
+      setTimeout(() => {
+        setShowComment(false)
+        setCurrentCommentIndex((prev) => (prev + 1) % streamingComments.length)
+      }, 3000) // 3秒間表示
+    }, 4000) // 4秒間隔で次のコメント
+
+    return () => clearInterval(interval)
   }, [])
 
   // 1920pxずつスクロールする関数
@@ -70,6 +106,30 @@ export function HeroCarousel() {
             {index === 0 && (
               <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4 z-10">
                 <div className="flex items-end gap-4 max-w-5xl">
+                  <div className="absolute top-0 left-1/4 transform -translate-x-1/2 -translate-y-32">
+                    <div className="relative">
+                      <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%94%BB%E5%83%8F.png.jpg-enOiZlZet2SX5ivBU3UH8VykSXN5nv.jpeg"
+                          alt="壁掛け作業員"
+                          fill
+                          className="object-cover rounded-full border-4 border-blue-500 shadow-lg"
+                        />
+                      </div>
+
+                      {showComment && (
+                        <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 animate-fade-in-out">
+                          <div className="bg-blue-500 text-white px-4 py-3 rounded-lg text-xs md:text-sm font-medium max-w-xs md:max-w-md lg:max-w-lg shadow-xl whitespace-normal">
+                            <div className="leading-relaxed">{streamingComments[currentCommentIndex]}</div>
+                            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full">
+                              <div className="w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-500"></div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
                   {/* アニメキャラクター */}
                   <div className="flex-shrink-0 mb-4">
                     <div className="w-32 h-32 md:w-40 md:h-40 relative">
@@ -146,7 +206,7 @@ export function HeroCarousel() {
                     <div className="flex flex-wrap justify-center items-center gap-1 text-center">
                       <span className="text-blue-600">ソクトノカベカケ</span>
                       <span>があなたの暮らしを</span>
-                      <span className="text-blue-600 font-black">素敵にメイク</span>
+                      <span className="font-bold text-blue-600">素敵にメイク</span>
                       <span>する。</span>
                     </div>
                     <div className="flex flex-wrap justify-center items-center gap-1 text-center mt-1">

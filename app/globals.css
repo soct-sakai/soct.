@@ -112,3 +112,27 @@
   animation: float-right linear infinite;
   will-change: transform, opacity;
 }
+
+/* 壁掛けアイコンからのコメント用フェードインアウトアニメーション追加 */
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.9);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 3s ease-in-out;
+}
