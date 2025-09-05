@@ -141,6 +141,12 @@ export function HeroCarousel() {
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
+                        <span className="font-semibold text-blue-600">壁掛けテレビによってもたらされる</span>
+                        <span className="font-bold text-blue-600">「変化した日常」</span>
+                        <span className="font-semibold">という新しい物語なんだ。</span>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
                         <span className="font-semibold">あなたの</span>
                         <span className="text-blue-600 font-bold">『好き』</span>
                         <span className="font-semibold">をもっと家族に伝えたいと思いませんか？</span>
@@ -154,13 +160,17 @@ export function HeroCarousel() {
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
                         <span className="font-medium">
-                          壁掛けテレビが、夫婦の穏やかな時間や、親子の共通の話題をくれることを。
+                          壁掛けテレビによって、共有した時間が夫婦の穏やかな時間を作り、
                         </span>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
+                        <span className="font-medium">親子の共通の話題をくれることを。</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 text-base md:text-lg lg:text-xl">
                         <span className="font-bold animate-pulse text-blue-600">
-                          さあ、リビングを家族みんなが「ホッとする」
+                          さあ、リビングを家族みんなが「リラックスできるホッとする」
                         </span>
                         <span className="font-bold animate-pulse text-blue-600">
                           素敵で最高でもっと特別な場所にしませんか？
