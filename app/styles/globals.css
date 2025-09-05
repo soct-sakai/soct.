@@ -150,7 +150,8 @@
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(6, 199, 85, 0.4);
   min-height: 64px;
-  border-radius: 16px;
+  /* LINEボタンの角丸を楕円形に近づけるため32pxに拡大 */
+  border-radius: 32px;
   border: none;
 }
 

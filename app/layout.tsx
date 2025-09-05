@@ -30,6 +30,16 @@ export default function RootLayout({
             gtag('config', 'AW-11435916801');
           `}
         </Script>
+
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-56JS4P35FK" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-56JS4P35FK');
+          `}
+        </Script>
       </head>
       <body className="font-meiryo">
         <PlanSelectionProvider>{children}</PlanSelectionProvider>
