@@ -147,11 +147,10 @@
   color: #fff;
   grid-column: span 3;
   grid-row: 2;
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(6, 199, 85, 0.4);
-  min-height: 72px;
+  min-height: 64px;
   border-radius: 16px;
-  /* LINEボタンの黒枠を削除 */
   border: none;
 }
 
@@ -205,15 +204,13 @@
 }
 
 .soct-fixed-cta .cta-btn.line:hover {
-  transform: translateY(-2px) scale(1.15);
+  transform: translateY(-2px) scale(1.08);
   box-shadow: 0 16px 40px rgba(6, 199, 85, 0.5);
-  /* ホバー時に薄緑をハッキリさせるギミック追加 */
   background: linear-gradient(135deg, #00d95a 0%, #00b900 100%);
 }
 
 .soct-fixed-cta .cta-btn.line:active {
-  transform: translateY(1px) scale(1.08);
-  /* タップ時により濃い緑色に変化 */
+  transform: translateY(1px) scale(1.02);
   background: linear-gradient(135deg, #00a847 0%, #008f00 100%);
 }
 
@@ -246,9 +243,8 @@
   }
 
   .soct-fixed-cta .cta-btn.line:hover {
-    transform: translateY(-4px) scale(1.18);
+    transform: translateY(-4px) scale(1.12);
     box-shadow: 0 20px 50px rgba(6, 199, 85, 0.5);
-    /* PC版でもホバー時の色変化を追加 */
     background: linear-gradient(135deg, #00d95a 0%, #00b900 100%);
   }
 }

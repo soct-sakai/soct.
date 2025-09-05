@@ -178,8 +178,8 @@ export function HeroCarousel() {
                     </div>
 
                     {/* キラキラエフェクト */}
-                    <div className="absolute top-2 right-4 text-yellow-400 text-xl md:text-2xl animate-pulse">✨</div>
-                    <div className="absolute bottom-4 right-6 text-blue-400 text-lg md:text-xl animate-pulse">⭐</div>
+                    <div className="absolute top-2 right-4 text-orange-500 text-xl md:text-2xl animate-pulse">✨</div>
+                    <div className="absolute bottom-4 right-6 text-blue-600 text-lg md:text-xl animate-pulse">⭐</div>
                   </div>
                 </div>
               </div>
@@ -216,8 +216,8 @@ export function HeroCarousel() {
                     </div>
 
                     {/* キラキラエフェクト */}
-                    <div className="absolute top-2 right-4 text-yellow-400 text-xl md:text-2xl animate-pulse">✨</div>
-                    <div className="absolute bottom-4 right-6 text-blue-400 text-lg md:text-xl animate-pulse">⭐</div>
+                    <div className="absolute top-2 right-4 text-orange-500 text-xl md:text-2xl animate-pulse">✨</div>
+                    <div className="absolute bottom-4 right-6 text-blue-600 text-lg md:text-xl animate-pulse">⭐</div>
                   </div>
                 </div>
               </div>
@@ -225,7 +225,7 @@ export function HeroCarousel() {
 
             {index === 2 && (
               <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 px-4">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 md:p-4 shadow-xl text-center max-w-xs md:max-w-lg lg:max-w-2xl">
+                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 md:p-4 shadow-xl text-center max-w-sm md:max-w-2xl lg:max-w-4xl">
                   <a
                     href="#package-plans"
                     className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 md:px-4 md:py-3 rounded-xl shadow-lg mb-2 md:mb-3 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
@@ -242,8 +242,6 @@ export function HeroCarousel() {
                       <span>があなたの暮らしを</span>
                       <span className="font-bold text-blue-600">素敵にメイク</span>
                       <span>する。</span>
-                    </div>
-                    <div className="flex flex-wrap justify-center items-center gap-1 text-center mt-1">
                       <span className="text-blue-600 font-black">壁掛けテレビ専門店</span>
                       <span>だから、プロの技術で</span>
                       <span className="text-blue-600 font-black">安心・安全</span>
@@ -254,8 +252,7 @@ export function HeroCarousel() {
                     </div>
                   </div>
 
-                  {/* キャンペーンバナー */}
-                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 md:px-3 md:py-2 rounded-full shadow-lg animate-pulse">
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 md:px-3 md:py-2 rounded-full shadow-lg animate-pulse mt-2">
                     <div className="flex items-center justify-center gap-1 md:gap-2">
                       <div className="w-4 h-4 md:w-6 md:h-6 relative flex-shrink-0">
                         <Image
@@ -268,7 +265,7 @@ export function HeroCarousel() {
                         />
                       </div>
                       <div className="text-center">
-                        <div className="text-xs md:text-sm font-black">
+                        <div className="text-xs md:text-sm font-black leading-tight">
                           🎁
                           9月中に成約のお客様にスティック型SSD1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
                         </div>
