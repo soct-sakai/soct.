@@ -130,7 +130,6 @@ export function HeroCarousel() {
                     <div className="text-gray-800 font-medium leading-relaxed">
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
                         <span className="font-bold text-blue-600">あなたの事をおしえてください</span>
-                        <span className="font-semibold">あなたの大切なご家族の事やテレビの視聴スタイルは？</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-base md:text-lg lg:text-xl">
@@ -144,12 +143,6 @@ export function HeroCarousel() {
                         <span className="font-semibold text-blue-600">壁掛けテレビによってもたらされる</span>
                         <span className="font-bold text-blue-600">「変化した日常」</span>
                         <span className="font-semibold">という新しい物語なんだ。</span>
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
-                        <span className="font-semibold">あなたの</span>
-                        <span className="text-blue-600 font-bold">『好き』</span>
-                        <span className="font-semibold">をもっと家族に伝えたいと思いませんか？</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
@@ -166,6 +159,12 @@ export function HeroCarousel() {
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
                         <span className="font-medium">親子の共通の話題をくれることを。</span>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
+                        <span className="font-semibold">あなたの</span>
+                        <span className="text-blue-600 font-bold">『好き』</span>
+                        <span className="font-semibold">をもっと家族に伝えたいと思いませんか？</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 text-base md:text-lg lg:text-xl">
