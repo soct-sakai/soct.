@@ -69,27 +69,25 @@ const regions = [
 
 export function IntroductionSection() {
   return (
-    <section className="py-16 relative text-gray-800 bg-gray-50">
-      {/* 格子状背景パターン */}
-      <div className="absolute inset-0 z-0">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" className="opacity-20">
-          <defs>
-            <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#94a3b8" strokeWidth="1" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#grid-pattern)" />
-        </svg>
-      </div>
-
+    <section
+      className="py-16 relative text-gray-800 bg-gray-50"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231230_114455.jpg-nQHtjXGIDqv0LammOZXMmXwcxdD8CD.jpeg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
       {/* メインコンテンツ */}
       <div className="container px-4 md:px-6 relative z-10">
         {/* メインコピー */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-blue-800">
-            🏡 壁掛けテレビ × リフォーム × スマートホーム 🌟
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
+            🏡 壁掛けテレビ × リフォーム × エコカラット × おしゃれな高級感 🌟
           </h2>
-          <p className="text-xl md:text-2xl mb-4 text-blue-700">✨ 見慣れたお部屋が、まるでラグジュアリー空間に！ ✨</p>
+          <p className="text-xl md:text-2xl mb-4 text-white drop-shadow-lg">
+            ✨ 見慣れたお部屋が、まるでラグジュアリー空間に！ ✨
+          </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             <div className="w-24 h-24 md:w-32 md:h-32 relative rounded-lg overflow-hidden shadow-lg">
               <Image

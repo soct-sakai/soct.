@@ -61,12 +61,11 @@ export function HeroUnified() {
               boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
             }}
           >
-            {/* Authority badge with luxury styling */}
             <div
               className="inline-block px-6 py-2 rounded-full text-sm font-semibold mb-6"
               style={{
-                background: "linear-gradient(45deg, #f39c12, #e67e22)",
-                color: "white",
+                backgroundColor: "#e67e22 !important",
+                color: "white !important",
               }}
             >
               『クローズアップ愛知』で特集された
@@ -89,12 +88,13 @@ export function HeroUnified() {
               プロの専門技術で安心・安全な壁掛け施工を実現
             </p>
 
-            {/* Luxury CTA button */}
             <button
-              className="w-full max-w-md px-10 py-5 rounded-full text-lg font-bold text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+              className="w-full max-w-md px-10 py-5 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
               style={{
-                background: "linear-gradient(45deg, #27ae60, #2ecc71)",
+                backgroundColor: "#27ae60 !important",
+                color: "white !important",
                 boxShadow: "0 10px 25px rgba(39,174,96,0.3)",
+                border: "none",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.boxShadow = "0 15px 35px rgba(39,174,96,0.4)"
@@ -190,7 +190,7 @@ export function HeroUnified() {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC008.jpg-fVu0fVvFSnQi9n9H8ieiRdU4YhzizR.jpeg"
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231230_114455.jpg-nQHtjXGIDqv0LammOZXMmXwcxdD8CD.jpeg"
             alt="完成した壁掛けテレビ設置例"
             fill
             className="object-cover"
@@ -293,6 +293,7 @@ export function HeroUnified() {
                 style={{
                   background: "linear-gradient(45deg, #27ae60, #2ecc71)",
                   boxShadow: "0 10px 25px rgba(39,174,96,0.3)",
+                  border: "none",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.boxShadow = "0 15px 35px rgba(39,174,96,0.4)"
