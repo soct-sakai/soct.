@@ -82,7 +82,9 @@ export function LargeTVSpecialistSection() {
               </div>
               <h3 className="text-xl font-bold text-green-700 mb-3">一発で完璧仕上がり</h3>
               <ul className="text-sm text-green-600 space-y-2 text-left">
-                <li>• 98インチ・100インチまで対応</li>
+                <li>• 専門店ならではの、知識量と適切な知見</li>
+                <li>• 75インチ、85インチの大型テレビ対応</li>
+                <li>• 98インチ、100インチ超えの超大型高級モデルも対応</li>
                 <li>• 壁内隠蔽配線で美しい仕上がり</li>
                 <li>• エコカラット・タイル壁OK</li>
                 <li>• 3年保証+地震落下保証</li>
