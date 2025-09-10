@@ -123,16 +123,16 @@ export function SNSChallengeSection() {
               <br />
               美しい成功例として残しませんか？
             </p>
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white px-8 py-3"
+            <button
+              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 py-3 shadow-lg"
               style={{
-                background: "linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68))",
-                color: "white",
+                backgroundColor: "#ec4899",
+                color: "#000000",
+                border: "none",
               }}
             >
               #ソクトノカベカケチャレンジ に参加する
-            </Button>
+            </button>
           </div>
         </div>
       </div>
