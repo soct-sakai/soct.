@@ -222,6 +222,18 @@ export function ContactForm() {
           </p>
         </div>
       </form>
+
+      <div className="mt-8 text-center">
+        <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6 rounded-2xl shadow-2xl animate-pulse max-w-2xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="text-3xl">🎁</div>
+            <div className="text-2xl font-black text-white">9月中に成約のお客様にスティック型SSD1TBプレゼント！</div>
+          </div>
+          <div className="text-lg font-bold leading-tight text-white">
+            録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

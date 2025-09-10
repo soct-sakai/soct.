@@ -187,14 +187,25 @@ export function HeroUnified() {
                 <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
                   料金例
                 </h3>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-lg font-medium" style={{ color: "#34495e" }}>
-                    75インチ大型テレビ壁掛け工事
-                  </span>
-                  <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
-                    88,000円〜
-                  </span>
-                  <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      75インチを壁掛けテレビ取付設置と金具のセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      88,000円〜
+                    </span>
+                    <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      隠ぺい配線工事とのセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      121,000円
+                    </span>
+                    <span className="text-sm text-gray-600">※配線を美しく隠します</span>
+                  </div>
                 </div>
               </div>
 
@@ -320,14 +331,25 @@ export function HeroUnified() {
                 <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
                   料金例
                 </h3>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-lg font-medium" style={{ color: "#34495e" }}>
-                    75インチ大型テレビ壁掛け工事
-                  </span>
-                  <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
-                    88,000円〜
-                  </span>
-                  <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      75インチを壁掛けテレビ取付設置と金具のセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      88,000円〜
+                    </span>
+                    <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      隠ぺい配線工事とのセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      121,000円
+                    </span>
+                    <span className="text-sm text-gray-600">※配線を美しく隠します</span>
+                  </div>
                 </div>
               </div>
 
@@ -503,14 +525,25 @@ export function HeroUnified() {
                 <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
                   料金例
                 </h3>
-                <div className="flex flex-col items-center gap-2">
-                  <span className="text-lg font-medium" style={{ color: "#34495e" }}>
-                    75インチ大型テレビ壁掛け工事
-                  </span>
-                  <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
-                    88,000円〜
-                  </span>
-                  <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      75インチを壁掛けテレビ取付設置と金具のセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      88,000円〜
+                    </span>
+                    <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      隠ぺい配線工事とのセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      121,000円
+                    </span>
+                    <span className="text-sm text-gray-600">※配線を美しく隠します</span>
+                  </div>
                 </div>
               </div>
 
