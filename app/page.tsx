@@ -249,7 +249,7 @@ export default function Page() {
                     { size: "41-49インチ", price: "44,000円" },
                     { size: "50-59インチ", price: "55,000円" },
                     { size: "60-69インチ", price: "66,000円" },
-                    { size: "70-79インチ", price: "77,000円" },
+                    { size: "70-79インチ", price: "88,000円" },
                     { size: "80-89インチ", price: "110,000円" },
                     { size: "90-99インチ", price: "165,000円" },
                     { size: "100インチ以上", price: "応相談" },
