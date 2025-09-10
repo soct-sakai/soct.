@@ -110,53 +110,59 @@ export function HeroCarousel() {
             )}
 
             {index === 0 && (
-              <div className="absolute top-8 left-0 right-0 flex justify-center px-4 z-10">
-                {/* Authority Badge and Main Headline */}
-                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-2xl border border-white/30 max-w-4xl text-center">
-                  {/* Authority Badge */}
-                  <div className="flex items-center justify-center gap-2 mb-4">
-                    <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">TV出演</div>
-                    <span className="text-lg font-bold text-gray-800">『クローズアップ愛知』で特集された</span>
-                  </div>
-
-                  {/* Main Headline */}
-                  <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-navy-900 mb-4 leading-tight">
-                    名古屋の大型テレビ壁掛け専門店
-                  </h1>
-
-                  {/* Key Features */}
-                  <div className="flex flex-wrap justify-center gap-3 mb-6">
-                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full font-bold text-lg">
-                      【65インチ以上専門】
+              <>
+                <div className="absolute top-1/2 left-8 transform -translate-y-1/2 z-10 max-w-lg">
+                  <div className="bg-gray-900/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-gray-700/30">
+                    {/* Authority Badge */}
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">ハートFM主催</div>
+                      <span className="text-lg font-bold text-white">『クローズアップ愛知』ノミネート！</span>
                     </div>
-                    <div className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-full font-bold">
-                      【新築・エコカラット対応】
-                    </div>
-                    <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-2 rounded-full font-bold">
-                      【3年+地震W保証】
-                    </div>
-                  </div>
 
-                  {/* Service Areas */}
-                  <div className="text-gray-700 text-sm md:text-base mb-4">
-                    <span className="font-semibold">対応エリア：</span>
-                    <span>名古屋市・愛知県・三重県・岐阜県</span>
-                    <br />
-                    <span className="text-xs">日進市・長久手市・一宮市・豊田市・岡崎市・刈谷市・春日井市</span>
-                  </div>
+                    {/* Main Headline */}
+                    <h1 className="text-3xl font-black text-white mb-4 leading-tight">
+                      名古屋の壁掛けテレビ専門店
+                      <br />
+                      ソクトノカベカケ
+                    </h1>
 
-                  {/* CTA Button */}
-                  <a
-                    href="#contact-form"
-                    className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-                  >
-                    🎯 無料相談はLINEで30秒
-                  </a>
+                    <div className="text-lg font-bold text-gray-200 mb-4">
+                      高価な有機ELや75インチ85インチの大型テレビなら速人へお任せください！
+                    </div>
+
+                    <a
+                      href="#contact-form"
+                      className="inline-block px-6 py-3 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                    >
+                      🎯 無料相談はLINEで30秒
+                    </a>
+                  </div>
                 </div>
-              </div>
+
+                <div className="absolute bottom-8 right-8 z-10">
+                  <div className="bg-gradient-to-r from-red-500 to-orange-500 p-4 rounded-2xl shadow-2xl animate-pulse max-w-sm">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-8 h-8 relative flex-shrink-0">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27476792_3.jpg-T8VJ0izYeHpAb4bIP1zkCXKGrSO5Yy.jpeg"
+                          alt="スティック型SSD 1TB"
+                          fill
+                          className="object-contain"
+                          loading="lazy"
+                          sizes="32px"
+                        />
+                      </div>
+                      <div className="text-xl font-black text-white">🎁 特別プレゼント</div>
+                    </div>
+                    <div className="text-sm font-bold leading-tight text-white">
+                      9月中に成約のお客様にスティック型SSD1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
+                    </div>
+                  </div>
+                </div>
+              </>
             )}
 
-            {index === 0 && (
+            {index === 1 && (
               <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4 z-10">
                 <div className="flex items-end gap-4 max-w-5xl">
                   <div className="flex-shrink-0 mb-4">
@@ -224,7 +230,7 @@ export function HeroCarousel() {
               </div>
             )}
 
-            {index === 1 && (
+            {index === 2 && (
               <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4 z-10">
                 <div className="flex items-end gap-4 max-w-5xl">
                   <div className="flex-shrink-0 mb-4">
@@ -259,58 +265,16 @@ export function HeroCarousel() {
                     <div className="absolute bottom-4 right-6 text-blue-600 text-lg md:text-xl animate-pulse">⭐</div>
                   </div>
                 </div>
-              </div>
-            )}
 
-            {index === 2 && (
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 px-4">
-                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-3 md:p-4 shadow-xl text-center max-w-sm md:max-w-2xl lg:max-w-4xl">
+                {/* 料金プランへのCTAボタンを追加 */}
+                <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2">
                   <a
                     href="#package-plans"
-                    className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 md:px-4 md:py-3 rounded-xl shadow-lg mb-2 md:mb-3 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                    className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-4 rounded-xl shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
-                    <div className="text-xs md:text-base lg:text-lg font-black">
-                      🎯 75インチ大型テレビ壁掛け工事なら77,000円！
-                    </div>
-                    <div className="text-xs md:text-sm mt-1">65インチ以上専門だから安心の技術力</div>
+                    <div className="text-lg font-black text-center">🎯 75インチ大型テレビ壁掛け工事なら77,000円！</div>
+                    <div className="text-sm mt-1 text-center">65インチ以上専門だから安心の技術力</div>
                   </a>
-
-                  <div className="text-gray-800 text-xs md:text-sm font-bold leading-tight mt-3">
-                    <div className="flex flex-wrap justify-center items-center gap-1 text-center">
-                      <span className="text-blue-600">ソクトノカベカケ</span>
-                      <span>は</span>
-                      <span className="font-bold text-blue-600">大型テレビ壁掛け専門店</span>
-                      <span>として</span>
-                      <span className="text-blue-600 font-black">最大1億円の損害保険完備</span>
-                      <span>で</span>
-                      <span className="text-blue-600 font-black">安心・安全</span>
-                      <span>！</span>
-                    </div>
-                    <div className="text-blue-600 font-semibold text-xs mt-1">
-                      高価な有機ELテレビも安心してお任せください♪
-                    </div>
-                  </div>
-
-                  <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 md:px-3 md:py-2 rounded-full shadow-lg animate-pulse mt-2">
-                    <div className="flex items-center justify-center gap-1 md:gap-2">
-                      <div className="w-4 h-4 md:w-6 md:h-6 relative flex-shrink-0">
-                        <Image
-                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/27476792_3.jpg-T8VJ0izYeHpAb4bIP1zkCXKGrSO5Yy.jpeg"
-                          alt="スティック型SSD 1TB"
-                          fill
-                          className="object-contain"
-                          loading="lazy"
-                          sizes="(max-width: 768px) 16px, 24px"
-                        />
-                      </div>
-                      <div className="text-center">
-                        <div className="text-xs md:text-sm font-black leading-tight">
-                          🎁
-                          9月中に成約のお客様にスティック型SSD1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             )}
