@@ -44,61 +44,82 @@ export function HeroUnified() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-white/30"></div>
+          <div
+            className="absolute inset-0"
+            style={{
+              background: "linear-gradient(135deg, rgba(44,62,80,0.8), rgba(52,73,94,0.8))",
+            }}
+          ></div>
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <div className="max-w-4xl w-full text-center">
-            {/* Authority badge */}
-            <div className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full text-sm font-bold mb-8 shadow-lg">
-              <span>『クローズアップ愛知』で特集された</span>
+          <div
+            className="max-w-2xl w-full text-center rounded-3xl p-12 shadow-2xl"
+            style={{
+              background: "rgba(255,255,255,0.95)",
+              backdropFilter: "blur(10px)",
+              boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
+            }}
+          >
+            {/* Authority badge with luxury styling */}
+            <div
+              className="inline-block px-6 py-2 rounded-full text-sm font-semibold mb-6"
+              style={{
+                background: "linear-gradient(45deg, #f39c12, #e67e22)",
+                color: "white",
+              }}
+            >
+              『クローズアップ愛知』で特集された
             </div>
 
-            {/* Main headline */}
-            <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+            {/* Main headline with luxury typography */}
+            <h1 className="text-4xl md:text-5xl font-black mb-4 leading-tight" style={{ color: "#2c3e50" }}>
               名古屋の大型テレビ
               <br />
-              <span className="text-5xl md:text-7xl" style={{ color: "#2C3E50" }}>
-                壁掛け専門店
-              </span>
+              壁掛け専門店
             </h1>
 
-            <div className="text-2xl md:text-3xl font-bold mb-8" style={{ color: "#F39C12" }}>
+            <div className="text-3xl md:text-4xl font-bold mb-6" style={{ color: "#f39c12" }}>
               ソクトノカベカケ
             </div>
 
-            <p className="text-xl md:text-2xl font-bold mb-4" style={{ color: "#2C3E50" }}>
-              高価な有機ELや<span className="text-red-600">75インチ・85インチ</span>の大型テレビなら
+            <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ color: "#34495e" }}>
+              高価な有機ELや75インチ・85インチの大型テレビなら
+              <br />
+              プロの専門技術で安心・安全な壁掛け施工を実現
             </p>
-            <p className="text-lg md:text-xl text-gray-700 mb-12">プロの専門技術で安心・安全な壁掛け施工を実現</p>
 
-            <a
-              href="#contact-form"
-              className="inline-block text-white font-bold text-xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
+            {/* Luxury CTA button */}
+            <button
+              className="w-full max-w-md px-10 py-5 rounded-full text-lg font-bold text-white transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
               style={{
-                background: "linear-gradient(135deg, #F39C12, #E67E22)",
+                background: "linear-gradient(45deg, #27ae60, #2ecc71)",
+                boxShadow: "0 10px 25px rgba(39,174,96,0.3)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 15px 35px rgba(39,174,96,0.4)"
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 10px 25px rgba(39,174,96,0.3)"
               }}
             >
               🎯 無料相談はLINEで30秒
-            </a>
+            </button>
           </div>
         </div>
+      </div>
 
-        {/* Gift promotion - positioned elegantly */}
-        <div className="absolute bottom-8 right-8 max-w-sm">
-          <div
-            className="text-white rounded-3xl p-6 shadow-2xl"
-            style={{ background: "linear-gradient(135deg, #E74C3C, #C0392B)" }}
-          >
-            <div className="flex items-center gap-3 mb-3">
-              <div className="text-2xl">🎁</div>
-              <div className="text-xl font-bold">特別プレゼント</div>
-            </div>
-            <div className="text-sm font-medium leading-relaxed">
-              9月中に成約のお客様にスティック型SSD1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
-            </div>
-          </div>
-        </div>
+      {/* Section divider */}
+      <div
+        className="h-24 relative"
+        style={{
+          background: "linear-gradient(to right, transparent, #ecf0f1, transparent)",
+        }}
+      >
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 rounded-full"
+          style={{ background: "#f39c12" }}
+        ></div>
       </div>
 
       <div className="relative h-screen">
@@ -110,63 +131,60 @@ export function HeroUnified() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
         <div className="relative z-10 h-full flex items-center px-4">
           <div className="max-w-6xl mx-auto w-full">
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl max-w-4xl">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 relative">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%94%BB%E5%83%8F%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B33.jpg-or8TyykVK3wZLWNqi6vodl7mC8gVmq.jpeg"
-                      alt="ソクトちゃん"
-                      fill
-                      className="object-cover rounded-full"
-                      style={{ border: "4px solid #F39C12" }}
-                      sizes="96px"
-                    />
-                  </div>
-                </div>
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl max-w-4xl"
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-black mb-8" style={{ color: "#2c3e50" }}>
+                大型テレビの壁掛けで失敗したくないあなたへ
+              </h2>
 
-                <div className="flex-1">
-                  <h2 className="text-2xl md:text-3xl font-black mb-6" style={{ color: "#2C3E50" }}>
-                    大型テレビの壁掛けで失敗したくないあなたへ
-                  </h2>
+              <div className="rounded-2xl p-8 mb-8" style={{ background: "linear-gradient(135deg, #f8f9fa, #ffffff)" }}>
+                <p className="text-xl md:text-2xl font-bold mb-6" style={{ color: "#2c3e50" }}>
+                  65インチ以上の大型テレビは重量50kg超
+                  <br />
+                  <span className="text-red-600">専門技術が必要です</span>
+                </p>
 
-                  <div className="bg-gray-50 rounded-2xl p-6 mb-6">
-                    <p className="text-xl md:text-2xl font-bold mb-4" style={{ color: "#2C3E50" }}>
-                      65インチ以上の大型テレビは重量50kg超
-                      <br />
-                      <span className="text-red-600">専門技術が必要です</span>
-                    </p>
-
-                    <div className="space-y-3 mb-6">
-                      <p className="text-red-600 font-bold flex items-center gap-3 text-lg">
-                        <span className="text-2xl">❌</span>
-                        <span>DIYで失敗 → 壁に複数の穴、修復費用10万円</span>
-                      </p>
-                      <p className="text-red-600 font-bold flex items-center gap-3 text-lg">
-                        <span className="text-2xl">❌</span>
-                        <span>一般業者 → 経験不足で傾き、やり直し費用</span>
-                      </p>
-                      <p className="font-bold flex items-center gap-3 text-lg" style={{ color: "#27AE60" }}>
-                        <span className="text-2xl">⭕</span>
-                        <span>ソクト専門技術 → 一発で完璧、美しい仕上がり</span>
-                      </p>
-                    </div>
-
-                    <p className="text-xl font-bold mb-2" style={{ color: "#2C3E50" }}>
-                      75インチ・85インチ・98インチ・100インチまで対応
-                    </p>
-                    <p className="text-gray-600">新築戸建ての配線計画もお任せ！</p>
-                  </div>
+                <div className="space-y-4 mb-6">
+                  <p className="text-red-600 font-bold flex items-center gap-3 text-lg">
+                    <span className="text-2xl">❌</span>
+                    <span>DIYで失敗 → 壁に複数の穴、修復費用10万円</span>
+                  </p>
+                  <p className="text-red-600 font-bold flex items-center gap-3 text-lg">
+                    <span className="text-2xl">❌</span>
+                    <span>一般業者 → 経験不足で傾き、やり直し費用</span>
+                  </p>
+                  <p className="font-bold flex items-center gap-3 text-lg" style={{ color: "#27ae60" }}>
+                    <span className="text-2xl">⭕</span>
+                    <span>ソクト専門技術 → 一発で完璧、美しい仕上がり</span>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Section divider */}
+      <div
+        className="h-24 relative"
+        style={{
+          background: "linear-gradient(to right, transparent, #ecf0f1, transparent)",
+        }}
+      >
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 rounded-full"
+          style={{ background: "#f39c12" }}
+        ></div>
       </div>
 
       <div className="relative h-screen">
@@ -178,45 +196,45 @@ export function HeroUnified() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
           <div className="max-w-5xl w-full">
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
-              <h2 className="text-3xl md:text-4xl font-black text-center mb-8" style={{ color: "#2C3E50" }}>
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl"
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-black text-center mb-8" style={{ color: "#2c3e50" }}>
                 お客様の声が続々と届いています
               </h2>
 
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div className="w-20 h-20 relative">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC%E7%94%BB%E5%83%8F.png.jpg-enOiZlZet2SX5ivBU3UH8VykSXN5nv.jpeg"
-                      alt="壁掛け作業員"
-                      fill
-                      className="object-cover rounded-full"
-                      style={{ border: "3px solid #2C3E50" }}
-                      sizes="80px"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex-1">
-                  <div className="bg-gray-50 rounded-2xl p-6 min-h-[120px] flex items-center">
-                    <div className="text-gray-800 leading-relaxed">
-                      {showComment && (
-                        <p className="text-lg font-medium animate-fade-in-out">
-                          {streamingComments[currentCommentIndex]}
-                        </p>
-                      )}
-                    </div>
-                  </div>
+              <div className="bg-gray-50 rounded-2xl p-6 min-h-[120px] flex items-center">
+                <div className="text-gray-800 leading-relaxed w-full text-center">
+                  {showComment && (
+                    <p className="text-lg font-medium animate-fade-in-out">{streamingComments[currentCommentIndex]}</p>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Section divider */}
+      <div
+        className="h-24 relative"
+        style={{
+          background: "linear-gradient(to right, transparent, #ecf0f1, transparent)",
+        }}
+      >
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 rounded-full"
+          style={{ background: "#f39c12" }}
+        ></div>
       </div>
 
       <div className="relative h-screen">
@@ -228,44 +246,74 @@ export function HeroUnified() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
           <div className="text-center max-w-4xl">
-            <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl mb-8">
-              <h2 className="text-3xl md:text-4xl font-black mb-6" style={{ color: "#2C3E50" }}>
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl mb-8"
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-black mb-6" style={{ color: "#2c3e50" }}>
                 プロの仕上がりをご覧ください
               </h2>
-              <p className="text-xl text-gray-700 leading-relaxed">
+
+              {/* Elegant pricing section */}
+              <div className="rounded-2xl p-8 mb-8" style={{ background: "linear-gradient(135deg, #f8f9fa, #ffffff)" }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
+                  料金例
+                </h3>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                    75インチ大型テレビ壁掛け工事
+                  </span>
+                  <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                    77,000円〜
+                  </span>
+                  <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                </div>
+              </div>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
                 配線も美しく隠し、まるで最初からそこにあったかのような自然な仕上がり。
                 <br />
                 これが
-                <span className="font-bold" style={{ color: "#F39C12" }}>
+                <span className="font-bold" style={{ color: "#f39c12" }}>
                   ソクトの専門技術
                 </span>
                 です。
               </p>
-            </div>
 
-            <a
-              href="#package-plans"
-              className="inline-block text-white px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105"
-              style={{
-                background: "linear-gradient(135deg, #2C3E50, #34495E)",
-              }}
-            >
-              <div className="text-2xl md:text-3xl font-black mb-2">🎯 75インチ大型テレビ壁掛け工事なら77,000円！</div>
-              <div className="text-lg md:text-xl font-bold">65インチ以上専門だから安心の技術力</div>
-              <div className="text-sm mt-2 opacity-90">まずは無料相談でお気軽にご相談ください</div>
-            </a>
+              <button
+                className="px-12 py-6 rounded-full text-white text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                style={{
+                  background: "linear-gradient(45deg, #27ae60, #2ecc71)",
+                  boxShadow: "0 10px 25px rgba(39,174,96,0.3)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(39,174,96,0.4)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(39,174,96,0.3)"
+                }}
+              >
+                まずは無料相談でお気軽にご相談ください
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <ChevronDown className="h-10 w-10 text-white bg-black/20 rounded-full p-2 shadow-lg" />
+        <ChevronDown
+          className="h-10 w-10 text-white rounded-full p-2 shadow-lg"
+          style={{ background: "rgba(0,0,0,0.2)" }}
+        />
       </div>
     </div>
   )
