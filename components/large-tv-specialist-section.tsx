@@ -10,9 +10,25 @@ export function LargeTVSpecialistSection() {
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">なぜ大型テレビは専門業者が必要なのか</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            65インチ以上の大型テレビは重量50kg超。壁の下地を正確に見つけなければ落下の危険があります。
-          </p>
+
+          <div className="flex items-center justify-center mb-6">
+            <div className="relative">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E7%94%BB%E5%83%8F%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B31.jpg-9vMaAZ3aNdFnO83D7MNKqFPbrcIiAE.jpeg"
+                alt="キャラクターアイコン"
+                className="w-20 h-20 rounded-full border-4 border-blue-300 shadow-lg"
+              />
+              <div className="absolute -right-4 -top-2 bg-white rounded-full p-2 shadow-lg border-2 border-blue-200">
+                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+              </div>
+            </div>
+            <div className="ml-6 bg-white rounded-2xl p-4 shadow-lg border-2 border-blue-200 relative max-w-2xl">
+              <div className="absolute -left-3 top-6 w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-white"></div>
+              <p className="text-lg text-gray-700">
+                それは65インチ以上の大型テレビとスイングモーション式金具との総重量は50kg超。壁の下地を正確に見つけなければ落下の危険があります。テレビを付けたい位置と下地がある場所が必ずしも一致するとは限りません。
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -47,7 +63,8 @@ export function LargeTVSpecialistSection() {
               </div>
               <h3 className="text-xl font-bold text-orange-700 mb-3">経験不足で傾き</h3>
               <ul className="text-sm text-orange-600 space-y-2 text-left">
-                <li>• 85インチの重量に対応できず</li>
+                <li>• 経験不足で傾き</li>
+                <li>• 有機ELテレビと金具の重量に対応できず</li>
                 <li>• 配線が見えて美しくない</li>
                 <li>• コンクリート壁で断られた</li>
                 <li>• やり直し費用が発生</li>
@@ -73,34 +90,6 @@ export function LargeTVSpecialistSection() {
               </ul>
             </CardContent>
           </Card>
-        </div>
-
-        {/* 対応サイズ・エリア */}
-        <div className="mt-12 text-center">
-          <div className="bg-white rounded-2xl p-6 shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-navy-900 mb-4">対応サイズ・エリア</h3>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-blue-600">対応テレビサイズ</h4>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {["55インチ", "65インチ", "75インチ", "85インチ", "98インチ", "100インチ"].map((size) => (
-                    <Badge key={size} variant="outline" className="text-sm">
-                      {size}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="font-bold text-lg mb-2 text-blue-600">対応エリア</h4>
-                <div className="text-sm text-gray-600">
-                  <p>
-                    <strong>名古屋市・愛知県・三重県・岐阜県</strong>
-                  </p>
-                  <p className="text-xs mt-1">日進市・長久手市・一宮市・豊田市・岡崎市・刈谷市・春日井市</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
