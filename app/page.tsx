@@ -1,7 +1,7 @@
 "use client"
 
 import { SiteHeader } from "@/components/site-header"
-import { HeroCarousel } from "@/components/hero-carousel"
+import { HeroUnified } from "@/components/hero-unified"
 import { LargeTVSpecialistSection } from "@/components/large-tv-specialist-section"
 import { SNSChallengeSection } from "@/components/sns-challenge-section"
 import { PasonaLaw } from "@/components/pasona-law"
@@ -99,7 +99,7 @@ export default function Page() {
       <SiteHeader />
       <main>
         <section id="hero">
-          <HeroCarousel />
+          <HeroUnified />
         </section>
 
         <LargeTVSpecialistSection />
