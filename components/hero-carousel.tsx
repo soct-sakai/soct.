@@ -106,6 +106,57 @@ export function HeroCarousel() {
             />
 
             {index === 0 && (
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 z-5"></div>
+            )}
+
+            {index === 0 && (
+              <div className="absolute top-8 left-0 right-0 flex justify-center px-4 z-10">
+                {/* Authority Badge and Main Headline */}
+                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-2xl border border-white/30 max-w-4xl text-center">
+                  {/* Authority Badge */}
+                  <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">TV出演</div>
+                    <span className="text-lg font-bold text-gray-800">『クローズアップ愛知』で特集された</span>
+                  </div>
+
+                  {/* Main Headline */}
+                  <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-navy-900 mb-4 leading-tight">
+                    名古屋の大型テレビ壁掛け専門店
+                  </h1>
+
+                  {/* Key Features */}
+                  <div className="flex flex-wrap justify-center gap-3 mb-6">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2 rounded-full font-bold text-lg">
+                      【65インチ以上専門】
+                    </div>
+                    <div className="bg-gradient-to-r from-green-600 to-green-700 text-white px-4 py-2 rounded-full font-bold">
+                      【新築・エコカラット対応】
+                    </div>
+                    <div className="bg-gradient-to-r from-amber-500 to-amber-600 text-white px-4 py-2 rounded-full font-bold">
+                      【3年+地震W保証】
+                    </div>
+                  </div>
+
+                  {/* Service Areas */}
+                  <div className="text-gray-700 text-sm md:text-base mb-4">
+                    <span className="font-semibold">対応エリア：</span>
+                    <span>名古屋市・愛知県・三重県・岐阜県</span>
+                    <br />
+                    <span className="text-xs">日進市・長久手市・一宮市・豊田市・岡崎市・刈谷市・春日井市</span>
+                  </div>
+
+                  {/* CTA Button */}
+                  <a
+                    href="#contact-form"
+                    className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                  >
+                    🎯 無料相談はLINEで30秒
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {index === 0 && (
               <div className="absolute bottom-8 left-0 right-0 flex items-end justify-center px-4 z-10">
                 <div className="flex items-end gap-4 max-w-5xl">
                   <div className="flex-shrink-0 mb-4">
@@ -129,51 +180,39 @@ export function HeroCarousel() {
 
                     <div className="text-gray-800 font-medium leading-relaxed">
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
-                        <span className="font-bold text-blue-600">あなたの事をおしえてください</span>
+                        <span className="font-bold text-blue-600">大型テレビの壁掛けで失敗したくないあなたへ</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-base md:text-lg lg:text-xl">
                         <span className="font-bold animate-pulse text-blue-600">
-                          テレビは壁掛けになって、あの頃みたいに家族の
+                          65インチ以上の大型テレビは重量50kg超
                         </span>
-                        <span className="font-bold animate-pulse text-blue-600">「笑顔の真ん中」へ。</span>
+                        <span className="font-bold animate-pulse text-blue-600">専門技術が必要です</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
-                        <span className="font-semibold text-blue-600">壁掛けテレビによってもたらされる</span>
-                        <span className="font-bold text-blue-600">「変化した日常」</span>
-                        <span className="font-semibold">という新しい物語なんだ。</span>
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
-                        <span className="font-medium">私たち</span>
-                        <span className="font-bold text-blue-600">ソクトノカベカケ</span>
-                        <span className="font-medium">は知っています。</span>
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
-                        <span className="font-medium">
-                          壁掛けテレビによって、共有した時間が夫婦の穏やかな時間を作り、
-                        </span>
-                      </div>
-
-                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
-                        <span className="font-medium">親子の共通の話題をくれることを。</span>
+                        <span className="font-semibold text-red-600">❌ DIYで失敗 → 壁に複数の穴、修復費用10万円</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
-                        <span className="font-semibold">あなたの</span>
-                        <span className="text-blue-600 font-bold">『好き』</span>
-                        <span className="font-semibold">をもっと家族に伝えたいと思いませんか？</span>
+                        <span className="font-semibold text-red-600">❌ 一般業者 → 経験不足で傾き、やり直し費用</span>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base">
+                        <span className="font-bold text-green-600">⭕ ソクト専門技術 → 一発で完璧、美しい仕上がり</span>
+                      </div>
+
+                      <div className="flex flex-wrap items-center gap-1 mb-3 text-sm md:text-base lg:text-lg">
+                        <span className="font-semibold">エコカラットやコンクリート壁で</span>
+                        <span className="text-red-600 font-bold">断られた</span>
+                        <span className="font-semibold">方もお任せください</span>
                       </div>
 
                       <div className="flex flex-wrap items-center gap-1 text-base md:text-lg lg:text-xl">
                         <span className="font-bold animate-pulse text-blue-600">
-                          さあ、リビングを家族みんなが「リラックスできるホッとする」
+                          75インチ・85インチ・98インチ・100インチまで対応
                         </span>
-                        <span className="font-bold animate-pulse text-blue-600">
-                          素敵で最高でもっと特別な場所にしませんか？
-                        </span>
+                        <span className="font-bold animate-pulse text-blue-600">新築戸建ての配線計画もお任せ！</span>
                       </div>
                     </div>
 
@@ -191,7 +230,7 @@ export function HeroCarousel() {
                   <div className="flex-shrink-0 mb-4">
                     <div className="w-32 h-32 md:w-40 md:h-40 relative">
                       <Image
-                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E7%94%BB%E5%83%8F.png.jpg-enOiZlZet2SX5ivBU3UH8VykSXN5nv.jpeg"
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC%E7%94%BB%E5%83%8F.png.jpg-enOiZlZet2SX5ivBU3UH8VykSXN5nv.jpeg"
                         alt="壁掛け作業員"
                         fill
                         className="object-cover rounded-full border-4 border-blue-500 shadow-lg"
@@ -231,24 +270,24 @@ export function HeroCarousel() {
                     className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 md:px-4 md:py-3 rounded-xl shadow-lg mb-2 md:mb-3 hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
                     <div className="text-xs md:text-base lg:text-lg font-black">
-                      🎯 65インチ施工なら金具セットで66,000円！
+                      🎯 75インチ大型テレビ壁掛け工事なら77,000円！
                     </div>
-                    <div className="text-xs md:text-sm mt-1">くわしくはプランをご確認ください！</div>
+                    <div className="text-xs md:text-sm mt-1">65インチ以上専門だから安心の技術力</div>
                   </a>
 
                   <div className="text-gray-800 text-xs md:text-sm font-bold leading-tight mt-3">
                     <div className="flex flex-wrap justify-center items-center gap-1 text-center">
                       <span className="text-blue-600">ソクトノカベカケ</span>
-                      <span>があなたの暮らしを</span>
-                      <span className="font-bold text-blue-600">素敵にメイク</span>
-                      <span>する。</span>
-                      <span className="text-blue-600 font-black">壁掛けテレビ専門店</span>
-                      <span>だから、プロの技術で</span>
+                      <span>は</span>
+                      <span className="font-bold text-blue-600">大型テレビ壁掛け専門店</span>
+                      <span>として</span>
+                      <span className="text-blue-600 font-black">最大1億円の損害保険完備</span>
+                      <span>で</span>
                       <span className="text-blue-600 font-black">安心・安全</span>
                       <span>！</span>
                     </div>
                     <div className="text-blue-600 font-semibold text-xs mt-1">
-                      公式LINEかお問い合わせから無料相談受付中♪
+                      高価な有機ELテレビも安心してお任せください♪
                     </div>
                   </div>
 

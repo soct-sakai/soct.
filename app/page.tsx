@@ -2,6 +2,8 @@
 
 import { SiteHeader } from "@/components/site-header"
 import { HeroCarousel } from "@/components/hero-carousel"
+import { LargeTVSpecialistSection } from "@/components/large-tv-specialist-section"
+import { SNSChallengeSection } from "@/components/sns-challenge-section"
 import { PasonaLaw } from "@/components/pasona-law"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { AccordionInstallationExamples } from "@/components/accordion-installation-examples"
@@ -99,6 +101,9 @@ export default function Page() {
         <section id="hero">
           <HeroCarousel />
         </section>
+
+        <LargeTVSpecialistSection />
+        <SNSChallengeSection />
 
         <section id="introduction">
           <IntroductionSection />
