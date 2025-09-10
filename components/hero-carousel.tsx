@@ -6,8 +6,8 @@ import { useEffect, useState } from "react"
 const heroImages = [
   {
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231230_114455.jpg-Jbm8YPoigbWexTBVGSad6Ae1IVVtwJ.jpeg",
-    alt: "壁掛けテレビ施工例1",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231104_190331.jpg-Dpbxoz9pYxZiKrVxgKLhshXzDRETcE.jpeg",
+    alt: "プロの技術者による壁掛けテレビ施工作業風景",
   },
   {
     image:
