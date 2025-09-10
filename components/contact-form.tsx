@@ -18,6 +18,7 @@ const packagePlans = [
   { id: "premium", label: "プレミアムプラン" },
   { id: "option", label: "オプションプラン" },
   { id: "consultation", label: "今回は相談" },
+  { id: "sns-challenge", label: "#ソクトノカベカケチャレンジ 参加希望" },
 ]
 
 export function ContactForm() {
@@ -33,11 +34,29 @@ export function ContactForm() {
   })
 
   const [isLoading, setIsLoading] = React.useState(false)
+  const [fromSNSChallenge, setFromSNSChallenge] = React.useState(false)
+
+  React.useEffect(() => {
+    const checkSNSChallenge = () => {
+      const urlParams = new URLSearchParams(window.location.search)
+      if (urlParams.get("from") === "sns-challenge" || window.location.hash === "#contact-form") {
+        setFromSNSChallenge(true)
+        setFormData((prev) => ({
+          ...prev,
+          packagePlan: ["sns-challenge"],
+          message: "#ソクトノカベカケチャレンジ に参加希望です。美しい壁掛けテレビ設置をお願いします。",
+        }))
+      }
+    }
+
+    checkSNSChallenge()
+    window.addEventListener("hashchange", checkSNSChallenge)
+    return () => window.removeEventListener("hashchange", checkSNSChallenge)
+  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // 基本的なバリデーション
     if (!formData.name || !formData.email || !formData.phone) {
       alert("必須項目を入力してください")
       return
@@ -59,7 +78,6 @@ export function ContactForm() {
 その他ご要望: ${formData.message || "なし"}
     `)
 
-    // メーラーを開く
     window.location.href = `mailto:kabekaketv@soct.jp.net?subject=${subject}&body=${body}`
 
     alert("メーラーが開きます。送信を完了してください。")
@@ -81,6 +99,16 @@ export function ContactForm() {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
         <p className="text-gray-600">壁掛けテレビの施工やご相談について、お気軽にお問い合わせください。</p>
+        {fromSNSChallenge && (
+          <div className="mt-4 p-4 bg-pink-50 border border-pink-200 rounded-lg animate-pulse">
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-2xl">✨</span>
+              <span className="text-pink-800 font-bold">
+                #ソクトノカベカケチャレンジ から来ていただきありがとうございます！
+              </span>
+            </div>
+          </div>
+        )}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -166,7 +194,6 @@ export function ContactForm() {
             </SelectContent>
           </Select>
 
-          {/* 注意書きを追加 */}
           <div className="mt-2 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
             <p className="text-sm text-yellow-800">
               <span className="font-semibold">⚠️ 重要なお知らせ</span>

@@ -1,8 +1,17 @@
 "use client"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
+import { ScrollLink } from "@/components/scroll-link"
+import { useState } from "react"
 
 export function SNSChallengeSection() {
+  const [showSuccess, setShowSuccess] = useState(false)
+
+  const handleChallengeClick = () => {
+    setShowSuccess(true)
+    setTimeout(() => setShowSuccess(false), 3000)
+  }
+
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container px-4 md:px-6">
@@ -33,23 +42,36 @@ export function SNSChallengeSection() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+        <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto relative">
+          {showSuccess && (
+            <div className="absolute inset-0 bg-green-500/90 rounded-2xl flex items-center justify-center z-10 animate-bounce">
+              <div className="text-center text-white">
+                <div className="text-4xl mb-2">✨</div>
+                <div className="text-2xl font-bold">これ反映されたよ！</div>
+                <div className="text-lg">お問い合わせフォームへ移動します</div>
+              </div>
+            </div>
+          )}
+
           <div className="text-center">
             <p className="text-lg font-semibold text-navy-900 mb-4">
               あなたの大型テレビも、DIYの失敗例ではなく
               <br />
               美しい成功例として残しませんか？
             </p>
-            <button
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 py-3 shadow-lg"
-              style={{
-                backgroundColor: "#ec4899",
-                color: "#000000",
-                border: "none",
-              }}
-            >
-              #ソクトノカベカケチャレンジ に参加する
-            </button>
+            <ScrollLink href="#contact-form">
+              <button
+                onClick={handleChallengeClick}
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-lg font-bold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 py-3 shadow-lg hover:shadow-xl hover:scale-105 transform"
+                style={{
+                  backgroundColor: "#ec4899",
+                  color: "#000000",
+                  border: "none",
+                }}
+              >
+                #ソクトノカベカケチャレンジ に参加する
+              </button>
+            </ScrollLink>
           </div>
         </div>
       </div>
