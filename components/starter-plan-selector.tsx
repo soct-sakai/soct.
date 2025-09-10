@@ -23,6 +23,8 @@ export function StarterPlanSelector({ sizeOptions }: StarterPlanSelectorProps) {
   const [selectedSizes, setSelectedSizes] = useState<{ [key: number]: number }>({})
   const [selectedMounts, setSelectedMounts] = useState<{ [key: number]: boolean }>({})
   const [totalPrice, setTotalPrice] = useState(0)
+  const [showAnimation, setShowAnimation] = useState(false)
+  const [hasTriggeredAnimation, setHasTriggeredAnimation] = useState(false)
 
   // Context から状態と更新関数を取得
   const planSelection = usePlanSelection()
@@ -48,6 +50,13 @@ export function StarterPlanSelector({ sizeOptions }: StarterPlanSelectorProps) {
 
     if (checked) {
       newSelectedSizes[index] = quantity
+      if (!hasTriggeredAnimation && Object.keys(selectedSizes).length === 0) {
+        setShowAnimation(true)
+        setHasTriggeredAnimation(true)
+        setTimeout(() => {
+          setShowAnimation(false)
+        }, 2000)
+      }
     } else {
       delete newSelectedSizes[index]
     }
@@ -74,6 +83,17 @@ export function StarterPlanSelector({ sizeOptions }: StarterPlanSelectorProps) {
         newSelectedMounts[Number.parseInt(key)] = false
       })
       newSelectedMounts[index] = true
+      if (
+        !hasTriggeredAnimation &&
+        Object.keys(selectedSizes).length === 0 &&
+        !Object.values(selectedMounts).some(Boolean)
+      ) {
+        setShowAnimation(true)
+        setHasTriggeredAnimation(true)
+        setTimeout(() => {
+          setShowAnimation(false)
+        }, 2000)
+      }
     } else {
       newSelectedMounts[index] = false
     }
@@ -150,6 +170,14 @@ export function StarterPlanSelector({ sizeOptions }: StarterPlanSelectorProps) {
 
   return (
     <div className="space-y-6">
+      {showAnimation && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+          <div className="bg-green-500 text-white px-8 py-4 rounded-2xl shadow-2xl animate-bounce text-xl font-bold">
+            問い合わせフォームに反映されたよ！
+          </div>
+        </div>
+      )}
+
       <div>
         <h4 className="font-semibold mb-3">スタータープラン(金具セットです)インチサイズ別料金：</h4>
         <div className="space-y-3">

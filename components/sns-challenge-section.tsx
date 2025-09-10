@@ -9,7 +9,7 @@ export function SNSChallengeSection() {
 
   const handleChallengeClick = () => {
     setShowSuccess(true)
-    setTimeout(() => setShowSuccess(false), 3000)
+    setTimeout(() => setShowSuccess(false), 3500) // Extended animation duration from 3000ms to 3500ms (0.5 seconds longer)
   }
 
   return (
