@@ -4,7 +4,6 @@ import { SiteHeader } from "@/components/site-header"
 import { HeroUnified } from "@/components/hero-unified"
 import { LargeTVSpecialistSection } from "@/components/large-tv-specialist-section"
 import { SNSChallengeSection } from "@/components/sns-challenge-section"
-import { PasonaLaw } from "@/components/pasona-law"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
 import { AccordionInstallationExamples } from "@/components/accordion-installation-examples"
 import { InstallationProcessGallery } from "@/components/installation-process-gallery"
@@ -112,7 +111,6 @@ export default function Page() {
         </section>
 
         <CEOMessage />
-        <PasonaLaw />
 
         {/* Customer Reasons */}
         <section className="py-12 bg-gray-50">
