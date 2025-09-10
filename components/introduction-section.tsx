@@ -70,22 +70,29 @@ const regions = [
 export function IntroductionSection() {
   return (
     <section
-      className="py-16 relative text-gray-800 bg-gray-50"
+      className="py-16 relative text-gray-800"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231230_114455.jpg-nQHtjXGIDqv0LammOZXMmXwcxdD8CD.jpeg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231230_114455.jpg-nQHtjXGIDqv0LammOZXMmXwcxdD8CD.jpeg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
+        backgroundColor: "#1a1a1a", // Added dark fallback background color
       }}
     >
       {/* メインコンテンツ */}
       <div className="container px-4 md:px-6 relative z-10">
         {/* メインコピー */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
+          <h2
+            className="text-3xl md:text-4xl font-bold mb-4 text-white"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)" }}
+          >
             🏡 壁掛けテレビ × リフォーム × エコカラット × おしゃれな高級感 🌟
           </h2>
-          <p className="text-xl md:text-2xl mb-4 text-white drop-shadow-lg">
+          <p
+            className="text-xl md:text-2xl mb-4 text-white"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)" }}
+          >
             ✨ 見慣れたお部屋が、まるでラグジュアリー空間に！ ✨
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">

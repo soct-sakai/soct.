@@ -63,7 +63,7 @@ export function LargeTVSpecialistSection() {
               </div>
               <h3 className="text-xl font-bold text-orange-700 mb-3">経験不足で傾き</h3>
               <ul className="text-sm text-orange-600 space-y-2 text-left">
-                <li>• 経験不足で傾き</li>
+                <li>• どこまで知識が精通しているかわからない</li>
                 <li>• 有機ELテレビと金具の重量に対応できず</li>
                 <li>• 配線が見えて美しくない</li>
                 <li>• コンクリート壁で断られた</li>
