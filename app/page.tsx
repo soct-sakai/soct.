@@ -28,6 +28,7 @@ import { CustomerReasons } from "@/components/customer-reasons"
 import { TVMountBrackets } from "@/components/tv-mount-brackets"
 import { WarrantyBanner } from "@/components/warranty-banner"
 import { PricingTablePopup } from "@/components/pricing-table-popup"
+import { CustomerProblemsSection } from "@/components/customer-problems-section"
 
 const RoomSimulatorIcon = () => {
   return (
@@ -103,6 +104,7 @@ export default function Page() {
         </section>
 
         <LargeTVSpecialistSection />
+        <CustomerProblemsSection />
         <SNSChallengeSection />
 
         <section id="introduction">

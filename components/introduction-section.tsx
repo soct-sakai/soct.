@@ -109,11 +109,17 @@ export function IntroductionSection() {
 
         {/* サービス紹介 */}
         <div className="max-w-3xl mx-auto mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-800">
+          <h3
+            className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-800"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)" }}
+          >
             🖥️ ソクトノカベカケで理想のリビングを実現！
           </h3>
-          <p className="text-xl text-center mb-8 text-blue-700">
-            「壁掛けテレビにしたい！」その想い、すべてお任せください💪
+          <p
+            className="text-xl md:text-2xl mb-4 text-white"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)" }}
+          >
+            ✨ 見慣れたお部屋が、まるでラグジュアリー空間に！ ✨
           </p>
 
           <div className="bg-white p-6 rounded-lg mb-12 shadow-md border border-gray-200">
@@ -134,7 +140,10 @@ export function IntroductionSection() {
 
         {/* テレビサイズ */}
         <div className="max-w-3xl mx-auto mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-800">
+          <h3
+            className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-800"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)" }}
+          >
             📺 テレビのサイズ、こだわりませんか？
           </h3>
           <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
@@ -184,7 +193,12 @@ export function IntroductionSection() {
 
         {/* 対応可能な施工 */}
         <div className="max-w-3xl mx-auto mb-16">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-800">🏠 あらゆる壁に対応！</h3>
+          <h3
+            className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-800"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)" }}
+          >
+            🏠 あらゆる壁に対応！
+          </h3>
           <div className="bg-white p-6 rounded-lg mb-8 shadow-md border border-gray-200">
             <p className="font-bold text-xl mb-4 text-blue-700">💪 「壁掛けって、うちの壁でもできるの？」</p>
             <p className="text-lg mb-6">→ はい、できます！どんな壁でもプロの技術でしっかり施工！</p>
