@@ -170,7 +170,7 @@ export function HeroUnified() {
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <div className="text-center max-w-4xl">
+          <div className="max-w-6xl mx-auto w-full">
             <div
               className="rounded-3xl p-8 md:p-12 shadow-2xl mb-8"
               style={{
@@ -192,7 +192,7 @@ export function HeroUnified() {
                     75インチ大型テレビ壁掛け工事
                   </span>
                   <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
-                    77,000円〜
+                    88,000円〜
                   </span>
                   <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
                 </div>
@@ -214,43 +214,32 @@ export function HeroUnified() {
                     <button
                       className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
                       style={{
-                        background: "linear-gradient(45deg, #f39c12, #e67e22)",
-                        color: "white",
+                        background: "linear-gradient(45deg, #f39c12, #e67e22) !important",
+                        color: "white !important",
                         boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
                         border: "none",
                       }}
                     >
-                      セットメニュ価格早見表を見る
+                      <span style={{ color: "white !important" }}>セットメニュ価格早見表を見る</span>
                       <br />
-                      <span className="text-sm">65インチや隠ぺい配線工事のセット金額がすぐわかる！</span>
+                      <span className="text-sm" style={{ color: "white !important" }}>
+                        65インチや隠ぺい配線工事のセット金額がすぐわかる！
+                      </span>
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                  <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
                     <div className="p-6">
                       <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
-                        セットメニュー価格表
+                        セットメニュー価格早見表
                       </h3>
-                      <div className="grid gap-4">
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">65インチテレビ壁掛けセット</h4>
-                          <p className="text-2xl font-bold text-blue-600">65,000円〜</p>
-                          <p className="text-sm text-gray-600">金具・工事費込み</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">75インチテレビ壁掛けセット</h4>
-                          <p className="text-2xl font-bold text-blue-600">77,000円〜</p>
-                          <p className="text-sm text-gray-600">金具・工事費込み</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">隠ぺい配線工事セット</h4>
-                          <p className="text-2xl font-bold text-blue-600">+25,000円〜</p>
-                          <p className="text-sm text-gray-600">壁内配線処理</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">エコカラット対応セット</h4>
-                          <p className="text-2xl font-bold text-blue-600">+15,000円〜</p>
-                          <p className="text-sm text-gray-600">特殊壁材対応</p>
-                        </div>
+                      <div className="flex justify-center">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E6%97%A9%E8%A6%8B%E8%A1%A801.JPG-b7v6rFRUnvGaCKYga0ZBKjm2jtYBVG.jpeg"
+                          alt="セットメニュー価格早見表"
+                          width={1200}
+                          height={400}
+                          className="rounded-lg shadow-lg max-w-full h-auto"
+                        />
                       </div>
                       <p className="text-center text-sm text-gray-600 mt-4">
                         ※現地調査・お見積もり無料　※価格は税込み表示
@@ -261,9 +250,10 @@ export function HeroUnified() {
               </div>
 
               <button
-                className="px-12 py-6 rounded-full text-white text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                className="px-12 py-6 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 style={{
-                  background: "linear-gradient(45deg, #8e44ad, #9b59b6)",
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6) !important",
+                  color: "white !important",
                   boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
                   border: "none",
                 }}
@@ -335,7 +325,7 @@ export function HeroUnified() {
                     75インチ大型テレビ壁掛け工事
                   </span>
                   <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
-                    77,000円〜
+                    88,000円〜
                   </span>
                   <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
                 </div>
@@ -357,43 +347,32 @@ export function HeroUnified() {
                     <button
                       className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
                       style={{
-                        background: "linear-gradient(45deg, #f39c12, #e67e22)",
-                        color: "white",
+                        background: "linear-gradient(45deg, #f39c12, #e67e22) !important",
+                        color: "white !important",
                         boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
                         border: "none",
                       }}
                     >
-                      セットメニュ価格早見表を見る
+                      <span style={{ color: "white !important" }}>セットメニュ価格早見表を見る</span>
                       <br />
-                      <span className="text-sm">65インチや隠ぺい配線工事のセット金額がすぐわかる！</span>
+                      <span className="text-sm" style={{ color: "white !important" }}>
+                        65インチや隠ぺい配線工事のセット金額がすぐわかる！
+                      </span>
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                  <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
                     <div className="p-6">
                       <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
-                        セットメニュー価格表
+                        セットメニュー価格早見表
                       </h3>
-                      <div className="grid gap-4">
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">65インチテレビ壁掛けセット</h4>
-                          <p className="text-2xl font-bold text-blue-600">65,000円〜</p>
-                          <p className="text-sm text-gray-600">金具・工事費込み</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">75インチテレビ壁掛けセット</h4>
-                          <p className="text-2xl font-bold text-blue-600">77,000円〜</p>
-                          <p className="text-sm text-gray-600">金具・工事費込み</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">隠ぺい配線工事セット</h4>
-                          <p className="text-2xl font-bold text-blue-600">+25,000円〜</p>
-                          <p className="text-sm text-gray-600">壁内配線処理</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">エコカラット対応セット</h4>
-                          <p className="text-2xl font-bold text-blue-600">+15,000円〜</p>
-                          <p className="text-sm text-gray-600">特殊壁材対応</p>
-                        </div>
+                      <div className="flex justify-center">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E6%97%A9%E8%A6%8B%E8%A1%A801.JPG-b7v6rFRUnvGaCKYga0ZBKjm2jtYBVG.jpeg"
+                          alt="セットメニュー価格早見表"
+                          width={1200}
+                          height={400}
+                          className="rounded-lg shadow-lg max-w-full h-auto"
+                        />
                       </div>
                       <p className="text-center text-sm text-gray-600 mt-4">
                         ※現地調査・お見積もり無料　※価格は税込み表示
@@ -404,9 +383,10 @@ export function HeroUnified() {
               </div>
 
               <button
-                className="px-12 py-6 rounded-full text-white text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                className="px-12 py-6 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 style={{
-                  background: "linear-gradient(45deg, #8e44ad, #9b59b6)",
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6) !important",
+                  color: "white !important",
                   boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
                   border: "none",
                 }}
@@ -528,7 +508,7 @@ export function HeroUnified() {
                     75インチ大型テレビ壁掛け工事
                   </span>
                   <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
-                    77,000円〜
+                    88,000円〜
                   </span>
                   <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
                 </div>
@@ -550,43 +530,32 @@ export function HeroUnified() {
                     <button
                       className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
                       style={{
-                        background: "linear-gradient(45deg, #f39c12, #e67e22)",
-                        color: "white",
+                        background: "linear-gradient(45deg, #f39c12, #e67e22) !important",
+                        color: "white !important",
                         boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
                         border: "none",
                       }}
                     >
-                      セットメニュ価格早見表を見る
+                      <span style={{ color: "white !important" }}>セットメニュ価格早見表を見る</span>
                       <br />
-                      <span className="text-sm">65インチや隠ぺい配線工事のセット金額がすぐわかる！</span>
+                      <span className="text-sm" style={{ color: "white !important" }}>
+                        65インチや隠ぺい配線工事のセット金額がすぐわかる！
+                      </span>
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                  <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
                     <div className="p-6">
                       <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
-                        セットメニュー価格表
+                        セットメニュー価格早見表
                       </h3>
-                      <div className="grid gap-4">
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">65インチテレビ壁掛けセット</h4>
-                          <p className="text-2xl font-bold text-blue-600">65,000円〜</p>
-                          <p className="text-sm text-gray-600">金具・工事費込み</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">75インチテレビ壁掛けセット</h4>
-                          <p className="text-2xl font-bold text-blue-600">77,000円〜</p>
-                          <p className="text-sm text-gray-600">金具・工事費込み</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">隠ぺい配線工事セット</h4>
-                          <p className="text-2xl font-bold text-blue-600">+25,000円〜</p>
-                          <p className="text-sm text-gray-600">壁内配線処理</p>
-                        </div>
-                        <div className="border rounded-lg p-4">
-                          <h4 className="font-bold text-lg mb-2">エコカラット対応セット</h4>
-                          <p className="text-2xl font-bold text-blue-600">+15,000円〜</p>
-                          <p className="text-sm text-gray-600">特殊壁材対応</p>
-                        </div>
+                      <div className="flex justify-center">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E6%97%A9%E8%A6%8B%E8%A1%A801.JPG-b7v6rFRUnvGaCKYga0ZBKjm2jtYBVG.jpeg"
+                          alt="セットメニュー価格早見表"
+                          width={1200}
+                          height={400}
+                          className="rounded-lg shadow-lg max-w-full h-auto"
+                        />
                       </div>
                       <p className="text-center text-sm text-gray-600 mt-4">
                         ※現地調査・お見積もり無料　※価格は税込み表示
@@ -597,9 +566,10 @@ export function HeroUnified() {
               </div>
 
               <button
-                className="px-12 py-6 rounded-full text-white text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                className="px-12 py-6 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 style={{
-                  background: "linear-gradient(45deg, #8e44ad, #9b59b6)",
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6) !important",
+                  color: "white !important",
                   boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
                   border: "none",
                 }}
