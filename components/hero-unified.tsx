@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 import { useEffect, useState } from "react"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 
 const streamingComments = [
   "帰宅したら、みんなスマホ越し…最後に家族で声を合わせて笑ったのはいつだろう？",
@@ -207,21 +208,222 @@ export function HeroUnified() {
                 です。
               </p>
 
+              <div className="mb-6">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        background: "linear-gradient(45deg, #f39c12, #e67e22)",
+                        color: "white",
+                        boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
+                        border: "none",
+                      }}
+                    >
+                      セットメニュ価格早見表を見る
+                      <br />
+                      <span className="text-sm">65インチや隠ぺい配線工事のセット金額がすぐわかる！</span>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
+                        セットメニュー価格表
+                      </h3>
+                      <div className="grid gap-4">
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">65インチテレビ壁掛けセット</h4>
+                          <p className="text-2xl font-bold text-blue-600">65,000円〜</p>
+                          <p className="text-sm text-gray-600">金具・工事費込み</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">75インチテレビ壁掛けセット</h4>
+                          <p className="text-2xl font-bold text-blue-600">77,000円〜</p>
+                          <p className="text-sm text-gray-600">金具・工事費込み</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">隠ぺい配線工事セット</h4>
+                          <p className="text-2xl font-bold text-blue-600">+25,000円〜</p>
+                          <p className="text-sm text-gray-600">壁内配線処理</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">エコカラット対応セット</h4>
+                          <p className="text-2xl font-bold text-blue-600">+15,000円〜</p>
+                          <p className="text-sm text-gray-600">特殊壁材対応</p>
+                        </div>
+                      </div>
+                      <p className="text-center text-sm text-gray-600 mt-4">
+                        ※現地調査・お見積もり無料　※価格は税込み表示
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+
               <button
                 className="px-12 py-6 rounded-full text-white text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 style={{
-                  background: "linear-gradient(45deg, #27ae60, #2ecc71)",
-                  boxShadow: "0 10px 25px rgba(39,174,96,0.3)",
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6)",
+                  boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
                   border: "none",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(39,174,96,0.4)"
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(142,68,173,0.4)"
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(39,174,96,0.3)"
+                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(142,68,173,0.3)"
+                }}
+                onClick={() => {
+                  const beforeAfterSection = document.getElementById("before-after-section")
+                  if (beforeAfterSection) {
+                    beforeAfterSection.scrollIntoView({ behavior: "smooth" })
+                  }
                 }}
               >
-                まずは無料相談でお気軽にご相談ください
+                施工事例Before → Afterへジャンプする
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Section divider */}
+      <div
+        className="h-24 relative"
+        style={{
+          background: "linear-gradient(to right, transparent, #ecf0f1, transparent)",
+        }}
+      >
+        <div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 rounded-full"
+          style={{ background: "#f39c12" }}
+        ></div>
+      </div>
+
+      <div className="relative h-screen">
+        <div className="absolute inset-0">
+          <Image
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC004.jpg-xPyq3vbNKvjIAvhsHzoLicudgiIiS1.jpeg"
+            alt="エレガントな壁掛けテレビ設置完成例"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        <div className="relative z-10 h-full flex items-center justify-center px-4">
+          <div className="text-center max-w-4xl">
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl mb-8"
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-black mb-6" style={{ color: "#2c3e50" }}>
+                プロの仕上がりをご覧ください
+              </h2>
+
+              {/* Elegant pricing section */}
+              <div className="rounded-2xl p-8 mb-8" style={{ background: "linear-gradient(135deg, #f8f9fa, #ffffff)" }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
+                  料金例
+                </h3>
+                <div className="flex flex-col items-center gap-2">
+                  <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                    75インチ大型テレビ壁掛け工事
+                  </span>
+                  <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                    77,000円〜
+                  </span>
+                  <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                </div>
+              </div>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                配線も美しく隠し、まるで最初からそこにあったかのような自然な仕上がり。
+                <br />
+                これが
+                <span className="font-bold" style={{ color: "#f39c12" }}>
+                  ソクトの専門技術
+                </span>
+                です。
+              </p>
+
+              <div className="mb-6">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        background: "linear-gradient(45deg, #f39c12, #e67e22)",
+                        color: "white",
+                        boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
+                        border: "none",
+                      }}
+                    >
+                      セットメニュ価格早見表を見る
+                      <br />
+                      <span className="text-sm">65インチや隠ぺい配線工事のセット金額がすぐわかる！</span>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
+                        セットメニュー価格表
+                      </h3>
+                      <div className="grid gap-4">
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">65インチテレビ壁掛けセット</h4>
+                          <p className="text-2xl font-bold text-blue-600">65,000円〜</p>
+                          <p className="text-sm text-gray-600">金具・工事費込み</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">75インチテレビ壁掛けセット</h4>
+                          <p className="text-2xl font-bold text-blue-600">77,000円〜</p>
+                          <p className="text-sm text-gray-600">金具・工事費込み</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">隠ぺい配線工事セット</h4>
+                          <p className="text-2xl font-bold text-blue-600">+25,000円〜</p>
+                          <p className="text-sm text-gray-600">壁内配線処理</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">エコカラット対応セット</h4>
+                          <p className="text-2xl font-bold text-blue-600">+15,000円〜</p>
+                          <p className="text-sm text-gray-600">特殊壁材対応</p>
+                        </div>
+                      </div>
+                      <p className="text-center text-sm text-gray-600 mt-4">
+                        ※現地調査・お見積もり無料　※価格は税込み表示
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+
+              <button
+                className="px-12 py-6 rounded-full text-white text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                style={{
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6)",
+                  boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
+                  border: "none",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(142,68,173,0.4)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(142,68,173,0.3)"
+                }}
+                onClick={() => {
+                  const beforeAfterSection = document.getElementById("before-after-section")
+                  if (beforeAfterSection) {
+                    beforeAfterSection.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
+              >
+                施工事例Before → Afterへジャンプする
               </button>
             </div>
           </div>
@@ -245,24 +447,24 @@ export function HeroUnified() {
         <div className="absolute inset-0">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_20231230_114455.jpg-nQHtjXGIDqv0LammOZXMmXwcxdD8CD.jpeg"
-            alt="完成した壁掛けテレビ設置例"
+            alt="エレガントな壁掛けテレビ設置完成例"
             fill
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
           <div className="max-w-5xl w-full">
             <div
-              className="rounded-3xl p-8 md:p-12 shadow-2xl"
+              className="rounded-3xl p-8 md:p-12 shadow-2xl mb-8"
               style={{
                 background: "rgba(255,255,255,0.95)",
                 backdropFilter: "blur(10px)",
               }}
             >
-              <h2 className="text-3xl md:text-4xl font-black text-center mb-8" style={{ color: "#2c3e50" }}>
+              <h2 className="text-3xl md:text-4xl font-black mb-6" style={{ color: "#2c3e50" }}>
                 お客様の声が続々と届いています
               </h2>
 
@@ -342,21 +544,79 @@ export function HeroUnified() {
                 です。
               </p>
 
+              <div className="mb-6">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        background: "linear-gradient(45deg, #f39c12, #e67e22)",
+                        color: "white",
+                        boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
+                        border: "none",
+                      }}
+                    >
+                      セットメニュ価格早見表を見る
+                      <br />
+                      <span className="text-sm">65インチや隠ぺい配線工事のセット金額がすぐわかる！</span>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
+                        セットメニュー価格表
+                      </h3>
+                      <div className="grid gap-4">
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">65インチテレビ壁掛けセット</h4>
+                          <p className="text-2xl font-bold text-blue-600">65,000円〜</p>
+                          <p className="text-sm text-gray-600">金具・工事費込み</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">75インチテレビ壁掛けセット</h4>
+                          <p className="text-2xl font-bold text-blue-600">77,000円〜</p>
+                          <p className="text-sm text-gray-600">金具・工事費込み</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">隠ぺい配線工事セット</h4>
+                          <p className="text-2xl font-bold text-blue-600">+25,000円〜</p>
+                          <p className="text-sm text-gray-600">壁内配線処理</p>
+                        </div>
+                        <div className="border rounded-lg p-4">
+                          <h4 className="font-bold text-lg mb-2">エコカラット対応セット</h4>
+                          <p className="text-2xl font-bold text-blue-600">+15,000円〜</p>
+                          <p className="text-sm text-gray-600">特殊壁材対応</p>
+                        </div>
+                      </div>
+                      <p className="text-center text-sm text-gray-600 mt-4">
+                        ※現地調査・お見積もり無料　※価格は税込み表示
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+
               <button
                 className="px-12 py-6 rounded-full text-white text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
                 style={{
-                  background: "linear-gradient(45deg, #27ae60, #2ecc71)",
-                  boxShadow: "0 10px 25px rgba(39,174,96,0.3)",
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6)",
+                  boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
                   border: "none",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(39,174,96,0.4)"
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(142,68,173,0.4)"
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(39,174,96,0.3)"
+                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(142,68,173,0.3)"
+                }}
+                onClick={() => {
+                  const beforeAfterSection = document.getElementById("before-after-section")
+                  if (beforeAfterSection) {
+                    beforeAfterSection.scrollIntoView({ behavior: "smooth" })
+                  }
                 }}
               >
-                まずは無料相談でお気軽にご相談ください
+                施工事例Before → Afterへジャンプする
               </button>
             </div>
           </div>
