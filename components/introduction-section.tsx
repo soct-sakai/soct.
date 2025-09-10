@@ -184,7 +184,7 @@ export function IntroductionSection() {
             <p className="font-bold text-xl mb-4 text-blue-700">💪 「壁掛けって、うちの壁でもできるの？」</p>
             <p className="text-lg mb-6">→ はい、できます！どんな壁でもプロの技術でしっかり施工！</p>
 
-            <ul className="space-y-3 text-lg">
+            <ul className="space-y-3 text-lg mb-8">
               <li className="flex items-start">
                 <span className="text-green-500 mr-2">✅</span>
                 <span>
@@ -216,6 +216,79 @@ export function IntroductionSection() {
                 </span>
               </li>
             </ul>
+
+            <div className="bg-red-50 border-l-4 border-red-400 p-4 mb-6">
+              <p className="font-bold text-lg mb-4 text-red-700">
+                🎯 これに5点以上当てはまる人は、ソクトノカベカケへ是非お任せくださいませ！
+              </p>
+              <div className="grid md:grid-cols-2 gap-2 text-sm">
+                <div className="space-y-2">
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>ハウスメーカーに断られた！</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>家電量販店で断られた！</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>ポータルサイトの安い業者に断られた！</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>下地が無い</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>不要な穴を開けたくない</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>適切な金具が選べるか不安</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>大型・有機ELテレビに精通した業者に任せたい</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>配線は見えないようにしたい</span>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>壁掛けテレビで失敗したくない</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>エコカラット・コンクリート壁で断られた</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>アクセントクロスで部屋を変えたい</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>エコカラット・吸音パネルで高級感を</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>没入できるアクセントウォールにしたい</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>1年間点検など安全確認システムがある業者</span>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-red-500 mr-2">✅</span>
+                    <span>10年20年付き合える事業者がいい</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <p className="mt-4 text-center text-lg">「うちでも壁掛けできる？」と気になったら、まずは無料相談を！</p>
           </div>
         </div>
