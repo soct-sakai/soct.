@@ -33,6 +33,11 @@ export function CEOMessage() {
               <div className="space-y-3">
                 <p className="text-lg font-medium">皆さま、こんにちは！株式会社速人の坂井です。</p>
                 <p>あなたにこのページを見てもらえて、本当に嬉しいです。</p>
+                <p className="font-medium text-blue-600">「壁のコンシェルジュ」としてあなたのお家の壁を診断します。</p>
+                <p>
+                  年間200件以上の壁掛けテレビ施工で喜ばれており、超大手法人会社様からもご依頼いただける実績は誇りに思います。
+                </p>
+                <p>さてここからは、私の経歴からどんな会社なのかを知っていただけたらと思います。</p>
               </div>
 
               <div className="mt-8 space-y-4 border-l-4 border-blue-200 pl-6">
