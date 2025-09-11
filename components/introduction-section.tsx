@@ -194,7 +194,7 @@ export function IntroductionSection() {
         {/* 対応可能な施工 */}
         <div className="max-w-3xl mx-auto mb-16">
           <h3
-            className="text-2xl md:text-3xl font-bold text-center mb-6 text-blue-800"
+            className="text-2xl md:text-3xl font-bold text-center mb-6 text-white"
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.6)" }}
           >
             🏠 あらゆる壁に対応！
