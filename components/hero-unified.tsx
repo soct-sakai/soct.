@@ -34,7 +34,12 @@ export function HeroUnified() {
   }, [])
 
   return (
-    <div className="relative min-h-screen bg-white font-sans">
+    <div className="relative min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50 font-sans">
+      <div className="absolute top-10 left-10 text-orange-600 text-4xl opacity-70 animate-pulse">🌸</div>
+      <div className="absolute top-32 right-20 text-green-700 text-3xl opacity-80 animate-bounce">🌿</div>
+      <div className="absolute bottom-40 left-16 text-pink-600 text-2xl opacity-70">🌺</div>
+      <div className="absolute bottom-20 right-32 text-amber-600 text-3xl opacity-70">✨</div>
+
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <Image
@@ -48,41 +53,41 @@ export function HeroUnified() {
           <div
             className="absolute inset-0"
             style={{
-              background: "linear-gradient(135deg, rgba(44,62,80,0.8), rgba(52,73,94,0.8))",
+              background: "linear-gradient(135deg, rgba(255,248,220,0.85), rgba(255,237,213,0.9))",
             }}
           ></div>
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
           <div
-            className="max-w-2xl w-full text-center rounded-3xl p-12 shadow-2xl"
+            className="max-w-2xl w-full text-center rounded-3xl p-12 shadow-2xl border-4 border-yellow-200"
             style={{
-              background: "rgba(255,255,255,0.95)",
+              background: "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,252,240,0.98))",
               backdropFilter: "blur(10px)",
-              boxShadow: "0 25px 50px rgba(0,0,0,0.15)",
+              boxShadow: "0 25px 50px rgba(255,193,7,0.2)",
             }}
           >
             <div
-              className="inline-block px-6 py-2 rounded-full text-sm font-semibold mb-6"
+              className="inline-block px-6 py-2 rounded-full text-sm font-semibold mb-6 border-2 border-yellow-300"
               style={{
-                backgroundColor: "#e67e22 !important",
+                backgroundColor: "#fbbf24 !important",
                 color: "white !important",
               }}
             >
               壁掛けテレビで失敗したくないあなたへ
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-black mb-4 leading-tight" style={{ color: "#2c3e50" }}>
+            <h1 className="text-4xl md:text-5xl font-black mb-4 leading-tight" style={{ color: "#f59e0b" }}>
               名古屋の壁掛けテレビと壁の専門店
               <br />
               『ソクトノカベカケ』は
             </h1>
 
-            <div className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#f39c12" }}>
+            <div className="text-2xl md:text-3xl font-bold mb-6" style={{ color: "#ea580c" }}>
               ハートFM主催『クローズアップ愛知』の25名にノミネート！
             </div>
 
-            <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ color: "#34495e" }}>
+            <p className="text-lg md:text-xl leading-relaxed mb-8" style={{ color: "#92400e" }}>
               あなたの大切な有機ELモデルや75インチ・85インチの大型テレビの
               <br />
               壁掛けを得意としております。
@@ -93,18 +98,18 @@ export function HeroUnified() {
             </p>
 
             <button
-              className="w-full max-w-md px-10 py-5 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+              className="w-full max-w-md px-10 py-5 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 border-2 border-orange-300"
               style={{
-                backgroundColor: "#27ae60 !important",
+                background: "linear-gradient(45deg, #f59e0b, #ea580c) !important",
                 color: "white !important",
-                boxShadow: "0 10px 25px rgba(39,174,96,0.3)",
+                boxShadow: "0 10px 25px rgba(245,158,11,0.4)",
                 border: "none",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 15px 35px rgba(39,174,96,0.4)"
+                e.currentTarget.style.boxShadow = "0 15px 35px rgba(245,158,11,0.5)"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = "0 10px 25px rgba(39,174,96,0.3)"
+                e.currentTarget.style.boxShadow = "0 10px 25px rgba(245,158,11,0.4)"
               }}
             >
               🎯 無料相談はLINEで30秒
@@ -113,16 +118,15 @@ export function HeroUnified() {
         </div>
       </div>
 
-      {/* Section divider */}
       <div
         className="h-24 relative"
         style={{
-          background: "linear-gradient(to right, transparent, #ecf0f1, transparent)",
+          background: "linear-gradient(to right, transparent, #fef3c7, transparent)",
         }}
       >
         <div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 rounded-full"
-          style={{ background: "#f39c12" }}
+          style={{ background: "#f59e0b" }}
         ></div>
       </div>
 
@@ -135,7 +139,7 @@ export function HeroUnified() {
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-black/30"></div>
+          <div className="absolute inset-0" style={{ background: "rgba(255,248,220,0.3)" }}></div>
         </div>
 
         {/* This section is now empty and will show just the background image */}
@@ -144,16 +148,15 @@ export function HeroUnified() {
         </div>
       </div>
 
-      {/* Section divider */}
       <div
         className="h-24 relative"
         style={{
-          background: "linear-gradient(to right, transparent, #ecf0f1, transparent)",
+          background: "linear-gradient(to right, transparent, #fef3c7, transparent)",
         }}
       >
         <div
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-1 rounded-full"
-          style={{ background: "#f39c12" }}
+          style={{ background: "#f59e0b" }}
         ></div>
       </div>
 
