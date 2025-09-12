@@ -11,9 +11,10 @@ export function CampaignSection() {
           <div
             className="inline-block mb-4 px-3 py-1 rounded-full text-sm font-medium"
             style={{
-              backgroundColor: "#1f2937",
-              color: "#ffffff",
+              backgroundColor: "#1f2937 !important",
+              color: "#ffffff !important",
               border: "2px solid #1f2937",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
             }}
           >
             新品テレビ販売
@@ -74,7 +75,14 @@ export function CampaignSection() {
           {/* TCL 75インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！198,000円
               </div>
             </div>
@@ -108,7 +116,14 @@ export function CampaignSection() {
           {/* TCL 85インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！298,000円
               </div>
             </div>
@@ -144,7 +159,14 @@ export function CampaignSection() {
           {/* TCL 98インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！598,000円
               </div>
             </div>
@@ -181,7 +203,14 @@ export function CampaignSection() {
           {/* 100インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！770,000円
               </div>
             </div>
