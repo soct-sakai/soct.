@@ -49,7 +49,12 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
     },
   ]
 
-  const currentCaseStudy = caseStudies[0] // Always use the first case study
+  const getCaseStudyIndex = (id: string): number => {
+    const match = id.match(/case-(\d+)/)
+    return match ? Number.parseInt(match[1]) - 1 : 0
+  }
+
+  const currentCaseStudy = caseStudies[getCaseStudyIndex(caseId)] || caseStudies[0]
 
   // 次のAfter画像に切り替え（3秒間隔）
   // useEffect(() => {
@@ -240,8 +245,8 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
                   key={index}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     index === currentAfterIndex
-                      ? "bg-blue-500 text-white shadow-md"
-                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                      ? "bg-blue-600 text-white shadow-md"
+                      : "bg-gray-100 text-gray-800 hover:bg-gray-200 border border-gray-300"
                   }`}
                   onClick={() => setCurrentAfterIndex(index)}
                 >
