@@ -19,6 +19,7 @@ import { ApplicationFlow } from "@/components/application-flow"
 import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
 import { WarrantyBanner } from "@/components/warranty-banner"
+import { TvMountBrackets } from "@/components/tv-mount-brackets"
 
 const RoomSimulatorIcon = () => {
   return (
@@ -113,7 +114,10 @@ export default function Page() {
         {/* 2. なぜ大型テレビは専門業者が必要なのか */}
         <LargeTVSpecialistSection />
 
-        {/* 3. ソクトがお客様に選ばれる9つの理由 */}
+        {/* TV Mounting Brackets Section */}
+        <TvMountBrackets />
+
+        {/* 3. 速とがお客様に選ばれる9つの理由 */}
         <section className="py-12 bg-gray-50 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
             <CustomerReasons />
