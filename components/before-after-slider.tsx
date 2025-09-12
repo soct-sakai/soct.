@@ -140,7 +140,7 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
           {/* Character image */}
           <div className="w-24 h-24 relative flex-shrink-0 mr-4">
             <Image
-              src="/images/character-icon.png"
+              src="/images/character-icon-installation.png"
               alt="キャラクター"
               fill
               className="object-cover rounded-full border-2 border-green-300"
