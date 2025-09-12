@@ -23,6 +23,15 @@ export function IntroductionSection() {
                 させます✨
               </p>
               <p className="text-xl font-bold text-blue-600">あなたの理想の空間、ソクトノカベカケが全力でお手伝い！</p>
+
+              <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <h3 className="text-lg font-bold text-blue-800 mb-2">📍 対応エリア</h3>
+                <div className="text-sm text-blue-700">
+                  <p className="font-semibold mb-1">🏢 主要対応地域：名古屋市</p>
+                  <p>🌏 対応県：愛知県・岐阜県・三重県・静岡県</p>
+                  <p className="text-xs mt-2 text-blue-600">※詳細なエリアについてはお気軽にお問い合わせください</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
