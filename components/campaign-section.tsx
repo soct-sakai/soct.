@@ -18,10 +18,10 @@ export function CampaignSection() {
           >
             新品テレビ販売
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">テレビ + 壁掛け施工セット割引</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
           <p className="text-xl text-gray-600">75インチ・85インチの大型サイズも対応</p>
           <p className="text-lg text-blue-600 mt-2 font-semibold">
-            98インチや100インチといった超大型テレビと壁掛け施工と金具もセットで三位一体！
+            98インチや100インチといった超大型テレビも取り扱っています！
           </p>
           <p className="text-sm text-gray-500 mt-2">詳細はお問い合わせください</p>
         </div>
@@ -83,12 +83,12 @@ export function CampaignSection() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-semibold">施工内容</h4>
+                  <h4 className="font-semibold">特徴</h4>
                   <ul className="list-disc list-inside text-sm space-y-1">
-                    <li>VESA規格対応の専用金具使用</li>
-                    <li>十分な強度を持つ下地補強工事</li>
-                    <li>配線を目立たなくする壁内配線工事</li>
-                    <li>美しく安全な取り付けを実現</li>
+                    <li>85V型MiniLED量子ドット技術</li>
+                    <li>AiPQ Proプロセッサー搭載</li>
+                    <li>120Hzのゲームモード & HDMI2.1対応</li>
+                    <li>Google TV、Netflix、YouTube対応</li>
                   </ul>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export function CampaignSection() {
         <div className="mt-8 text-center">
           <ScrollLink href="#contact-form">
             <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white font-bold text-lg px-8 py-4">
-              テレビ + 壁掛け施工 セット割引
+              新品テレビのお問い合わせ
               <br />
               <span className="text-sm">詳細はお問い合わせください</span>
             </Button>
