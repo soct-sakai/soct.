@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
+import { usePlanSelection } from "@/context/plan-selection-context"
 
 const packagePlans = [
   { id: "tcl75", label: "TCL 75インチ施工セットプラン" },
@@ -22,6 +23,8 @@ const packagePlans = [
 ]
 
 export function ContactForm() {
+  const planSelection = usePlanSelection()
+
   const [formData, setFormData] = React.useState({
     name: "",
     postalCode: "",
@@ -35,6 +38,120 @@ export function ContactForm() {
 
   const [isLoading, setIsLoading] = React.useState(false)
   const [fromSNSChallenge, setFromSNSChallenge] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleQuoteRequest = () => {
+      const quoteRequestData = sessionStorage.getItem("quoteRequest")
+      if (quoteRequestData) {
+        try {
+          const { planName, planDetails } = JSON.parse(quoteRequestData)
+
+          // Update package plan selection based on quote request
+          const updatedPackagePlans = [...formData.packagePlan]
+          const planMapping: { [key: string]: string } = {
+            スターター: "starter",
+            オプション: "option",
+            ダイヤモンド: "diamond",
+            プラチナ: "platinum",
+            プレミアム: "premium",
+          }
+
+          const planId = planMapping[planName]
+          if (planId && !updatedPackagePlans.includes(planId)) {
+            updatedPackagePlans.push(planId)
+          }
+
+          // Update form with quote request details
+          setFormData((prev) => ({
+            ...prev,
+            packagePlan: updatedPackagePlans,
+            message: planDetails,
+          }))
+
+          // Clear the quote request from sessionStorage
+          sessionStorage.removeItem("quoteRequest")
+        } catch (error) {
+          console.error("Error parsing quote request:", error)
+        }
+      }
+    }
+
+    handleQuoteRequest()
+  }, [])
+
+  React.useEffect(() => {
+    const updateFormFromPlanSelection = () => {
+      const updatedPackagePlans = [...formData.packagePlan]
+      let updatedMessage = formData.message
+
+      if (planSelection.selectedSizes.length > 0) {
+        if (!updatedPackagePlans.includes("starter")) {
+          updatedPackagePlans.push("starter")
+        }
+      }
+
+      if (planSelection.selectedOptions.length > 0) {
+        if (!updatedPackagePlans.includes("option")) {
+          updatedPackagePlans.push("option")
+        }
+      }
+
+      let selectionDetails = ""
+
+      if (planSelection.selectedSizes.length > 0) {
+        selectionDetails += "\n\n【選択されたスタータープラン】\n"
+        planSelection.selectedSizes.forEach((size) => {
+          selectionDetails += `・${size.size} ${size.quantity}台 (${size.price})\n`
+        })
+
+        if (planSelection.selectedMount) {
+          selectionDetails += `・金具: ${planSelection.selectedMount.name} (${planSelection.selectedMount.price})\n`
+        }
+
+        if (planSelection.totalPrice > 0) {
+          selectionDetails += `スタータープラン合計: ${planSelection.totalPrice.toLocaleString()}円\n`
+        }
+      }
+
+      if (planSelection.selectedOptions.length > 0) {
+        selectionDetails += "\n【選択されたオプション】\n"
+        planSelection.selectedOptions.forEach((option) => {
+          selectionDetails += `・${option.name} ${option.quantity > 1 ? `${option.quantity}個` : ""} (${option.price})\n`
+        })
+
+        if (planSelection.optionsTotalPrice > 0) {
+          selectionDetails += `オプション合計: ${planSelection.optionsTotalPrice.toLocaleString()}円\n`
+        }
+      }
+
+      const grandTotal = planSelection.totalPrice + planSelection.optionsTotalPrice
+      if (grandTotal > 0) {
+        selectionDetails += `\n【総合計金額】\n${grandTotal.toLocaleString()}円\n`
+      }
+
+      if (
+        selectionDetails &&
+        !updatedMessage.includes("【選択されたスタータープラン】") &&
+        !updatedMessage.includes("【選択されたオプション】")
+      ) {
+        updatedMessage = (updatedMessage || "") + selectionDetails
+      }
+
+      setFormData((prev) => ({
+        ...prev,
+        packagePlan: updatedPackagePlans,
+        message: updatedMessage,
+      }))
+    }
+
+    updateFormFromPlanSelection()
+  }, [
+    planSelection.selectedSizes,
+    planSelection.selectedMount,
+    planSelection.selectedOptions,
+    planSelection.totalPrice,
+    planSelection.optionsTotalPrice,
+  ])
 
   React.useEffect(() => {
     const checkSNSChallenge = () => {

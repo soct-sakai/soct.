@@ -12,7 +12,6 @@ import { CEOMessage } from "@/components/ceo-message"
 import { WarrantySlider } from "@/components/warranty-slider"
 import { ContactForm } from "@/components/contact-form"
 import { CompanyInfo } from "@/components/company-info"
-import { ScrollLink } from "@/components/scroll-link"
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import { CampaignSection } from "@/components/campaign-section"
@@ -93,6 +92,20 @@ const RoomSimulatorIcon = () => {
 }
 
 export default function Page() {
+  const handleQuoteRequest = (planName: string, planDetails?: string) => {
+    // Store the plan information in sessionStorage to pass to contact form
+    const quoteData = {
+      planName,
+      planDetails: planDetails || `${planName}プランの見積もりを希望します。`,
+      timestamp: Date.now(),
+    }
+    sessionStorage.setItem("quoteRequest", JSON.stringify(quoteData))
+
+    // Scroll to contact form
+    const contactForm = document.getElementById("contact-form")
+    contactForm?.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <div className="min-h-screen bg-white luxury-grid-bg-fine">
       <SiteHeader />
@@ -216,22 +229,6 @@ export default function Page() {
             </div>
 
             <div className="space-y-8 max-w-4xl mx-auto">
-              <Card className="overflow-hidden">
-                <CardContent className="p-6">
-                  <h3 className="luxury-subheading mb-4">基本料金パッケージ</h3>
-                  <p className="luxury-body mb-4">すべてのプランに含まれるもの：</p>
-                  <ul className="list-disc list-inside mb-4 luxury-body">
-                    <li>取付工事一式</li>
-                    <li>3年保証</li>
-                    <li>地震落下時の再施工保証</li>
-                    <li>配線まとめ</li>
-                  </ul>
-                  <p className="text-sm text-gray-600">
-                    ※ インチサイズに応じた料金はスタータープランでご確認いただけます。
-                  </p>
-                </CardContent>
-              </Card>
-
               {[
                 {
                   name: "スターター",
@@ -348,12 +345,17 @@ export default function Page() {
                       </ul>
                       <p className="text-sm text-gray-600">{plan.description}</p>
                       <p className="text-sm text-primary font-semibold">※ 全プラン3年間無料保証付き</p>
-                      <ScrollLink
-                        href="#contact-form"
-                        className="block w-full bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded text-center"
+                      <button
+                        onClick={() =>
+                          handleQuoteRequest(
+                            plan.name,
+                            `${plan.name}プランの見積もりを希望します。\n\n含まれるサービス:\n${plan.options.map((option) => `・${option}`).join("\n")}\n\n${plan.description}`,
+                          )
+                        }
+                        className="block w-full bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded text-center transition-colors"
                       >
                         見積もりを依頼する
-                      </ScrollLink>
+                      </button>
                     </div>
                   </CardContent>
                 </Card>
