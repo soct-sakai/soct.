@@ -117,9 +117,54 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
             />
           </div>
           {/* Speech bubble */}
-          <div className="bg-white border-2 border-green-300 rounded-2xl p-4 shadow-lg relative max-w-md">
-            <div className="text-2xl md:text-3xl font-bold text-green-800 mb-2">施工事例</div>
-            <div className="text-lg text-gray-700">施工 Before → After</div>
+          <div className="bg-white border-2 border-green-300 rounded-2xl p-4 shadow-lg relative max-w-2xl">
+            <div className="text-2xl md:text-3xl font-bold text-green-800 mb-4">施工事例　施工 Before → After</div>
+            <div className="text-sm text-gray-700 space-y-3 text-left">
+              <div>
+                <strong>SHARPのAQUOS65インチ。</strong>
+                <br />
+                実は、もともとスタンド式で設置されていたのを壁掛けに。
+                <br />
+                人気のエコカラット、ストーングレース柄の壁面へのTV取り付けスタイリッシュでモダンは壁は、しっかりとテレビを固定して安全バッチリ！
+                <br />
+                お客様希望で隠ぺい配線はなしでモール仕上げ。
+                <br />
+                隠ぺい配線ならより高級感のある仕上がりに。
+                <br />
+                基本料金とエコカラットへの取付、モールの金額で約81000円でした！
+              </div>
+
+              <div>
+                <strong>SONY BRAVIA 75インチの大型テレビを美しく設置。</strong>
+                <br />
+                ふかし壁(アクセントウォール)と空中テレビボード(フロートボード)の収納を組み合わせた、上質なリビング空間を実現。配線は全て隠蔽し、スマートな仕上がりに。この壁とテレビと施工セットで100万円コースですね！
+              </div>
+
+              <div>
+                <strong>SONY BRAVIA75インチも、広いリビングで主役になれる。</strong>
+                <br />
+                ベニヤの壁に大理石調のリブパネルへの設置高級感ある大理石調の壁面に、配線を完全に隠蔽した美しい仕上がり。
+                <br />
+                壁裏は収納スペースになっていてBlu-rayレコーダーやゲーム機も完全に見えないよ。バックの収納棚数の多さも必見ですが、この壁は吹き抜けホールにもなっていてお金掛かってます。
+              </div>
+
+              <div>
+                <strong>65インチのPanasonic VIERA。</strong>
+                <br />
+                空中テレビボード(フロートボード)と調和する観葉植物で眼に優しいデザイン。壁もテレビもとっても素敵！夜はムーディな映画を大好きな人とみていたくなる。Blu-rayレコーダーやゲーム機もフロートボード内に完全収納。
+                <br />
+                エコカラットと空中テレビボードで施工費も含めるとこちらも50万掛かりますね！
+              </div>
+
+              <div>
+                <strong>寝室にも、ミドルクラスのテレビを壁掛けに。</strong>
+                <br />
+                クールなライトグレークロス×石膏ボードの壁面にTOSHIBA REGZA
+                55インチを設置。寝ながらYouTube動画を楽しむだけじゃない！？ってどぉいうこと？
+                <br />
+                アクセントクロスと壁掛けのみのセットでも、25万円。睡眠が楽しくなるなら安い投資になるのかな！？
+              </div>
+            </div>
             {/* Speech bubble arrow pointing left */}
             <div className="absolute left-[-12px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[12px] border-r-green-300 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent"></div>
             <div className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[10px] border-r-white border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent"></div>
@@ -207,7 +252,9 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
 
       {/* CTA */}
       <div className="text-center space-y-3">
-        <p className="text-sm text-gray-600 leading-relaxed">作業時間約2時間/見積無料/施工日から3年保証付き</p>
+        <p className="text-sm text-gray-600 leading-relaxed font-semibold">
+          作業時間約2時間/見積無料/施工日から3年保証付き
+        </p>
       </div>
     </div>
   )
