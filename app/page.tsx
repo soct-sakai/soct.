@@ -18,7 +18,6 @@ import { SiteFooter } from "@/components/site-footer"
 import { ApplicationFlow } from "@/components/application-flow"
 import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
-import { TVMountBrackets } from "@/components/tv-mount-brackets"
 import { WarrantyBanner } from "@/components/warranty-banner"
 
 const RoomSimulatorIcon = () => {
@@ -130,9 +129,6 @@ export default function Page() {
 
         {/* 4. 🔧 施工プロセス */}
         <InstallationProcessGallery />
-
-        {/* TV Mount Brackets Section */}
-        <TVMountBrackets />
 
         {/* 5. 施工事例　施工 Before → After */}
         <section id="installation-examples" className="py-24 luxury-grid-bg-fine">
@@ -247,9 +243,6 @@ export default function Page() {
 
         {/* キャンペーンセクションを追加（パッケージプランの前に） */}
         <CampaignSection />
-
-        {/* TV Mount Brackets Section */}
-        <TVMountBrackets />
 
         {/* Application Flow */}
         <ApplicationFlow />
