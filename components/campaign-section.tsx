@@ -18,6 +18,52 @@ export function CampaignSection() {
           >
             新品テレビ販売
           </div>
+
+          <div className="flex items-center justify-center gap-6 mb-6 flex-wrap">
+            <div className="relative">
+              <Image
+                src="/images/character-icon.png"
+                alt="キャラクターアイコン"
+                width={120}
+                height={120}
+                className="rounded-full border-4 border-blue-300 shadow-lg"
+              />
+            </div>
+            <div className="relative bg-white rounded-2xl p-6 shadow-lg border-2 border-blue-200 max-w-md">
+              <div className="absolute -left-3 top-6 w-0 h-0 border-t-[15px] border-t-transparent border-b-[15px] border-b-transparent border-r-[20px] border-r-white"></div>
+              <div className="absolute -left-4 top-6 w-0 h-0 border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent border-r-[21px] border-r-blue-200"></div>
+              <h2 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
+                新品テレビ75インチ85インチ、最上位の98インチや100インチも用意可能です！
+              </h2>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-4 shadow-md mb-6 max-w-2xl mx-auto">
+            <h3 className="font-semibold text-lg mb-3 text-gray-800">取り扱いブランド</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+              <div className="text-blue-600 font-medium">
+                ・SONY BRAVIA
+                <br />
+                （ソニー ブラビア）
+              </div>
+              <div className="text-blue-600 font-medium">
+                ・Panasonic VIERA
+                <br />
+                （パナソニック ビエラ）
+              </div>
+              <div className="text-blue-600 font-medium">
+                ・SHARP AQUOS
+                <br />
+                （シャープ アクオス）
+              </div>
+              <div className="text-blue-600 font-medium">
+                ・TOSHIBA REGZA
+                <br />
+                （東芝 レグザ）
+              </div>
+            </div>
+          </div>
+
           <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
           <p className="text-xl text-gray-600">75インチ・85インチの大型サイズも対応</p>
           <p className="text-lg text-blue-600 mt-2 font-semibold">
