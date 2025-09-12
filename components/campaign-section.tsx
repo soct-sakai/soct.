@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ScrollLink } from "@/components/scroll-link"
 import Image from "next/image"
@@ -9,7 +8,16 @@ export function CampaignSection() {
     <section className="py-12 bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-8">
-          <Badge className="mb-4 bg-blue-500 text-white">新品テレビ販売</Badge>
+          <div
+            className="inline-block mb-4 px-3 py-1 rounded-full text-sm font-medium"
+            style={{
+              backgroundColor: "#1f2937",
+              color: "#ffffff",
+              border: "2px solid #1f2937",
+            }}
+          >
+            新品テレビ販売
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
           <p className="text-xl text-gray-600">高品質な超大型テレビも是非ご検討ください！</p>
           <p className="text-sm text-gray-500 mt-2">

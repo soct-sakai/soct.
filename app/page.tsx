@@ -248,6 +248,9 @@ export default function Page() {
         {/* キャンペーンセクションを追加（パッケージプランの前に） */}
         <CampaignSection />
 
+        {/* TV Mount Brackets Section */}
+        <TVMountBrackets />
+
         {/* Application Flow */}
         <ApplicationFlow />
 
