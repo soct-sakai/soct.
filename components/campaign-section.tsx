@@ -18,11 +18,12 @@ export function CampaignSection() {
           >
             新品テレビ販売
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
-          <p className="text-xl text-gray-600">高品質な超大型テレビも是非ご検討ください！</p>
-          <p className="text-sm text-gray-500 mt-2">
-            ※テレビは販売時期によって内容が異なる場合がございます。現調時かお問い合わせ時にご相談くださいませ。
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">テレビ + 壁掛け施工セット割引</h2>
+          <p className="text-xl text-gray-600">75インチ・85インチの大型サイズも対応</p>
+          <p className="text-lg text-blue-600 mt-2 font-semibold">
+            98インチや100インチといった超大型テレビと壁掛け施工と金具もセットで三位一体！
           </p>
+          <p className="text-sm text-gray-500 mt-2">詳細はお問い合わせください</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
@@ -173,8 +174,10 @@ export function CampaignSection() {
 
         <div className="mt-8 text-center">
           <ScrollLink href="#contact-form">
-            <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
-              新品テレビについて問い合わせる
+            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white font-bold text-lg px-8 py-4">
+              テレビ + 壁掛け施工 セット割引
+              <br />
+              <span className="text-sm">詳細はお問い合わせください</span>
             </Button>
           </ScrollLink>
         </div>
