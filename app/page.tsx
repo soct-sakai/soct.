@@ -18,6 +18,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { ApplicationFlow } from "@/components/application-flow"
 import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
+import { TVMountBrackets } from "@/components/tv-mount-brackets"
 import { WarrantyBanner } from "@/components/warranty-banner"
 
 const RoomSimulatorIcon = () => {
@@ -236,6 +237,9 @@ export default function Page() {
             </div>
           </div>
         </section>
+
+        {/* TV Mount Brackets Section */}
+        <TVMountBrackets />
 
         <section id="introduction">
           <IntroductionSection />
