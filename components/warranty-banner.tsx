@@ -10,7 +10,7 @@ export function WarrantyBanner() {
       <div className="container px-4 md:px-6">
         <Card className="overflow-hidden border-2 border-blue-200 shadow-xl mb-8">
           <CardContent className="p-0">
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 md:p-6">
+            <div className="text-white p-4 md:p-6" style={{ backgroundColor: "#1d4ed8", color: "#ffffff" }}>
               <div className="flex items-center justify-center gap-3 mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -23,11 +23,12 @@ export function WarrantyBanner() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="h-8 w-8 md:h-10 md:w-10"
+                  style={{ color: "#ffffff" }}
                 >
                   <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
                   <line x1="1" y1="10" x2="23" y2="10" />
                 </svg>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center" style={{ color: "#ffffff" }}>
                   株式会社速人 決済方法につきまして
                 </h2>
               </div>
@@ -89,13 +90,15 @@ export function WarrantyBanner() {
 
         <Card className="overflow-hidden border-2 border-green-200 shadow-xl">
           <CardContent className="p-0">
-            <div className="bg-gradient-to-r from-green-500 to-blue-500 text-white p-4 md:p-6">
+            <div className="text-white p-4 md:p-6" style={{ backgroundColor: "#059669", color: "#ffffff" }}>
               <div className="flex items-center justify-center gap-3 mb-2">
-                <Shield className="h-8 w-8 md:h-10 md:w-10" />
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">安心の3年保証</h2>
-                <Shield className="h-8 w-8 md:h-10 md:w-10" />
+                <Shield className="h-8 w-8 md:h-10 md:w-10" style={{ color: "#ffffff" }} />
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center" style={{ color: "#ffffff" }}>
+                  安心の3年保証
+                </h2>
+                <Shield className="h-8 w-8 md:h-10 md:w-10" style={{ color: "#ffffff" }} />
               </div>
-              <p className="text-center text-lg md:text-xl font-semibold">
+              <p className="text-center text-lg md:text-xl font-semibold" style={{ color: "#ffffff" }}>
                 施工後も長期間サポート！業界最高水準の保証制度
               </p>
             </div>
@@ -178,11 +181,12 @@ export function WarrantyBanner() {
                 >
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    className="px-8 py-4 text-lg font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    style={{ backgroundColor: "#1d4ed8", color: "#ffffff" }}
                   >
-                    <Shield className="mr-2 h-5 w-5" />
-                    3年保証の詳細を見る
-                    <ExternalLink className="ml-2 h-5 w-5" />
+                    <Shield className="mr-2 h-5 w-5" style={{ color: "#ffffff" }} />
+                    <span style={{ color: "#ffffff" }}>3年保証の詳細を見る</span>
+                    <ExternalLink className="ml-2 h-5 w-5" style={{ color: "#ffffff" }} />
                   </Button>
                 </a>
 

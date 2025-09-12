@@ -69,12 +69,16 @@ const regions = [
 
 export function ServiceArea() {
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-24 bg-white luxury-grid-bg-fine">
       <div className="container">
-        <h2 className="text-3xl font-bold text-center mb-12">対応エリア</h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">🔹 対応エリア</h2>
+          <p className="text-xl text-gray-700 mb-2">愛知・岐阜・三重・静岡・特に名古屋市では信頼の実績！</p>
+        </div>
+
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {regions.map((region) => (
-            <div key={region.name} className="bg-white p-6 rounded-lg shadow-md">
+            <div key={region.name} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
               <h3 className="text-xl font-bold mb-4 flex items-center">
                 <span className="w-4 h-4 rounded-full mr-2" style={{ backgroundColor: region.color }} />
                 {region.name}
@@ -86,6 +90,13 @@ export function ServiceArea() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <p className="text-lg text-gray-700 mb-2">
+            壁掛けテレビと壁の専門店のプロが、あなたのリビングを劇的変化させます✨
+          </p>
+          <p className="text-xl font-bold text-blue-600">あなたの理想の空間、ソクトノカベカケが全力でお手伝い！</p>
         </div>
       </div>
     </section>

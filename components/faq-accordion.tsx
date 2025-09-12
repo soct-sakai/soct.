@@ -1,10 +1,7 @@
 "use client"
-
-import * as React from "react"
 import Image from "next/image"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
-import Autoplay from "embla-carousel-autoplay"
 
 const faqSlides = [
   {
@@ -30,15 +27,12 @@ const faqSlides = [
 ]
 
 export function FAQAccordion() {
-  const plugin = React.useRef(Autoplay({ delay: 5000, stopOnInteraction: true }))
-
   return (
     <Carousel
       opts={{
         align: "start",
         loop: true,
       }}
-      plugins={[plugin.current]}
       className="w-full max-w-5xl mx-auto"
     >
       <CarouselContent>
