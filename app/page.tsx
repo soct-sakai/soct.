@@ -238,15 +238,15 @@ export default function Page() {
           </div>
         </section>
 
-        {/* TV Mount Brackets Section */}
-        <TVMountBrackets />
-
         <section id="introduction">
           <IntroductionSection />
         </section>
 
         {/* キャンペーンセクションを追加（パッケージプランの前に） */}
         <CampaignSection />
+
+        {/* TV Mount Brackets Section */}
+        <TVMountBrackets />
 
         {/* Application Flow */}
         <ApplicationFlow />
