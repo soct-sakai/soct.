@@ -129,12 +129,14 @@ export function ContactForm() {
         selectionDetails += `\n【総合計金額】\n${grandTotal.toLocaleString()}円\n`
       }
 
-      if (
-        selectionDetails &&
-        !updatedMessage.includes("【選択されたスタータープラン】") &&
-        !updatedMessage.includes("【選択されたオプション】")
-      ) {
-        updatedMessage = (updatedMessage || "") + selectionDetails
+      if (selectionDetails) {
+        // Remove existing selection details before adding new ones
+        const cleanMessage = updatedMessage
+          .replace(/\n\n【選択されたスタータープラン】[\s\S]*?(?=\n\n【|$)/g, "")
+          .replace(/\n【選択されたオプション】[\s\S]*?(?=\n\n【|$)/g, "")
+          .replace(/\n【総合計金額】[\s\S]*?(?=\n\n|$)/g, "")
+
+        updatedMessage = cleanMessage + selectionDetails
       }
 
       setFormData((prev) => ({
@@ -151,6 +153,7 @@ export function ContactForm() {
     planSelection.selectedOptions,
     planSelection.totalPrice,
     planSelection.optionsTotalPrice,
+    formData.message, // Added formData.message to dependencies to prevent infinite loops
   ])
 
   React.useEffect(() => {
@@ -294,7 +297,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label className="block text-sm font-medium mb-3">
             希望する連絡の手段 <span className="text-red-500">*</span>
           </label>
           <Select onValueChange={(value) => handleInputChange("preferredContact", value)}>

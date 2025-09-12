@@ -222,7 +222,7 @@ export function OptionPlanSelector() {
       setHasTriggeredAnimation(true)
       setTimeout(() => {
         setShowAnimation(false)
-      }, 2000)
+      }, 3500) // Extended duration to match SNS challenge animation
     }
 
     // チェックが外れた場合は数量をリセット
