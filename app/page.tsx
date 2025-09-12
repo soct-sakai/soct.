@@ -137,6 +137,9 @@ export default function Page() {
         {/* 4. 🔧 施工プロセス */}
         <InstallationProcessGallery />
 
+        {/* TV Mount Brackets Section */}
+        <TVMountBrackets />
+
         {/* 5. 施工事例　施工 Before → After */}
         <section id="installation-examples" className="py-24 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
@@ -208,6 +211,9 @@ export default function Page() {
         <section id="introduction">
           <IntroductionSection />
         </section>
+
+        {/* キャンペーンセクションを追加（パッケージプランの前に） */}
+        <CampaignSection />
 
         <section id="service-area" className="py-24 bg-gray-50 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
@@ -317,14 +323,8 @@ export default function Page() {
           </div>
         </section>
 
-        {/* TV Mount Brackets Section */}
-        <TVMountBrackets />
-
         {/* Application Flow */}
         <ApplicationFlow />
-
-        {/* キャンペーンセクションを追加（パッケージプランの前に） */}
-        <CampaignSection />
 
         {/* パッケージプラン - Added subtle grid background */}
         <section id="package-plans" className="py-24 luxury-grid-bg-fine">
