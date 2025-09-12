@@ -153,7 +153,6 @@ export function ContactForm() {
     planSelection.selectedOptions,
     planSelection.totalPrice,
     planSelection.optionsTotalPrice,
-    formData.message, // Added formData.message to dependencies to prevent infinite loops
   ])
 
   React.useEffect(() => {
