@@ -1,5 +1,4 @@
 "use client"
-import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { ScrollLink } from "@/components/scroll-link"
 import { useState } from "react"
@@ -16,7 +15,16 @@ export function SNSChallengeSection() {
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-pink-500 text-white px-4 py-2">SNSで話題</Badge>
+          <div
+            className="inline-block mb-4 px-4 py-2 rounded-full text-sm font-medium"
+            style={{
+              backgroundColor: "#ec4899",
+              color: "#ffffff",
+              border: "2px solid #ec4899",
+            }}
+          >
+            SNSで話題
+          </div>
           <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">#ソクトノカベカケチャレンジ</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             お客様の美しい壁掛けテレビ設置をSNSでシェアして、みんなで成功事例を共有しましょう
@@ -55,7 +63,7 @@ export function SNSChallengeSection() {
 
           <div className="text-center">
             <p className="text-lg font-semibold text-navy-900 mb-4">
-              あなたの大型テレビも、DIYの失敗例ではなく
+              お客様の大型テレビも、DIYの失敗例ではなく
               <br />
               美しい成功例として残しませんか？
             </p>
