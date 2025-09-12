@@ -8,7 +8,7 @@ export function SNSChallengeSection() {
 
   const handleChallengeClick = () => {
     setShowSuccess(true)
-    setTimeout(() => setShowSuccess(false), 3500) // Extended animation duration from 3000ms to 3500ms (0.5 seconds longer)
+    setTimeout(() => setShowSuccess(false), 3500)
   }
 
   return (
@@ -26,6 +26,27 @@ export function SNSChallengeSection() {
             SNSで話題
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">#ソクトノカベカケチャレンジ</h2>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6 max-w-4xl mx-auto">
+            <div className="flex-shrink-0">
+              <Image
+                src="/images/sns-character-icon.png"
+                alt="キャラクターアイコン"
+                width={120}
+                height={120}
+                className="rounded-full"
+              />
+            </div>
+            <div className="relative bg-blue-500 text-white p-6 rounded-2xl shadow-lg max-w-2xl">
+              <div className="absolute -left-4 top-6 w-0 h-0 border-t-[15px] border-t-transparent border-b-[15px] border-b-transparent border-r-[20px] border-r-blue-500 md:block hidden"></div>
+              <div className="absolute -top-4 left-6 w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-b-[20px] border-b-blue-500 md:hidden block"></div>
+              <p className="text-sm md:text-base font-medium leading-relaxed">
+                撮ってシェア📷
+                SNS投稿で背中押して！応援投稿でみんなの"壁掛け愛"速人＝壁掛けテレビ、目指せ日本一📣拡散希望！#ソクトノカベチャレ
+              </p>
+            </div>
+          </div>
+
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             お客様の美しい壁掛けテレビ設置をSNSでシェアして、みんなで成功事例を共有しましょう
           </p>
