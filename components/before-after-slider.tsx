@@ -49,18 +49,18 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
     },
   ]
 
-  const currentCaseStudy = caseStudies[currentAfterIndex] || caseStudies[0]
+  const currentCaseStudy = caseStudies[0] // Always use the first case study
 
   // 次のAfter画像に切り替え（3秒間隔）
-  useEffect(() => {
-    if (afterImages.length <= 1) return
+  // useEffect(() => {
+  //   if (afterImages.length <= 1) return
 
-    const interval = setInterval(() => {
-      setCurrentAfterIndex((prev) => (prev + 1) % afterImages.length)
-    }, 3000)
+  //   const interval = setInterval(() => {
+  //     setCurrentAfterIndex((prev) => (prev + 1) % afterImages.length)
+  //   }, 3000)
 
-    return () => clearInterval(interval)
-  }, [afterImages.length])
+  //   return () => clearInterval(interval)
+  // }, [afterImages.length])
 
   // 初回操作時のイベント送信
   const fireInteractionEvent = () => {
