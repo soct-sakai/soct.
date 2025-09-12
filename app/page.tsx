@@ -133,7 +133,6 @@ export default function Page() {
         {/* 5. 施工事例　施工 Before → After */}
         <section id="installation-examples" className="py-24 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
-            <h2 className="luxury-heading text-center mb-12">施工事例</h2>
             <div className="space-y-16">
               <BeforeAfterSlider
                 caseId="case-01"

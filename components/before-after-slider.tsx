@@ -107,7 +107,27 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <h3 className="text-2xl md:text-3xl font-bold">施工 Before → After</h3>
+        <div className="flex justify-center items-center mb-6">
+          <div className="relative">
+            {/* Speech bubble */}
+            <div className="bg-white border-2 border-green-300 rounded-2xl p-4 shadow-lg relative mr-4 max-w-md">
+              <div className="text-2xl md:text-3xl font-bold text-green-800 mb-2">施工事例</div>
+              <div className="text-lg text-gray-700">施工 Before → After</div>
+              {/* Speech bubble arrow */}
+              <div className="absolute right-[-12px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[12px] border-l-green-300 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent"></div>
+              <div className="absolute right-[-10px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-[10px] border-l-white border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent"></div>
+            </div>
+            {/* Character image */}
+            <div className="w-24 h-24 relative flex-shrink-0">
+              <Image
+                src="/images/character-icon.png"
+                alt="キャラクター"
+                fill
+                className="object-cover rounded-full border-2 border-green-300"
+              />
+            </div>
+          </div>
+        </div>
         <h4 className="text-xl font-semibold">{title}</h4>
         <p className="text-gray-600">{description}</p>
       </div>
