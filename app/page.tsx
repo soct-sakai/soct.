@@ -22,6 +22,54 @@ import { TVMountBrackets } from "@/components/tv-mount-brackets"
 import { WarrantyBanner } from "@/components/warranty-banner"
 
 const RoomSimulatorIcon = () => {
+  const emailTemplate = `【お客様情報】
+✅現地調査(見積)第1希望日：
+　　月　　　日(　　)　　　　：　
+✅現地調査(見積)第2希望日：
+　　月　　　日(　　)　　　　：　
+✅現地調査(見積)第3希望日：
+　　月　　　日(　　)　　　　：　
+
+※現調はなくてもおおよその見積料金は算出可能です。
+施工当日に再度ご説明させて頂き、プラスの追加工事が
+合った場合に料金が上乗せとなります。もちろん事前に
+確認をさせていただきますのでご安心くださいませ。
+
+✅施工希望日：
+　　月　　　日(　　)　　　　：　
+
+✅お名前：　　　　　　様
+✅お電話番号：
+✅住所(設置場所)：
+✅テレビのメーカー：
+✅テレビのインチサイズ：
+✅ 設置したい壁の全体画像とアップの画像：
+✅ 電源がある場所の画像（ここから電源を取る予定の場所）：
+
+【設置に関する確認事項】
+✅ 弊社に対して、どこまでを依頼したいかの内容
+　①金具の用意
+　お客様　　　弊社
+
+　②金具の種類
+　壁固定式　　スイングモーション式
+
+　③下地補強の有無　
+　ある　　　　なし
+
+　④下地補強無い場合、補強を
+　したい　　　しない
+　(しない場合、テレビのサイズによっては不可となります)
+
+　⑤隠ぺい配線隠しのダクト作成(壁内隠ぺい配線工事)
+　したい　　　しない`
+
+  const createMailtoLink = () => {
+    const subject = encodeURIComponent("壁掛けテレビ設置のご相談")
+    const body = encodeURIComponent(emailTemplate)
+    return `mailto:kabekaketv@soct.jp.net?subject=${subject}&body=${body}`
+  }
+
   return (
     <>
       {/* スマホ用固定フッターCTA - リッチメニュー形式 */}
@@ -30,7 +78,7 @@ const RoomSimulatorIcon = () => {
           <span className="ico">📞</span>
           <span className="label">電話相談</span>
         </a>
-        <a className="cta-btn email" href="mailto:kabekaketv@soct.jp.net" aria-label="メールで相談">
+        <a className="cta-btn email" href={createMailtoLink()} aria-label="メールで相談">
           <span className="ico">✉️</span>
           <span className="label">メール相談</span>
         </a>
@@ -60,7 +108,7 @@ const RoomSimulatorIcon = () => {
                 <span className="text-sm font-medium">電話相談</span>
               </div>
             </a>
-            <a href="mailto:kabekaketv@soct.jp.net" className="group">
+            <a href={createMailtoLink()} className="group">
               <div className="bg-gray-50 hover:bg-gray-100 text-gray-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
                 <span className="text-lg">✉️</span>
                 <span className="text-sm font-medium">メール相談</span>
