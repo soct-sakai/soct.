@@ -62,6 +62,11 @@ export function CampaignSection() {
                 <br />
                 （東芝 レグザ）
               </div>
+              <div className="text-blue-600 font-medium">・LG</div>
+              <div className="text-blue-600 font-medium">・TCL</div>
+              <div className="text-blue-600 font-medium">・Hisense</div>
+              <div className="text-blue-600 font-medium">・Xiaomi</div>
+              <div className="text-blue-600 font-medium">・etc</div>
             </div>
           </div>
 
