@@ -20,8 +20,6 @@ import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
 import { TVMountBrackets } from "@/components/tv-mount-brackets"
 import { WarrantyBanner } from "@/components/warranty-banner"
-import { Badge } from "@/components/ui/badge"
-import { Check } from "lucide-react"
 import { ScrollLink } from "@/components/scroll-link"
 import Image from "next/image"
 
@@ -260,190 +258,207 @@ export default function Page() {
         {/* TV Mount Brackets Section */}
         <TVMountBrackets />
 
+        {/* Package Plans Section - Restored original layout */}
         <section id="package-plans" className="py-24">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">パッケージプラン</h2>
+
+            <div className="text-center mb-8">
+              <ScrollLink href="#contact-form">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-700 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-800 transition-all duration-300 shadow-lg">
+                  📋 セットメニュー価格早見表を見る
+                </button>
+              </ScrollLink>
+            </div>
+
             <div className="space-y-8 max-w-4xl mx-auto">
               <Card className="overflow-hidden">
                 <CardContent className="p-6">
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">基本料金パッケージ</h3>
                   <p className="mb-4">すべてのプランに含まれるもの：</p>
-                  <ul className="list-disc list-inside mb-4">
+                  <ul className="list-disc list-inside mb-4 space-y-1">
                     <li>取付工事一式</li>
                     <li>3年保証</li>
                     <li>地震落下時の再施工保証</li>
-                    <li>基本配線工事</li>
+                    <li>配線まとめ</li>
                   </ul>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <p className="font-semibold">40インチまで：</p>
-                      <p>22,000円</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold">41-49インチ：</p>
-                      <p>33,000円</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold">50-59インチ：</p>
-                      <p>44,000円</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold">60-69インチ：</p>
-                      <p>55,000円</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold">70-79インチ：</p>
-                      <p>66,000円</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold">80-89インチ：</p>
-                      <p>88,000円</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold">90-99インチ：</p>
-                      <p>110,000円</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold">100インチ以上：</p>
-                      <p>応相談</p>
-                    </div>
-                  </div>
+                  <p className="text-sm text-gray-600 mb-4">
+                    ※ インチサイズに応じた料金はスタータープランでご確認いただけます。
+                  </p>
                 </CardContent>
               </Card>
 
-              {[
-                {
-                  name: "スタータープラン",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.jpg-IHQR1w4YlGdkxWQ1su9nKEp2UfpzKV.jpeg",
-                  options: ["壁掛けテレビ施工のみ"],
-                  price: "22,000円〜",
-                  description: "インチサイズに応じた料金",
-                },
-                {
-                  name: "スタンダードA",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-wXLginPbnmoF2YjSARnaoSvbtg5uaL.jpeg",
-                  options: ["壁掛けテレビ施工", "壁固定式金具"],
-                  price: "35,200円〜",
-                  description: "インチサイズ料金 + 壁固定式金具（13,200円）",
-                  highlighted: true,
-                },
-                {
-                  name: "スタンダードB",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.jpg-wXLginPbnmoF2YjSARnaoSvbtg5uaL.jpeg",
-                  options: ["壁掛けテレビ施工", "スイングモーション式金具"],
-                  price: "41,800円〜",
-                  description: "インチサイズ料金 + スイングモーション式金具（19,800円）",
-                },
-                {
-                  name: "プラチナプラン",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.jpg-2Jaj9kuUDB6k6NUUFIqM2BwrLXg9U7.jpeg",
-                  options: [
-                    "壁掛けテレビ施工",
-                    "壁固定式金具",
-                    "壁内隠ぺい配線",
-                    "下地補強設置工事",
-                    "エコカラットタイル壁",
-                  ],
-                  price: "459,800円〜",
-                  description:
-                    "インチサイズ料金 + 金具（19,800円）+ 隠ぺい配線（22,000円）+ 下地補強（66,000円）+ エコカラット（330,000円〜）",
-                },
-                {
-                  name: "ダイヤモンドプラン",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3.jpg-NyXWhf5lKMeYeH058g9sl1I7iNERNa.jpeg",
-                  options: ["壁掛けテレビ施工", "壁固定式金具", "壁内隠ぺい配線", "アクセントクロス貼り換え"],
-                  price: "213,800円〜",
-                  description:
-                    "インチサイズ料金 + 金具（19,800円）+ 隠ぺい配線（22,000円）+ アクセントクロス（150,000円〜）",
-                },
-                {
-                  name: "プレミアムプラン",
-                  image:
-                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5.jpg-fMGsNyP2p9W75QwENKFATm755Ce1TZ.jpeg",
-                  options: [
-                    "壁掛けテレビ施工",
-                    "壁固定式金具",
-                    "壁内隠ぺい配線",
-                    "下地補強設置工事",
-                    "アクセントウォール",
-                    "リブパネル",
-                  ],
-                  price: "1,009,800円〜",
-                  description:
-                    "インチサイズ料金 + 金具（19,800円）+ 隠ぺい配線（22,000円）+ 下地補強（66,000円）+ アクセントウォール（550,000円〜）+ リブパネル（330,000円〜）",
-                },
-              ].map((plan, index) => (
-                <Card key={index} className={`overflow-hidden ${plan.highlighted ? "border-blue-500 border-2" : ""}`}>
-                  <div className="relative h-[300px] w-full bg-gray-50">
-                    <Image
-                      src={plan.image || "/placeholder.svg"}
-                      alt={`${plan.name}パッケージプラン`}
-                      fill
-                      className="object-contain p-4"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4 flex-wrap">
-                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold">{plan.name}</h3>
-                      {plan.highlighted && <Badge className="bg-blue-500">おすすめ</Badge>}
-                    </div>
-                    <p className="text-2xl font-bold mb-4">{plan.price}</p>
-                    <div className="space-y-4">
-                      <ul className="space-y-2">
-                        {plan.options.map((option, i) => (
-                          <li key={i} className="flex items-center">
-                            <Check className="h-4 w-4 mr-2 text-green-500" />
-                            {option}
-                          </li>
-                        ))}
-                      </ul>
-                      <p className="text-sm text-gray-600">{plan.description}</p>
-                      <p className="text-sm text-blue-600 font-semibold">※ 全プラン3年間無料保証付き</p>
-                      <ScrollLink
-                        href="#contact-form"
-                        className="block w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded text-center"
-                      >
-                        見積もりを依頼する
-                      </ScrollLink>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-
-              {/* Additional Options */}
               <Card className="overflow-hidden">
-                <div className="relative h-[300px] w-full bg-gray-50">
+                <div className="relative h-[400px] w-full bg-gray-50">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.jpg-IHQR1w4YlGdkxWQ1su9nKEp2UfpzKV.jpeg"
+                    alt="スタータープラン - 壁掛けテレビ施工"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded">
+                    <h4 className="font-bold text-lg">スタータープラン</h4>
+                    <p className="text-sm">○壁掛けテレビ施工</p>
+                  </div>
+
+                  <div className="absolute bottom-4 right-4 flex gap-2">
+                    <a
+                      href="tel:0524332799"
+                      className="bg-red-500 text-white px-3 py-2 rounded flex items-center gap-1 text-sm"
+                    >
+                      📞 電話相談
+                    </a>
+                    <label className="bg-gray-500 text-white px-3 py-2 rounded flex items-center gap-1 text-sm cursor-pointer">
+                      <input type="checkbox" className="mr-1" />
+                      ✉️ メール相談
+                    </label>
+                  </div>
+
+                  <div className="absolute bottom-16 right-4">
+                    <a
+                      href="https://lin.ee/4pVYnlI"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-green-500 text-white px-4 py-2 rounded flex items-center gap-1 text-sm"
+                    >
+                      💬 LINEで相談（おすすめ）
+                    </a>
+                  </div>
+
+                  <div className="absolute bottom-28 right-4">
+                    <ScrollLink
+                      href="#package-plans"
+                      className="bg-blue-500 text-white px-4 py-2 rounded flex items-center gap-1 text-sm"
+                    >
+                      📋 基本メニュー
+                    </ScrollLink>
+                  </div>
+                </div>
+
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold">スタータープラン</h3>
+                    <select className="border rounded px-2 py-1 text-sm">
+                      <option>1台</option>
+                      <option>2台</option>
+                      <option>3台</option>
+                    </select>
+                  </div>
+
+                  <p className="text-lg font-semibold mb-4">スタータープラン(金具セットです)インチサイズ別料金：</p>
+
+                  <div className="space-y-2 mb-4">
+                    <div className="flex items-center justify-between">
+                      <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        40インチまで：33,000円
+                      </label>
+                      <select className="border rounded px-2 py-1 text-sm">
+                        <option>1台</option>
+                      </select>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        汎用スイングモーション式金具 大(75～85まで)：39,800円
+                      </label>
+                      <select className="border rounded px-2 py-1 text-sm">
+                        <option>1台</option>
+                      </select>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        上下昇降式金具　中・大(40～75まで)：110,000円
+                      </label>
+                      <select className="border rounded px-2 py-1 text-sm">
+                        <option>1台</option>
+                      </select>
+                    </div>
+
+                    <div className="flex items-center">
+                      <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        その他の金具(100インチ対応や、天釣り金具等)：応相談
+                      </label>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center mb-4">
+                    <input type="checkbox" className="mr-2" checked readOnly />
+                    <span className="text-green-600">✓ 壁掛けテレビ施工のみ</span>
+                  </div>
+
+                  <p className="text-sm text-blue-600 mb-4">※ 全プラン3年間無料保証付き</p>
+
+                  <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-4 rounded font-semibold">
+                    見積もりを依頼する
+                  </button>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden">
+                <div className="relative h-[400px] w-full bg-gray-50">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6.jpg-svSF5yxQItuUKpXmSD0MM6izM752rC.jpeg"
                     alt="オプションプラン"
                     fill
-                    className="object-contain p-4"
+                    className="object-cover"
                   />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">オプションプラン</h3>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    {[
-                      "クロス貼替",
-                      "エコカラット取付",
-                      "スマートホーム",
-                      "フローティングシェルフ",
-                      "壁固定式金具",
-                      "スイング式金具",
-                      "下地補強",
-                      "特殊壁テクニカル料金",
-                      "電源とアンテナの増設工事",
-                    ].map((option, index) => (
-                      <div key={index} className="flex items-center gap-2">
-                        <Check className="h-4 w-4 text-green-500" />
-                        <span>{option}</span>
+                  <div className="absolute inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center">
+                    <div className="text-center px-4">
+                      <div className="grid grid-cols-2 gap-8 text-sm">
+                        <div className="space-y-2">
+                          <h4 className="font-bold text-white">• タイル取付</h4>
+                          <h4 className="font-bold text-white">• ふかし壁</h4>
+                          <h4 className="font-bold text-white">• フロート</h4>
+                        </div>
+                        <div className="space-y-2">
+                          <h4 className="font-bold text-white">• リブパネル</h4>
+                          <h4 className="font-bold text-white">• 壁固定式金具</h4>
+                          <h4 className="font-bold text-white">• スイング式金具</h4>
+                          <h4 className="font-bold text-white">• 壁内隠ぺい配線</h4>
+                          <h4 className="font-bold text-white">• 下地補強</h4>
+                          <h4 className="font-bold text-white">• 特殊壁テクニカル料金</h4>
+                          <h4 className="font-bold text-white">• 電源とアンテナの増設工事</h4>
+                        </div>
                       </div>
-                    ))}
+                      <div className="mt-6">
+                        <h3 className="text-xl font-bold text-white mb-3">壁掛けテレビオプション</h3>
+                        <div className="grid grid-cols-2 gap-4 text-xs">
+                          <div className="text-white font-medium">○ クロス貼替</div>
+                          <div className="text-white font-medium">○ エコカラット取付</div>
+                          <div className="text-white font-medium">○ スマートホーム</div>
+                          <div className="text-white font-medium">○ フローティングシェルフ</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <CardContent className="p-6">
+                  <h3 className="text-2xl font-bold mb-4">オプションプラン</h3>
+                  <p className="mb-4">一般オプション：</p>
+
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center justify-between">
+                      <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Wifi設定 1台毎：3,300円
+                      </label>
+                      <select className="border rounded px-2 py-1 text-sm">
+                        <option>1台</option>
+                      </select>
+                    </div>
+
+                    <div className="flex items-center">
+                      <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        周辺機器接続設定 1台毎：2,200円
+                      </label>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
