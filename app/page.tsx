@@ -127,6 +127,13 @@ export default function Page() {
           </div>
         </section>
 
+        {/* Customer Reviews - CustomerReasonsの直後に移動、新しいギャラリー形式 */}
+        <section className="py-12 luxury-grid-bg">
+          <div className="container px-4 md:px-6">
+            <CustomerReviewsGallery />
+          </div>
+        </section>
+
         {/* 4. 🔧 施工プロセス */}
         <InstallationProcessGallery />
 
@@ -196,16 +203,6 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Customer Reviews - CustomerReasonsの直後に移動、新しいギャラリー形式 */}
-        <section className="py-12 luxury-grid-bg">
-          <div className="container px-4 md:px-6">
-            <div className="text-center mb-16">
-              <h2 className="luxury-heading">お客様の声📱 実際のお客様からの口コミ</h2>
-            </div>
-            <CustomerReviewsGallery />
-          </div>
-        </section>
-
         <SNSChallengeSection />
 
         <section id="introduction">
@@ -215,7 +212,7 @@ export default function Page() {
         <section id="service-area" className="py-24 bg-gray-50 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">🔹 対応エリア</h2>
+              <h2 className="luxury-heading">🔹 対応エリア</h2>
               <p className="text-xl text-gray-700 mb-2">愛知・岐阜・三重・静岡・特に名古屋市では信頼の実績！</p>
             </div>
 

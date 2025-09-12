@@ -91,11 +91,28 @@ const reviewImages = [
 export function CustomerReviewsGallery() {
   return (
     <div className="space-y-8">
-      <div className="text-center mb-8">
-        <h3 className="text-2xl font-bold mb-4 text-blue-800">📱 実際のお客様からの口コミ</h3>
-        <p className="text-lg text-gray-600">
-          Googleマップやその他のプラットフォームに投稿された、リアルなお客様の声をご紹介します
-        </p>
+      <div className="flex justify-center items-center mb-8">
+        <div className="flex items-center gap-4">
+          {/* Character image */}
+          <div className="w-24 h-24 relative flex-shrink-0">
+            <Image
+              src="/images/character-icon-3.png"
+              alt="キャラクター"
+              fill
+              className="object-cover rounded-full border-2 border-blue-300"
+            />
+          </div>
+          {/* Speech bubble */}
+          <div className="bg-white border-2 border-blue-300 rounded-2xl p-4 shadow-lg relative max-w-md">
+            <div className="text-xl font-bold text-blue-800 mb-2">📱 実際のお客様からの口コミ</div>
+            <div className="text-lg text-gray-700">
+              Googleマップやその他のプラットフォームに投稿された、リアルなお客様の声をご紹介します
+            </div>
+            {/* Speech bubble arrow pointing left */}
+            <div className="absolute left-[-12px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[12px] border-r-blue-300 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent"></div>
+            <div className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[10px] border-r-white border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent"></div>
+          </div>
+        </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
