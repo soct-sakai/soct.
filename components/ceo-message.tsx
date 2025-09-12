@@ -33,11 +33,74 @@ export function CEOMessage() {
               <div className="space-y-3">
                 <p className="text-lg font-medium">皆さま、こんにちは！株式会社速人の坂井です。</p>
                 <p>あなたにこのページを見てもらえて、本当に嬉しいです。</p>
+
                 <p className="font-medium text-blue-600">「壁のコンシェルジュ」としてあなたのお家の壁を診断します。</p>
                 <p>
                   年間200件以上の壁掛けテレビ施工で喜ばれており、超大手法人会社様からもご依頼いただける実績は誇りに思います。
                 </p>
+
                 <p>さてここからは、私の経歴からどんな会社なのかを知っていただけたらと思います。</p>
+                <p>
+                  会社は、株式会社速人(ソクト)といい現在は名古屋市北区大曽根に所在します。
+                  <br />
+                  もともとは2019年12月に名古屋市南区要町で創業しております。
+                  <br />
+                  現在は、壁掛けテレビの事業をメインとして活動しています。
+                </p>
+
+                <p className="font-medium text-red-600">
+                  創業からの道のりは断崖絶壁。
+                  <br />
+                  上手くいかないことの連続、何度経営難で倒産寸前までいったことでしょうか。
+                  <br />
+                  経営者レベルワーストだなと思い、自らを『ワースト社長』と名乗っています。
+                </p>
+              </div>
+
+              <div className="mt-8 space-y-4 bg-red-50 p-6 rounded-lg border-l-4 border-red-200">
+                <h3 className="font-bold text-lg text-red-600 mb-4">困難な経験と学び</h3>
+                <p>
+                  上手くいかないのは、事業を遂行していくうえでの人と仕事するという難しさ。
+                  <br />
+                  時には社員が取引先と結託し、事業そのものと人材まるごと乗っ取られてという事も。
+                </p>
+
+                <p>
+                  壁掛けテレビの事業においても、数名のお客様には弊社の知見が足りず、ご迷惑をお掛けするという事もありました。
+                </p>
+
+                <div className="ml-4 space-y-2 text-sm">
+                  <p>・機材の運び入れの際に、工具が倒れて巾木を傷つけてしまったり。</p>
+                  <p>・マスキングテープの粘着力でも破れてしまったクロス。</p>
+                  <p>・下地があると聞いていたが、下地が無くて、それを何とか加工技術で補った。</p>
+                  <p>
+                    後日、お子さんがテレビに物を投げて壊してしまい、テレビメーカーのサービスさんが
+                    <br />
+                    金具メーカーが推奨する正規の付け方じゃないという事でテレビが壊れた時に
+                    <br />
+                    保証が効かなかったり。テレビと壁と金具全てを保険で保証という事も。
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 space-y-4 bg-green-50 p-6 rounded-lg border-l-4 border-green-200">
+                <p>
+                  多くの失敗を得て、どうしたらもっと喜んでいただける仕事の内容になるだろうかを突き詰めて参りました。
+                  <br />
+                  ですが、その方向性が合わずに去っていった技術者さん。
+                </p>
+
+                <p>
+                  苦難がありましたが、こうしたHPを見て下さった方が速人へ直接のお仕事をご依頼くださるように少しづつなってきました。
+                </p>
+
+                <p className="font-bold text-green-700">
+                  感謝を忘れずに、壁掛けテレビという本来生活に必要が無いサービスが、
+                  <br />
+                  あなたの新生活をより華やかに温かみがあるものへとなるように全力を尽くします。
+                  <br />
+                  そんな名前の割にゆっくりめに成長していく会社です。
+                </p>
               </div>
 
               <div className="mt-8 space-y-4 border-l-4 border-blue-200 pl-6">
@@ -48,45 +111,6 @@ export function CEOMessage() {
                 </p>
                 <p>就職活動が上手くいかず半年間ニートした時もありました。</p>
                 <p>そして色んな仕事をしてきました。</p>
-              </div>
-
-              <div className="mt-8 space-y-4 bg-gray-50 p-6 rounded-lg">
-                <h3 className="font-bold text-lg text-blue-600 mb-4">これまでの歩み</h3>
-
-                <div className="space-y-3">
-                  <p>
-                    <span className="font-semibold text-blue-500">17歳</span> -
-                    まだ若い頃でしたが、新築の家を建てたり、古い家を直したりする職人に。
-                  </p>
-
-                  <p>
-                    <span className="font-semibold text-blue-500">22歳</span> -
-                    ゲームが好きすぎて、ゲームショップの副店長。
-                  </p>
-
-                  <p>
-                    <span className="font-semibold text-blue-500">25歳</span> -
-                    漫画喫茶で店長として、お客さんの顔を見て、接客の楽しさを知りました。
-                  </p>
-
-                  <p>
-                    <span className="font-semibold text-blue-500">27歳</span> -
-                    ネットで物を売る仕事に飛び込んで、企画営業として、どうやったら物が売れるのか、頭をひねる毎日でした。
-                  </p>
-
-                  <p>
-                    <span className="font-semibold text-blue-500">29歳</span> - 結婚
-                  </p>
-                  <p>
-                    <span className="font-semibold text-blue-500">30歳</span> -
-                    一人で軽貨物の運送業を始めました。雨の日も風の日も、荷物を届けて、自分の力で生計を立てる厳しさを知りました。
-                  </p>
-
-                  <p>
-                    <span className="font-semibold text-blue-500">39歳</span> -
-                    ついに「株式会社速人」を立ち上げました。最初から、軽貨物と便利屋。何でも屋の始まりです。
-                  </p>
-                </div>
               </div>
 
               <div className="mt-8 space-y-4 border-l-4 border-pink-200 pl-6 bg-pink-50 p-6 rounded-r-lg">

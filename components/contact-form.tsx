@@ -21,7 +21,7 @@ const packagePlans = [
   { id: "sns-challenge", label: "#ソクトノカベカケチャレンジ 参加希望" },
 ]
 
-function ContactForm() {
+export function ContactForm() {
   const [formData, setFormData] = React.useState({
     name: "",
     postalCode: "",
@@ -264,6 +264,3 @@ function ContactForm() {
     </div>
   )
 }
-
-export { ContactForm }
-export default ContactForm

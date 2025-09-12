@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { ChevronDown } from "lucide-react"
 import { useEffect, useState } from "react"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 
 const streamingComments = [
   "帰宅したら、みんなスマホ越し…最後に家族で声を合わせて笑ったのはいつだろう？",
@@ -169,7 +170,121 @@ export function HeroUnified() {
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <div className="max-w-6xl mx-auto w-full"></div>
+          <div className="max-w-6xl mx-auto w-full">
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl mb-8"
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-black mb-6" style={{ color: "#2c3e50" }}>
+                プロの仕上がりをご覧ください
+              </h2>
+
+              {/* Elegant pricing section */}
+              <div className="rounded-2xl p-8 mb-8" style={{ background: "linear-gradient(135deg, #f8f9fa, #ffffff)" }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
+                  料金例
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      75インチを壁掛けテレビ取付設置と金具のセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      88,000円〜
+                    </span>
+                    <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      隠ぺい配線工事とのセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      121,000円
+                    </span>
+                    <span className="text-sm text-gray-600">※配線を美しく隠します</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                配線も美しく隠し、まるで最初からそこにあったかのような自然な仕上がり。
+                <br />
+                これが
+                <span className="font-bold" style={{ color: "#f39c12" }}>
+                  ソクトの専門技術
+                </span>
+                です。
+              </p>
+
+              <div className="mb-6">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        background: "linear-gradient(45deg, #f39c12, #e67e22) !important",
+                        color: "white !important",
+                        boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
+                        border: "none",
+                      }}
+                    >
+                      <span style={{ color: "white !important" }}>セットメニュ価格早見表を見る</span>
+                      <br />
+                      <span className="text-sm" style={{ color: "white !important" }}>
+                        65インチや隠ぺい配線工事のセット金額がすぐわかる！
+                      </span>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
+                        セットメニュー価格早見表
+                      </h3>
+                      <div className="flex justify-center">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E6%97%A9%E8%A6%8B%E8%A1%A801.JPG-b7v6rFRUnvGaCKYga0ZBKjm2jtYBVG.jpeg"
+                          alt="セットメニュー価格早見表"
+                          width={1200}
+                          height={400}
+                          className="rounded-lg shadow-lg max-w-full h-auto"
+                        />
+                      </div>
+                      <p className="text-center text-sm text-gray-600 mt-4">
+                        ※現地調査・お見積もり無料　※価格は税込み表示
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+
+              <button
+                className="px-12 py-6 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                style={{
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6) !important",
+                  color: "white !important",
+                  boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
+                  border: "none",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(142,68,173,0.4)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(142,68,173,0.3)"
+                }}
+                onClick={() => {
+                  const beforeAfterSection = document.getElementById("before-after-section")
+                  if (beforeAfterSection) {
+                    beforeAfterSection.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
+              >
+                施工事例Before → Afterへジャンプする
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -199,7 +314,121 @@ export function HeroUnified() {
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <div className="max-w-6xl mx-auto w-full"></div>
+          <div className="text-center max-w-4xl">
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl mb-8"
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-black mb-6" style={{ color: "#2c3e50" }}>
+                プロの仕上がりをご覧ください
+              </h2>
+
+              {/* Elegant pricing section */}
+              <div className="rounded-2xl p-8 mb-8" style={{ background: "linear-gradient(135deg, #f8f9fa, #ffffff)" }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
+                  料金例
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      75インチを壁掛けテレビ取付設置と金具のセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      88,000円〜
+                    </span>
+                    <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      隠ぺい配線工事とのセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      121,000円
+                    </span>
+                    <span className="text-sm text-gray-600">※配線を美しく隠します</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                配線も美しく隠し、まるで最初からそこにあったかのような自然な仕上がり。
+                <br />
+                これが
+                <span className="font-bold" style={{ color: "#f39c12" }}>
+                  ソクトの専門技術
+                </span>
+                です。
+              </p>
+
+              <div className="mb-6">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        background: "linear-gradient(45deg, #f39c12, #e67e22) !important",
+                        color: "white !important",
+                        boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
+                        border: "none",
+                      }}
+                    >
+                      <span style={{ color: "white !important" }}>セットメニュ価格早見表を見る</span>
+                      <br />
+                      <span className="text-sm" style={{ color: "white !important" }}>
+                        65インチや隠ぺい配線工事のセット金額がすぐわかる！
+                      </span>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
+                        セットメニュー価格早見表
+                      </h3>
+                      <div className="flex justify-center">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E6%97%A9%E8%A6%8B%E8%A1%A801.JPG-b7v6rFRUnvGaCKYga0ZBKjm2jtYBVG.jpeg"
+                          alt="セットメニュー価格早見表"
+                          width={1200}
+                          height={400}
+                          className="rounded-lg shadow-lg max-w-full h-auto"
+                        />
+                      </div>
+                      <p className="text-center text-sm text-gray-600 mt-4">
+                        ※現地調査・お見積もり無料　※価格は税込み表示
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+
+              <button
+                className="px-12 py-6 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                style={{
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6) !important",
+                  color: "white !important",
+                  boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
+                  border: "none",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(142,68,173,0.4)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(142,68,173,0.3)"
+                }}
+                onClick={() => {
+                  const beforeAfterSection = document.getElementById("before-after-section")
+                  if (beforeAfterSection) {
+                    beforeAfterSection.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
+              >
+                施工事例Before → Afterへジャンプする
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -279,7 +508,121 @@ export function HeroUnified() {
         </div>
 
         <div className="relative z-10 h-full flex items-center justify-center px-4">
-          <div className="max-w-6xl mx-auto w-full"></div>
+          <div className="text-center max-w-4xl">
+            <div
+              className="rounded-3xl p-8 md:p-12 shadow-2xl mb-8"
+              style={{
+                background: "rgba(255,255,255,0.95)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <h2 className="text-3xl md:text-4xl font-black mb-6" style={{ color: "#2c3e50" }}>
+                プロの仕上がりをご覧ください
+              </h2>
+
+              {/* Elegant pricing section */}
+              <div className="rounded-2xl p-8 mb-8" style={{ background: "linear-gradient(135deg, #f8f9fa, #ffffff)" }}>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: "#2c3e50" }}>
+                  料金例
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      75インチを壁掛けテレビ取付設置と金具のセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      88,000円〜
+                    </span>
+                    <span className="text-sm text-gray-600">※現地調査・お見積もり無料</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <span className="text-lg font-medium" style={{ color: "#34495e" }}>
+                      隠ぺい配線工事とのセット
+                    </span>
+                    <span className="text-4xl font-black" style={{ color: "#2c3e50" }}>
+                      121,000円
+                    </span>
+                    <span className="text-sm text-gray-600">※配線を美しく隠します</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                配線も美しく隠し、まるで最初からそこにあったかのような自然な仕上がり。
+                <br />
+                これが
+                <span className="font-bold" style={{ color: "#f39c12" }}>
+                  ソクトの専門技術
+                </span>
+                です。
+              </p>
+
+              <div className="mb-6">
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button
+                      className="px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 transform hover:scale-105"
+                      style={{
+                        background: "linear-gradient(45deg, #f39c12, #e67e22) !important",
+                        color: "white !important",
+                        boxShadow: "0 8px 20px rgba(243,156,18,0.3)",
+                        border: "none",
+                      }}
+                    >
+                      <span style={{ color: "white !important" }}>セットメニュ価格早見表を見る</span>
+                      <br />
+                      <span className="text-sm" style={{ color: "white !important" }}>
+                        65インチや隠ぺい配線工事のセット金額がすぐわかる！
+                      </span>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-6 text-center" style={{ color: "#2c3e50" }}>
+                        セットメニュー価格早見表
+                      </h3>
+                      <div className="flex justify-center">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A3%E6%97%A9%E8%A6%8B%E8%A1%A801.JPG-b7v6rFRUnvGaCKYga0ZBKjm2jtYBVG.jpeg"
+                          alt="セットメニュー価格早見表"
+                          width={1200}
+                          height={400}
+                          className="rounded-lg shadow-lg max-w-full h-auto"
+                        />
+                      </div>
+                      <p className="text-center text-sm text-gray-600 mt-4">
+                        ※現地調査・お見積もり無料　※価格は税込み表示
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+
+              <button
+                className="px-12 py-6 rounded-full text-xl font-bold transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                style={{
+                  background: "linear-gradient(45deg, #8e44ad, #9b59b6) !important",
+                  color: "white !important",
+                  boxShadow: "0 10px 25px rgba(142,68,173,0.3)",
+                  border: "none",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = "0 15px 35px rgba(142,68,173,0.4)"
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = "0 10px 25px rgba(142,68,173,0.3)"
+                }}
+                onClick={() => {
+                  const beforeAfterSection = document.getElementById("before-after-section")
+                  if (beforeAfterSection) {
+                    beforeAfterSection.scrollIntoView({ behavior: "smooth" })
+                  }
+                }}
+              >
+                施工事例Before → Afterへジャンプする
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 

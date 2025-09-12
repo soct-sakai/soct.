@@ -2,12 +2,22 @@
 
 import { SiteHeader } from "@/components/site-header"
 import { HeroCarousel } from "@/components/hero-carousel"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check } from "lucide-react"
+import { ChevronRight, Check, CheckCircle, XCircle } from "lucide-react"
 import Image from "next/image"
+import { PasonaLaw } from "@/components/pasona-law"
 import { ServiceArea } from "@/components/service-area"
+import { InstallationExample } from "@/components/installation-example"
+import { AccordionInstallationExamples } from "@/components/accordion-installation-examples"
+import { WallTypes } from "@/components/wall-types"
+import { InstallationProcess } from "@/components/installation-process"
 import { ReviewTable } from "@/components/review-table"
+import { FAQAccordion } from "@/components/faq-accordion"
+import { CEOMessage } from "@/components/ceo-message"
+import { WarrantySlider } from "@/components/warranty-slider"
+import { ContactForm } from "@/components/contact-form"
+import { CompanyInfo } from "@/components/company-info"
 import { CompanyComparison } from "@/components/company-comparison"
 import { Instagram, Facebook, Linkedin, Link } from "lucide-react"
 import { ScrollLink } from "@/components/scroll-link"
@@ -17,8 +27,6 @@ import { CustomerReasons } from "@/components/customer-reasons"
 import { Button } from "@/components/ui/button"
 import { CustomizationOptions } from "@/components/customization-options"
 import { CustomerBenefits } from "@/components/customer-benefits"
-import { CompanyInfo } from "@/components/company-info"
-import ContactForm from "@/components/contact-form" // Import ContactForm component
 
 const RoomSimulatorIcon = () => {
   return (
@@ -100,7 +108,135 @@ export default function Page() {
 
         <TrustBadges />
         <ServiceDetails />
-        <CompanyInfo />
+        <CEOMessage />
+        <PasonaLaw />
+
+        {/* Benefits and Drawbacks */}
+        <section id="services" className="py-24 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">
+              壁掛けテレビのメリット・デメリット
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-2xl md:text-3xl text-green-600">メリット</CardTitle>
+                  <CheckCircle className="h-10 w-10 text-green-500" />
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    {[
+                      "スペースの有効活用",
+                      "安全性の向上（子供がテレビを押して不安を解消）",
+                      "見やすい位置に設置可能（キッチンからでも見渡せる）",
+                      "家族とのコミュニケーション時間が増える！",
+                      "大好きなゲームや映画(動画)への集中力高まり楽しい！",
+                    ].map((merit, index) => (
+                      <li key={index} className="flex items-start">
+                        <Check className="h-5 w-5 mr-2 text-green-500 flex-shrink-0 mt-1" />
+                        <span>{merit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+                  <CardTitle className="text-2xl md:text-3xl text-red-600">デメリット</CardTitle>
+                  <XCircle className="h-10 w-10 text-red-500" />
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4">
+                    {[
+                      "施工時に壁に穴をあける必要がある",
+                      "業者選びが重要",
+                      "模様替えが出来ない",
+                      "テレビの買い替えの取外し",
+                    ].map((demerit, index) => (
+                      <li key={index} className="flex items-start">
+                        <ChevronRight className="h-5 w-5 mr-2 text-red-500 flex-shrink-0 mt-1" />
+                        <span>{demerit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="space-y-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-center">壁の種類と必要な施工</h3>
+              <WallTypes />
+            </div>
+            <div className="space-y-8 mt-12" id="installation-process">
+              <InstallationProcess />
+            </div>
+          </div>
+        </section>
+
+        {/* Installation Examples */}
+        <section id="installation-examples" className="py-24">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">施工事例</h2>
+            <div className="space-y-16">
+              <InstallationExample
+                title="モダンな壁面へのTV取り付け"
+                description="スタイリッシュな石目調の壁面に、配線を完全に隠蔽したスッキリとした取り付けを実現。テレビ周りがすっきりとし、高級感のある仕上がりに。"
+                beforeImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%93%E3%83%95%E3%82%A9%E3%83%BC001.jpg-Sj6CExf7btsJccfMK2iPGA2Bzo60Fj.jpeg"
+                afterImages={[
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC001.jpg-ilFqalmRczB6w2MfdlMFNInYdyoBzO.jpeg",
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC002.jpg-QZOcbZSgPuln1ZmPhaniF4bQPuBZKN.jpeg",
+                ]}
+              />
+
+              <InstallationExample
+                title="75インチ大型テレビの壁掛け施工"
+                description="SONY BRAVIA 75インチの大型テレビを美しく設置。アクセントウォールと浮遊式の収納を組み合わせた、上質なリビング空間を実現。配線は全て隠蔽し、スマートな仕上がりに。"
+                beforeImage="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%93%E3%83%95%E3%82%A9%E3%83%BC002.jpg-N1wJ4SaOadPw7uA6nriL2jroak7Jhm.jpeg"
+                afterImages={[
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC003.jpg-9Os5R1wVccCEiSz4QP2reuZmupZ5nz.jpeg",
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC004.jpg-zh2Fd8vQPfxIr364EcRayGMBS01nqe.jpeg",
+                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC005.jpg-JGNqhIw0cQFGjNoVJtiWMt41mFZCvw.jpeg",
+                ]}
+              />
+
+              <AccordionInstallationExamples
+                examples={[
+                  {
+                    title: "大理石調の高級壁面への設置",
+                    description:
+                      "大理石調の高級感ある壁面に、配線を完全に隠蔽した美しい仕上がり。スマートTVの機能を最大限に活かせる設置位置で、快適な視聴環境を実現。",
+                    beforeImage:
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%93%E3%83%95%E3%82%A9%E3%83%BC003.jpg-itownsE7aGurXvIoe5tC5QWoCBppNX.jpeg",
+                    afterImages: [
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC006.jpg-8TeYGbLN9FUzmT1qvoROWXeDbYWrI9.jpeg",
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC007.jpg-CmT3E9eyhv4Kg6DXufuQpatI3ILwSJ.jpeg",
+                    ],
+                  },
+                  {
+                    title: "フローティング収納と調和する設置",
+                    description:
+                      "グレーストーン調の壁面に、フローティング収納とマッチする配置でテレビを設置。観葉植物とも調和した、洗練された空間デザインを実現。配線は壁内に完全収納。",
+                    beforeImage:
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%93%E3%83%95%E3%82%A9%E3%83%BC004.jpg-DnWwS1Jd8mjM16zUTkIJGT4MH4A0QU.jpeg",
+                    afterImages: [
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC008.jpg-qB08PTabi4OHFfhEfa2Jmxg2jdkZPt.jpeg",
+                    ],
+                  },
+                  {
+                    title: "一般的な壁面への美しい設置",
+                    description:
+                      "一般的なクロス×石膏ボードの壁面にTOSHIBA REGZA 55C350Xを設置。どんな一般住宅でも美しく仕上げられる確かな技術で、配線を完全に隠蔽し、スッキリとした空間を実現。",
+                    beforeImage:
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%83%93%E3%83%95%E3%82%A9%E3%83%BC005.jpg-FlFHQ0NReKzoPrXJc4UEFemcJvbK06.jpeg",
+                    afterImages: [
+                      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC009.jpg-TUvRV5R4hg2sYKTkNHfU5BfEIUY9pc.jpeg",
+                    ],
+                  },
+                ]}
+              />
+            </div>
+          </div>
+        </section>
 
         {/* Updated Customer Reviews */}
         <section className="py-24">
@@ -124,9 +260,60 @@ export default function Page() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section id="support" className="py-24 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">よくある質問</h2>
+            <FAQAccordion />
+          </div>
+        </section>
+
         <section className="py-24">
           <div className="container px-4 md:px-6">
             <ServiceArea />
+          </div>
+        </section>
+
+        {/* Staff Introduction */}
+        <section className="py-24">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">スタッフのご紹介</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {[
+                {
+                  name: "坂井 社長",
+                  role: "代表取締役 工事総責任者",
+                  experience: "経験15年",
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E8%87%AA%E5%88%86%E3%81%AE%E7%94%BB%E5%83%8F%E5%88%87%E3%82%8A%E6%8A%9C%E3%81%8D01.jpg-Lxke7zyE0dbgcP1e5lIxESxMaEqMIn.jpeg",
+                },
+                {
+                  name: "鈴木 大介",
+                  role: "頼れるチームリーダー",
+                  experience: "経験3年",
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%BF%E3%83%83%E3%83%9502.jpg-GIMZRRnSwpDnYAYf9wdQjqyyn3siEW.jpeg",
+                },
+                {
+                  name: "エリちゃん",
+                  role: "HPLP製作デザイナー\nたまに施工補助入ります。\n女性スタッフが欲しい時は希望してね。",
+                  experience: "経験2年",
+                  image:
+                    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%B9%E3%82%BF%E3%83%83%E3%83%9501.jpg-mYk1icvxR8SlcbiPcsph48BOsnK8BA.jpeg",
+                },
+              ].map((staff, index) => (
+                <Card key={index}>
+                  <CardContent className="pt-6 text-center">
+                    <div className="w-24 h-24 md:w-32 md:h-32 relative mx-auto mb-4 rounded-full overflow-hidden">
+                      <Image src={staff.image || "/placeholder.svg"} alt={staff.name} fill className="object-cover" />
+                    </div>
+                    <h3 className="font-bold text-xl md:text-2xl mb-2">{staff.name}</h3>
+                    <div className="text-gray-600 mb-2 whitespace-pre-line">{staff.role}</div>
+                    <p className="text-sm text-gray-500">{staff.experience}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -285,11 +472,122 @@ export default function Page() {
                   </CardContent>
                 </Card>
               ))}
+
+              {/* Additional Options */}
+              <Card className="overflow-hidden">
+                <div className="relative h-[300px] w-full bg-gray-50">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6.jpg-svSF5yxQItuUKpXmSD0MM6izM752rC.jpeg"
+                    alt="オプションプラン"
+                    fill
+                    className="object-contain p-4"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">オプションプラン</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {[
+                      "クロス貼替",
+                      "エコカラット取付",
+                      "スマートホーム",
+                      "フローティングシェルフ",
+                      "壁固定式金具",
+                      "スイング式金具",
+                      "下地補強",
+                      "特殊壁テクニカル料金",
+                      "電源とアンテナの増設工事",
+                    ].map((option, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <Check className="h-4 w-4 text-green-500" />
+                        <span>{option}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
             <p className="text-center mt-8 text-sm text-gray-600">
               ※ 価格は目安です。実際の費用は現地調査後に正確に算出いたします。TV
               サイズや追加サービスにより変動する場合があります。
             </p>
+          </div>
+        </section>
+
+        {/* Payment Methods */}
+        <section className="py-24 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12">ご利用可能なお支払い方法</h2>
+            <div className="max-w-3xl mx-auto">
+              <Card>
+                <CardContent className="p-8">
+                  <div className="space-y-8">
+                    {/* Credit Card Announcement */}
+                    <div className="text-center space-y-4">
+                      <h3 className="text-2xl md:text-3xl font-bold">※ソクトからのお知らせ※</h3>
+                      <div className="relative">
+                        <Image
+                          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%E3%82%AD%E3%83%A3%E3%83%97%E3%83%81%E3%83%A303.JPG-bfPUV3iS9D9RtXGhna1dz2nyXIt2BW.jpeg"
+                          alt="クレジットカード決済対応のお知らせ"
+                          width={600}
+                          height={400}
+                          className="mx-auto"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Payment Methods List */}
+                    <div className="grid gap-6">
+                      <div className="border-b pb-4">
+                        <h4 className="font-bold text-lg md:text-xl mb-2">現金決済</h4>
+                        <p className="text-gray-600">
+                          施工開始前の決済となります。追加作業が発生した場合は要相談となります。
+                        </p>
+                      </div>
+
+                      <div className="border-b pb-4">
+                        <h4 className="font-bold text-lg md:text-xl mb-2">振込決済</h4>
+                        <p className="text-gray-600">施工開始前の決済となります。</p>
+                      </div>
+
+                      <div className="border-b pb-4">
+                        <h4 className="font-bold text-lg md:text-xl mb-2">クレジットカード決済</h4>
+                        <p className="text-gray-600 mb-2">以下のカードブランドをご利用いただけます：</p>
+                        <ul className="list-disc list-inside text-gray-600 ml-4">
+                          <li>VISA</li>
+                          <li>Mastercard</li>
+                          <li>JCB</li>
+                          <li>American Express（アメリカンエクスプレス）</li>
+                          <li>Discover（ディスカバーカード）</li>
+                          <li>Diners Club（ダイナースクラブ）</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-lg md:text-xl mb-2">キャッシュレス決済</h4>
+                        <p className="text-gray-600">
+                          一部の決済方法に対応しております。お使いの決済方法が利用可能かどうか、お問い合わせください。
+                        </p>
+                        <p className="text-gray-600 mt-2">※ QUICPayにも対応開始です！</p>
+                      </div>
+                    </div>
+
+                    <div className="bg-orange-50 p-4 rounded-lg">
+                      <p className="text-sm text-orange-800">
+                        ※ お支払い方法についてご不明な点がございましたら、お気軽にお問い合わせください。
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Warranty Slider */}
+        <section className="py-24 bg-gray-50">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">安心の返金対応と保証制度</h2>
+            <WarrantySlider />
           </div>
         </section>
 
@@ -308,6 +606,8 @@ export default function Page() {
             </div>
           </div>
         </section>
+
+        <CompanyInfo />
 
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12 md:py-16">
