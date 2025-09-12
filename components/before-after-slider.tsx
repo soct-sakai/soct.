@@ -21,6 +21,36 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
 
   const currentAfterImage = afterImages[currentAfterIndex]
 
+  const caseStudies = [
+    {
+      title: "SHARPのAQUOS65インチ。",
+      content:
+        "実は、もともとスタンド式で設置されていたのを壁掛けに。人気のエコカラット、ストーングレース柄の壁面へのTV取り付けスタイリッシュでモダンは壁は、しっかりとテレビを固定して安全バッチリ！お客様希望で隠ぺい配線はなしでモール仕上げ。隠ぺい配線ならより高級感のある仕上がりに。基本料金とエコカラットへの取付、モールの金額で約81000円でした！",
+    },
+    {
+      title: "SONY BRAVIA 75インチの大型テレビを美しく設置。",
+      content:
+        "ふかし壁(アクセントウォール)と空中テレビボード(フロートボード)の収納を組み合わせた、上質なリビング空間を実現。配線は全て隠蔽し、スマートな仕上がりに。この壁とテレビと施工セットで100万円コースですね！",
+    },
+    {
+      title: "SONY BRAVIA75インチも、広いリビングで主役になれる。",
+      content:
+        "ベニヤの壁に大理石調のリブパネルへの設置高級感ある大理石調の壁面に、配線を完全に隠蔽した美しい仕上がり。壁裏は収納スペースになっていてBlu-rayレコーダーやゲーム機も完全に見えないよ。バックの収納棚数の多さも必見ですが、この壁は吹き抜けホールにもなっていてお金掛かってます。",
+    },
+    {
+      title: "65インチのPanasonic VIERA。",
+      content:
+        "空中テレビボード(フロートボード)と調和する観葉植物で眼に優しいデザイン。壁もテレビもとっても素敵！夜はムーディな映画を大好きな人とみていたくなる。Blu-rayレコーダーやゲーム機もフロートボード内に完全収納。エコカラットと空中テレビボードで施工費も含めるとこちらも50万掛かりますね！",
+    },
+    {
+      title: "寝室にも、ミドルクラスのテレビを壁掛けに。",
+      content:
+        "クールなライトグレークロス×石膏ボードの壁面にTOSHIBA REGZA 55インチを設置。寝ながらYouTube動画を楽しむだけじゃない！？ってどぉいうこと？アクセントクロスと壁掛けのみのセットでも、25万円。睡眠が楽しくなるなら安い投資になるのかな！？",
+    },
+  ]
+
+  const currentCaseStudy = caseStudies[currentAfterIndex] || caseStudies[0]
+
   // 次のAfter画像に切り替え（3秒間隔）
   useEffect(() => {
     if (afterImages.length <= 1) return
@@ -116,53 +146,14 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
               className="object-cover rounded-full border-2 border-green-300"
             />
           </div>
-          {/* Speech bubble */}
+          {/* Speech bubble with dynamic content */}
           <div className="bg-white border-2 border-green-300 rounded-2xl p-4 shadow-lg relative max-w-2xl">
             <div className="text-2xl md:text-3xl font-bold text-green-800 mb-4">施工事例　施工 Before → After</div>
             <div className="text-sm text-gray-700 space-y-3 text-left">
               <div>
-                <strong>SHARPのAQUOS65インチ。</strong>
+                <strong>{currentCaseStudy.title}</strong>
                 <br />
-                実は、もともとスタンド式で設置されていたのを壁掛けに。
-                <br />
-                人気のエコカラット、ストーングレース柄の壁面へのTV取り付けスタイリッシュでモダンは壁は、しっかりとテレビを固定して安全バッチリ！
-                <br />
-                お客様希望で隠ぺい配線はなしでモール仕上げ。
-                <br />
-                隠ぺい配線ならより高級感のある仕上がりに。
-                <br />
-                基本料金とエコカラットへの取付、モールの金額で約81000円でした！
-              </div>
-
-              <div>
-                <strong>SONY BRAVIA 75インチの大型テレビを美しく設置。</strong>
-                <br />
-                ふかし壁(アクセントウォール)と空中テレビボード(フロートボード)の収納を組み合わせた、上質なリビング空間を実現。配線は全て隠蔽し、スマートな仕上がりに。この壁とテレビと施工セットで100万円コースですね！
-              </div>
-
-              <div>
-                <strong>SONY BRAVIA75インチも、広いリビングで主役になれる。</strong>
-                <br />
-                ベニヤの壁に大理石調のリブパネルへの設置高級感ある大理石調の壁面に、配線を完全に隠蔽した美しい仕上がり。
-                <br />
-                壁裏は収納スペースになっていてBlu-rayレコーダーやゲーム機も完全に見えないよ。バックの収納棚数の多さも必見ですが、この壁は吹き抜けホールにもなっていてお金掛かってます。
-              </div>
-
-              <div>
-                <strong>65インチのPanasonic VIERA。</strong>
-                <br />
-                空中テレビボード(フロートボード)と調和する観葉植物で眼に優しいデザイン。壁もテレビもとっても素敵！夜はムーディな映画を大好きな人とみていたくなる。Blu-rayレコーダーやゲーム機もフロートボード内に完全収納。
-                <br />
-                エコカラットと空中テレビボードで施工費も含めるとこちらも50万掛かりますね！
-              </div>
-
-              <div>
-                <strong>寝室にも、ミドルクラスのテレビを壁掛けに。</strong>
-                <br />
-                クールなライトグレークロス×石膏ボードの壁面にTOSHIBA REGZA
-                55インチを設置。寝ながらYouTube動画を楽しむだけじゃない！？ってどぉいうこと？
-                <br />
-                アクセントクロスと壁掛けのみのセットでも、25万円。睡眠が楽しくなるなら安い投資になるのかな！？
+                {currentCaseStudy.content}
               </div>
             </div>
             {/* Speech bubble arrow pointing left */}
@@ -170,8 +161,6 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
             <div className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[10px] border-r-white border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent"></div>
           </div>
         </div>
-        <h4 className="text-xl font-semibold">{title}</h4>
-        <p className="text-gray-600">{description}</p>
       </div>
 
       <div
@@ -220,16 +209,10 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
         />
 
         {/* ラベル */}
-        <div
-          className="absolute bottom-4 left-4 px-3 py-1.5 rounded-full text-sm font-bold tracking-wider z-30"
-          style={{ backgroundColor: "#000000", color: "#ffffff" }}
-        >
+        <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-full text-sm font-bold tracking-wider !bg-black !text-white !border-2 !border-black z-[9999]">
           BEFORE
         </div>
-        <div
-          className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full text-sm font-bold tracking-wider z-30"
-          style={{ backgroundColor: "#000000", color: "#ffffff" }}
-        >
+        <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full text-sm font-bold tracking-wider !bg-black !text-white !border-2 !border-black z-[9999]">
           AFTER
         </div>
 
