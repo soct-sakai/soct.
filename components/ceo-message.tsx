@@ -248,11 +248,55 @@ export function CEOMessage() {
                 </p>
               </div>
 
-              <p className="font-bold text-right mt-8 text-lg">
-                株式会社速人
-                <br />
-                代表取締役 坂井
-              </p>
+              {/* Added professional installation images next to company signature */}
+              <div className="mt-8 border-t pt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                  {/* Company signature section */}
+                  <div className="text-center md:text-left">
+                    <p className="font-bold text-xl mb-2">
+                      株式会社速人
+                      <br />
+                      代表取締役 坂井
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      プロフェッショナルな施工で
+                      <br />
+                      お客様の理想を実現いたします
+                    </p>
+                  </div>
+
+                  {/* Professional work images */}
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/ceo-work-1.jpg"
+                        alt="代表取締役坂井による精密な施工作業"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                      <Image src="/images/ceo-work-2.jpg" alt="お客様との温かい交流" fill className="object-cover" />
+                    </div>
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/ceo-work-3.jpg"
+                        alt="女性スタッフによる丁寧な施工"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="relative aspect-square rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/ceo-work-4.jpg"
+                        alt="精密な測定による完璧な仕上がり"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="text-center mt-6">
