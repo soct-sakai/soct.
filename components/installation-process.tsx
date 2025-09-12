@@ -23,7 +23,20 @@ export function InstallationProcess() {
   return (
     <div className="space-y-8">
       <div className="text-center">
-        <h3 className="text-2xl font-bold mb-4">壁内配線の施工プロセス</h3>
+        <div className="flex justify-center items-center mb-6">
+          <div className="w-20 h-20 relative mr-4">
+            <Image
+              src="/images/character-icon-2.png"
+              alt="施工プロセスキャラクター"
+              fill
+              className="object-cover rounded-full border-2 border-green-300"
+            />
+          </div>
+          <div>
+            <h3 className="text-3xl font-bold mb-2">🔧 施工プロセス</h3>
+            <p className="text-lg text-gray-600">壁内配線の施工プロセス</p>
+          </div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           当社の専門技術者による壁内配線の施工手順をご紹介します。
           安全で美しい仕上がりを実現するための徹底したプロセスをご覧ください。
