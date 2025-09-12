@@ -137,6 +137,46 @@ export default function Page() {
         {/* 4. 🔧 施工プロセス */}
         <InstallationProcessGallery />
 
+        {/* New TV Sales Section */}
+        <section className="py-24 bg-gradient-to-br from-blue-50 to-indigo-100 luxury-grid-bg-fine">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="luxury-heading">新品テレビ販売</h2>
+              <p className="text-xl text-gray-700 mb-8">新品テレビ75インチ85インチも用意可能です！</p>
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+                  <div className="grid md:grid-cols-2 gap-8 items-center">
+                    <div className="space-y-6">
+                      <h3 className="text-2xl font-bold text-gray-900">最新モデルを特別価格でご提供</h3>
+                      <ul className="space-y-3 text-left">
+                        <li className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                          SONY BRAVIA、Panasonic VIERA、SHARP AQUOS
+                        </li>
+                        <li className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                          75インチ・85インチの大型サイズも対応
+                        </li>
+                        <li className="flex items-center">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                          壁掛け施工とセットで更にお得
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="text-center">
+                      <div className="bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl p-6">
+                        <p className="text-lg font-semibold mb-2">テレビ + 壁掛け施工</p>
+                        <p className="text-3xl font-bold">セット割引</p>
+                        <p className="text-sm mt-2">詳細はお問い合わせください</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* TV Mount Brackets Section */}
         <TVMountBrackets />
 
