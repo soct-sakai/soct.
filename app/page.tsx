@@ -52,14 +52,14 @@ const RoomSimulatorIcon = () => {
           <span className="label">LINEで相談</span>
         </a>
         <a className="cta-btn menu" href="#package-plans" aria-label="基本メニューを見る">
-          <span className="ico">📋</span>
-          <span className="label">基本メニュー</span>
+          <span className="ico text-gray-900">📋</span>
+          <span className="label text-gray-900">基本メニュー</span>
         </a>
       </nav>
 
-      {/* PC用リッチメニュー */}
+      {/* PC用リッチメニュー - Updated to use unified color scheme */}
       <div className="hidden md:block fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
-        <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 max-w-md">
+        <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 max-w-md luxury-grid-bg-fine">
           <div className="grid grid-cols-2 gap-3">
             <a href="tel:0524332799" className="group">
               <div className="bg-red-50 hover:bg-red-100 text-red-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
@@ -80,7 +80,7 @@ const RoomSimulatorIcon = () => {
               </div>
             </a>
             <a href="#package-plans" className="group col-span-2">
-              <div className="bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+              <div className="bg-blue-50 hover:bg-blue-100 text-blue-800 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                 <span className="text-lg">📋</span>
                 <span className="text-sm font-medium">基本メニュー</span>
               </div>
@@ -110,8 +110,8 @@ export default function Page() {
 
         <CEOMessage />
 
-        {/* Customer Reasons */}
-        <section className="py-12 bg-gray-50">
+        {/* Customer Reasons - Added subtle grid background */}
+        <section className="py-12 bg-gray-50 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
             <CustomerReasons />
           </div>
@@ -121,7 +121,7 @@ export default function Page() {
         <section className="py-12">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4">お客様の声</h2>
+              <h2 className="luxury-heading">お客様の声</h2>
             </div>
             <CustomerReviewsGallery />
           </div>
@@ -133,7 +133,7 @@ export default function Page() {
         {/* Installation Examples */}
         <section id="installation-examples" className="py-24">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">施工事例</h2>
+            <h2 className="luxury-heading text-center mb-12">施工事例</h2>
             <div className="space-y-16">
               <BeforeAfterSlider
                 caseId="case-01"
@@ -206,10 +206,10 @@ export default function Page() {
         {/* キャンペーンセクションを追加（パッケージプランの前に） */}
         <CampaignSection />
 
-        {/* パッケージプラン */}
-        <section id="package-plans" className="py-24">
+        {/* パッケージプラン - Added subtle grid background */}
+        <section id="package-plans" className="py-24 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">パッケージプラン</h2>
+            <h2 className="luxury-heading text-center mb-12">パッケージプラン</h2>
 
             <div className="flex justify-center mb-8">
               <PricingTablePopup />
@@ -218,9 +218,9 @@ export default function Page() {
             <div className="space-y-8 max-w-4xl mx-auto">
               <Card className="overflow-hidden">
                 <CardContent className="p-6">
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4">基本料金パッケージ</h3>
-                  <p className="mb-4">すべてのプランに含まれるもの：</p>
-                  <ul className="list-disc list-inside mb-4">
+                  <h3 className="luxury-subheading mb-4">基本料金パッケージ</h3>
+                  <p className="luxury-body mb-4">すべてのプランに含まれるもの：</p>
+                  <ul className="list-disc list-inside mb-4 luxury-body">
                     <li>取付工事一式</li>
                     <li>3年保証</li>
                     <li>地震落下時の再施工保証</li>
@@ -302,7 +302,7 @@ export default function Page() {
                   description: "インチサイズ料金 + 金具 + 隠ぺい配線 + 下地補強 + アクセントウォール + リブパネル",
                 },
               ].map((plan, index) => (
-                <Card key={index} className={`overflow-hidden ${plan.highlighted ? "border-blue-500 border-2" : ""}`}>
+                <Card key={index} className={`overflow-hidden ${plan.highlighted ? "border-primary border-2" : ""}`}>
                   <div className="relative h-[300px] w-full bg-gray-50">
                     <Image
                       src={plan.image || "/placeholder.svg"}
@@ -313,8 +313,8 @@ export default function Page() {
                   </div>
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 mb-4 flex-wrap">
-                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold">{plan.name}プラン</h3>
-                      {plan.highlighted && <Badge className="bg-blue-500">おすすめ</Badge>}
+                      <h3 className="luxury-subheading">{plan.name}プラン</h3>
+                      {plan.highlighted && <Badge className="bg-primary">おすすめ</Badge>}
                     </div>
                     {plan.isDetailedPrice && (
                       <div className="mb-4">
@@ -341,16 +341,16 @@ export default function Page() {
                       <ul className="space-y-2">
                         {plan.options.map((option, i) => (
                           <li key={i} className="flex items-center">
-                            <Check className="h-4 w-4 mr-2 text-green-500" />
+                            <Check className="h-4 w-4 mr-2 text-accent" />
                             {option}
                           </li>
                         ))}
                       </ul>
                       <p className="text-sm text-gray-600">{plan.description}</p>
-                      <p className="text-sm text-blue-600 font-semibold">※ 全プラン3年間無料保証付き</p>
+                      <p className="text-sm text-primary font-semibold">※ 全プラン3年間無料保証付き</p>
                       <ScrollLink
                         href="#contact-form"
-                        className="block w-full bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded text-center"
+                        className="block w-full bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded text-center"
                       >
                         見積もりを依頼する
                       </ScrollLink>
@@ -369,16 +369,16 @@ export default function Page() {
         {/* Warranty Banner - 3年保証の詳細 */}
         <WarrantyBanner />
 
-        {/* Warranty Slider */}
-        <section className="py-24 bg-gray-50">
+        {/* Warranty Slider - Added subtle grid background */}
+        <section className="py-24 bg-gray-50 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">安心の返金対応と保証制度</h2>
+            <h2 className="luxury-heading text-center mb-12">安心の返金対応と保証制度</h2>
             <WarrantySlider />
           </div>
         </section>
 
-        {/* Contact Form Section */}
-        <section id="contact-form" className="py-24 bg-blue-600">
+        {/* Contact Form Section - Updated to use primary color */}
+        <section id="contact-form" className="py-24 bg-primary">
           <div className="container px-4 md:px-6">
             <div className="max-w-2xl mx-auto">
               <Card>

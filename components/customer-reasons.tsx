@@ -55,8 +55,8 @@ export function CustomerReasons() {
       {/* タイトル部分 - 背景画像の外に配置 */}
       <div className="container px-4 md:px-6 mb-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">ソクトがお客様に選ばれる9つの理由</h2>
-          <p className="text-lg text-gray-700 font-medium">プロの技術者による確かな施工品質</p>
+          <h2 className="luxury-heading mb-2">ソクトがお客様に選ばれる9つの理由</h2>
+          <p className="luxury-emphasis">プロの技術者による確かな施工品質</p>
         </div>
       </div>
 
@@ -79,11 +79,11 @@ export function CustomerReasons() {
             {reasons.map((reason, index) => (
               <Card
                 key={index}
-                className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-white/40 backdrop-blur-sm border border-white/30 shadow-lg hover:bg-white/50"
+                className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-white/80 backdrop-blur-sm border border-white/50 shadow-lg hover:bg-white/90"
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-full shadow-lg border border-white/40">
+                    <div className="bg-primary p-3 rounded-full shadow-lg border border-white/40">
                       <reason.icon className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
