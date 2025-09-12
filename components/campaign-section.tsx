@@ -64,8 +64,6 @@ export function CampaignSection() {
             </div>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
-          <p className="text-xl text-gray-600">75インチ・85インチの大型サイズも対応</p>
           <p className="text-lg text-blue-600 mt-2 font-semibold">
             98インチや100インチといった超大型テレビも取り扱っています！
           </p>
