@@ -144,33 +144,107 @@ export default function Page() {
         <section id="service-area" className="py-24 bg-gray-50 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="luxury-heading">対応エリア</h2>
-              <p className="text-lg text-gray-600 mt-4">
-                愛知県を中心に、高品質な壁掛けテレビ施工サービスを提供しています
-              </p>
+              <h2 className="text-4xl font-bold mb-4">🔹 対応エリア</h2>
+              <p className="text-xl text-gray-700 mb-2">愛知・岐阜・三重・静岡・特に名古屋市では信頼の実績！</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <div className="bg-white p-6 rounded-lg shadow-sm luxury-grid-bg-fine">
-                <h3 className="text-xl font-bold mb-4 text-primary">主要対応エリア</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p>• 名古屋市全区</p>
-                  <p>• 豊田市、岡崎市、一宮市</p>
-                  <p>• 春日井市、豊橋市、安城市</p>
-                  <p>• 西尾市、刈谷市、小牧市</p>
-                  <p>• 稲沢市、東海市、大府市</p>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                {
+                  name: "名古屋市",
+                  color: "#FF9EAA",
+                  cities: [
+                    "中区",
+                    "東区",
+                    "北区",
+                    "西区",
+                    "南区",
+                    "中村区",
+                    "昭和区",
+                    "瑞穂区",
+                    "熱田区",
+                    "中川区",
+                    "港区",
+                    "守山区",
+                    "名東区",
+                    "天白区",
+                    "緑区",
+                    "千種区",
+                  ],
+                },
+                {
+                  name: "名古屋近郊外",
+                  color: "#FFB366",
+                  cities: ["清須市", "北名古屋市", "豊山町", "日進市", "愛知郡東郷町", "豊明市", "大府市", "東海市"],
+                },
+                {
+                  name: "尾張地方",
+                  color: "#FFDD66",
+                  cities: [
+                    "一宮市",
+                    "岩倉市",
+                    "江南市",
+                    "犬山市",
+                    "大口町",
+                    "扶桑町",
+                    "小牧市",
+                    "春日井市",
+                    "瀬戸市",
+                    "尾張旭市",
+                    "長久手市",
+                  ],
+                },
+                {
+                  name: "名古屋西部",
+                  color: "#FFE5B3",
+                  cities: ["愛西市", "弥富市", "あま市", "津島市", "稲沢市", "海部郡大治町", "蟹江町", "飛島村"],
+                },
+                {
+                  name: "西三河",
+                  color: "#66B3FF",
+                  cities: [
+                    "豊田市",
+                    "岡崎市",
+                    "碧南市",
+                    "刈谷市",
+                    "安城市",
+                    "西尾市",
+                    "知立市",
+                    "高浜市",
+                    "みよし市",
+                    "幸田町",
+                  ],
+                },
+                {
+                  name: "東三河",
+                  color: "#66E5FF",
+                  cities: ["豊橋市", "豊川市", "蒲郡市", "新城市", "田原市", "設楽町", "東栄町", "豊根村"],
+                },
+                {
+                  name: "知多半島",
+                  color: "#99FF99",
+                  cities: ["半田市", "常滑市", "知多市", "阿久比町", "東浦町", "南知多町", "美浜町", "武豊町"],
+                },
+              ].map((region) => (
+                <div key={region.name} className="bg-white p-6 rounded-lg shadow-md border border-gray-100">
+                  <h3 className="text-xl font-bold mb-4 flex items-center">
+                    <span className="w-4 h-4 rounded-full mr-2" style={{ backgroundColor: region.color }} />
+                    {region.name}
+                  </h3>
+                  <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-gray-600">
+                    {region.cities.map((city) => (
+                      <div key={city}>{city}</div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm luxury-grid-bg-fine">
-                <h3 className="text-xl font-bold mb-4 text-primary">その他対応可能エリア</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p>• 愛知県内全域</p>
-                  <p>• 岐阜県南部</p>
-                  <p>• 三重県北部</p>
-                  <p className="text-sm text-gray-500 mt-4">
-                    ※ エリア外でもご相談ください。出張費が発生する場合があります。
-                  </p>
-                </div>
-              </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-16">
+              <p className="text-lg text-gray-700 mb-2">
+                壁掛けテレビと壁の専門店のプロが、あなたのリビングを劇的変化させます✨
+              </p>
+              <p className="text-xl font-bold text-blue-600">あなたの理想の空間、ソクトノカベカケが全力でお手伝い！</p>
             </div>
           </div>
         </section>

@@ -69,7 +69,7 @@ const regions = [
 
 export function ServiceArea() {
   return (
-    <section className="py-24 bg-white luxury-grid-bg-fine">
+    <section className="py-24 bg-white">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">🔹 対応エリア</h2>
