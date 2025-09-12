@@ -115,7 +115,6 @@ export default function Page() {
         </section>
 
         <LargeTVSpecialistSection />
-        <SNSChallengeSection />
 
         <section id="introduction">
           <IntroductionSection />
@@ -137,6 +136,42 @@ export default function Page() {
               <h2 className="luxury-heading">お客様の声</h2>
             </div>
             <CustomerReviewsGallery />
+          </div>
+        </section>
+
+        <SNSChallengeSection />
+
+        <section id="service-area" className="py-24 bg-gray-50 luxury-grid-bg-fine">
+          <div className="container px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="luxury-heading">対応エリア</h2>
+              <p className="text-lg text-gray-600 mt-4">
+                愛知県を中心に、高品質な壁掛けテレビ施工サービスを提供しています
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white p-6 rounded-lg shadow-sm luxury-grid-bg-fine">
+                <h3 className="text-xl font-bold mb-4 text-primary">主要対応エリア</h3>
+                <div className="space-y-2 text-gray-700">
+                  <p>• 名古屋市全区</p>
+                  <p>• 豊田市、岡崎市、一宮市</p>
+                  <p>• 春日井市、豊橋市、安城市</p>
+                  <p>• 西尾市、刈谷市、小牧市</p>
+                  <p>• 稲沢市、東海市、大府市</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-sm luxury-grid-bg-fine">
+                <h3 className="text-xl font-bold mb-4 text-primary">その他対応可能エリア</h3>
+                <div className="space-y-2 text-gray-700">
+                  <p>• 愛知県内全域</p>
+                  <p>• 岐阜県南部</p>
+                  <p>• 三重県北部</p>
+                  <p className="text-sm text-gray-500 mt-4">
+                    ※ エリア外でもご相談ください。出張費が発生する場合があります。
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
