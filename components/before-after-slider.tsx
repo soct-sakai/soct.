@@ -3,7 +3,6 @@
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 
 interface BeforeAfterSliderProps {
   beforeImage: string
@@ -208,21 +207,7 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
 
       {/* CTA */}
       <div className="text-center space-y-3">
-        <Button
-          size="lg"
-          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg"
-          onClick={() => window.open("https://lin.ee/pL2yRZ7", "_blank")}
-        >
-          📱 LINEで「壁チェック」を予約
-        </Button>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          作業時間約2時間/見積無料/施工日から3年保証付き/
-          <br className="md:hidden" />
-          <span className="text-orange-600 font-semibold">
-            9月限定　TV録画用スティック型SSD
-            1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
-          </span>
-        </p>
+        <p className="text-sm text-gray-600 leading-relaxed">作業時間約2時間/見積無料/施工日から3年保証付き</p>
       </div>
     </div>
   )
