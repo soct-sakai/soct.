@@ -97,7 +97,7 @@ const brackets = [
   },
 ]
 
-export function TvMountBrackets() {
+export function TVMountBrackets() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextBracket = () => {
