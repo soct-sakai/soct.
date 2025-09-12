@@ -196,21 +196,21 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="introduction">
-          <IntroductionSection />
-        </section>
-
         {/* Customer Reviews - CustomerReasonsの直後に移動、新しいギャラリー形式 */}
         <section className="py-12 luxury-grid-bg">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="luxury-heading">お客様の声</h2>
+              <h2 className="luxury-heading">お客様の声📱 実際のお客様からの口コミ</h2>
             </div>
             <CustomerReviewsGallery />
           </div>
         </section>
 
         <SNSChallengeSection />
+
+        <section id="introduction">
+          <IntroductionSection />
+        </section>
 
         <section id="service-area" className="py-24 bg-gray-50 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
