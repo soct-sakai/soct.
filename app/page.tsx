@@ -94,7 +94,7 @@ const RoomSimulatorIcon = () => {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white luxury-grid-bg-fine">
       <SiteHeader />
       <main>
         <section id="hero">
@@ -118,7 +118,7 @@ export default function Page() {
         </section>
 
         {/* Customer Reviews - CustomerReasonsの直後に移動、新しいギャラリー形式 */}
-        <section className="py-12">
+        <section className="py-12 luxury-grid-bg">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
               <h2 className="luxury-heading">お客様の声</h2>
@@ -131,7 +131,7 @@ export default function Page() {
         <TVMountBrackets />
 
         {/* Installation Examples */}
-        <section id="installation-examples" className="py-24">
+        <section id="installation-examples" className="py-24 luxury-grid-bg-fine">
           <div className="container px-4 md:px-6">
             <h2 className="luxury-heading text-center mb-12">施工事例</h2>
             <div className="space-y-16">
