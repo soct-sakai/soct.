@@ -231,6 +231,27 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
 
       {/* CTA */}
       <div className="text-center space-y-3">
+        {afterImages.length > 1 && (
+          <div className="flex justify-center items-center gap-4 mb-4">
+            <span className="text-sm font-medium text-gray-600">アフター画像:</span>
+            <div className="flex gap-2">
+              {afterImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    index === currentAfterIndex
+                      ? "bg-blue-500 text-white shadow-md"
+                      : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  }`}
+                  onClick={() => setCurrentAfterIndex(index)}
+                >
+                  {index + 1}枚目
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         <p className="text-sm text-gray-600 leading-relaxed font-semibold">
           作業時間約2時間/見積無料/施工日から3年保証付き
         </p>
