@@ -40,6 +40,27 @@ export default function RootLayout({
             gtag('config', 'G-56JS4P35FK');
           `}
         </Script>
+
+        <Script id="gtm-enhanced-events" strategy="afterInteractive">
+          {`
+            // Enhanced GTM event tracking setup
+            window.dataLayer = window.dataLayer || [];
+            
+            // Track phone call duration (simplified version)
+            document.addEventListener('click', function(e) {
+              const target = e.target.closest('a[href^="tel:"]');
+              if (target) {
+                // Simulate 60s call tracking after click
+                setTimeout(function() {
+                  window.dataLayer.push({
+                    event: 'call_60s',
+                    call_duration: 60
+                  });
+                }, 60000);
+              }
+            });
+          `}
+        </Script>
       </head>
       <body className="font-meiryo">
         <PlanSelectionProvider>{children}</PlanSelectionProvider>

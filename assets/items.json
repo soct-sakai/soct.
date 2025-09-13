@@ -1,0 +1,244 @@
+{
+  "items": [
+    {
+      "cat": "reinforce",
+      "code": "FRM-12-0904",
+      "name": "前出し簡易補強 12mm 900×450",
+      "unit": "式",
+      "price": 16500,
+      "notes": "前出+12mm"
+    },
+    {
+      "cat": "reinforce",
+      "code": "FRM-18-0904",
+      "name": "前出し簡易補強 18mm 900×450",
+      "unit": "式",
+      "price": 22000,
+      "notes": "前出+18mm"
+    },
+    {
+      "cat": "reinforce",
+      "code": "FRM-24-0904",
+      "name": "前出し簡易補強 24mm 900×450",
+      "unit": "式",
+      "price": 27500,
+      "notes": "前出+24mm"
+    },
+    {
+      "cat": "reinforce",
+      "code": "FRM-36-0904",
+      "name": "前出し簡易補強 36mm 900×450",
+      "unit": "式",
+      "price": 33000,
+      "notes": "前出+36mm"
+    },
+    {
+      "cat": "reinforce",
+      "code": "INW-12-1809-1",
+      "name": "壁内下地補強 12mm 1800×900 1枚",
+      "unit": "式",
+      "price": 110000,
+      "notes": "推奨：〜55インチ"
+    },
+    {
+      "cat": "reinforce",
+      "code": "INW-18-1809-1",
+      "name": "壁内下地補強 18mm 1800×900 1枚",
+      "unit": "式",
+      "price": 154000,
+      "notes": "推奨：65–75インチ"
+    },
+    {
+      "cat": "reinforce",
+      "code": "INW-24-1809-1",
+      "name": "壁内下地補強 24mm 1800×900 1枚",
+      "unit": "式",
+      "price": 198000,
+      "notes": "推奨：65–85インチ/有機EL"
+    },
+    {
+      "cat": "reinforce",
+      "code": "INW-36-1809-1",
+      "name": "壁内下地補強 36mm 1800×900 1枚",
+      "unit": "式",
+      "price": 242000,
+      "notes": "推奨：85インチ以上"
+    },
+    {
+      "cat": "reinforce",
+      "code": "INW-24-1809-2",
+      "name": "壁内下地補強 24mm 1800×900 2枚",
+      "unit": "式",
+      "price": 330000,
+      "notes": "推奨：100インチ以上"
+    },
+    {
+      "cat": "wiring",
+      "code": "WIR-HIDE-3M",
+      "name": "壁内隠蔽配線 3m",
+      "unit": "式",
+      "price": 22000,
+      "notes": "配線を壁内に隠蔽"
+    },
+    {
+      "cat": "wiring",
+      "code": "WIR-HIDE-5M",
+      "name": "壁内隠蔽配線 5m",
+      "unit": "式",
+      "price": 33000,
+      "notes": "配線を壁内に隠蔽"
+    },
+    {
+      "cat": "wiring",
+      "code": "WIR-HIDE-10M",
+      "name": "壁内隠蔽配線 10m",
+      "unit": "式",
+      "price": 55000,
+      "notes": "配線を壁内に隠蔽"
+    },
+    {
+      "cat": "wiring",
+      "code": "WIR-DUCT-1",
+      "name": "露出ダクト 1か所",
+      "unit": "式",
+      "price": 11000,
+      "notes": "配線を露出ダクトで整理"
+    },
+    {
+      "cat": "wiring",
+      "code": "WIR-DUCT-2",
+      "name": "露出ダクト 2か所",
+      "unit": "式",
+      "price": 22000,
+      "notes": "配線を露出ダクトで整理"
+    },
+    {
+      "cat": "wall",
+      "code": "WALL-ECO",
+      "name": "エコカラット加工",
+      "unit": "式",
+      "price": 11000,
+      "notes": "エコカラット壁への対応"
+    },
+    {
+      "cat": "wall",
+      "code": "WALL-CONCRETE",
+      "name": "コンクリート加工",
+      "unit": "式",
+      "price": 16500,
+      "notes": "コンクリート壁への対応"
+    },
+    {
+      "cat": "wall",
+      "code": "WALL-TILE",
+      "name": "タイル加工",
+      "unit": "式",
+      "price": 22000,
+      "notes": "タイル壁への対応"
+    },
+    {
+      "cat": "wall",
+      "code": "WALL-HARD",
+      "name": "高硬度壁加工",
+      "unit": "式",
+      "price": 27500,
+      "notes": "高硬度壁への対応"
+    },
+    {
+      "cat": "electrical",
+      "code": "ELEC-POWER-GYPS",
+      "name": "電源新設（石膏ボード）",
+      "unit": "式",
+      "price": 16500,
+      "notes": "新規電源コンセント設置"
+    },
+    {
+      "cat": "electrical",
+      "code": "ELEC-POWER-FRAME",
+      "name": "電源新設（下地加工）",
+      "unit": "式",
+      "price": 22000,
+      "notes": "下地加工込み電源設置"
+    },
+    {
+      "cat": "electrical",
+      "code": "ELEC-ANT-GYPS",
+      "name": "アンテナ新設（石膏ボード）",
+      "unit": "式",
+      "price": 11000,
+      "notes": "新規アンテナ端子設置"
+    },
+    {
+      "cat": "electrical",
+      "code": "ELEC-ANT-FRAME",
+      "name": "アンテナ新設（下地加工）",
+      "unit": "式",
+      "price": 16500,
+      "notes": "下地加工込みアンテナ設置"
+    },
+    {
+      "cat": "finish",
+      "code": "FIN-ACCENT",
+      "name": "アクセントクロス",
+      "unit": "式",
+      "price": 33000,
+      "notes": "壁面デザイン向上"
+    },
+    {
+      "cat": "finish",
+      "code": "FIN-RIB",
+      "name": "リブ/吸音パネル",
+      "unit": "式",
+      "price": 55000,
+      "notes": "音響・デザイン向上"
+    },
+    {
+      "cat": "finish",
+      "code": "FIN-FLOAT",
+      "name": "フロートボード",
+      "unit": "式",
+      "price": 88000,
+      "notes": "浮遊式収納ボード"
+    },
+    {
+      "cat": "cable",
+      "code": "CAB-HDMI-3M",
+      "name": "HDMI 3m",
+      "unit": "本",
+      "price": 3300,
+      "notes": "当日持参・現地購入可"
+    },
+    {
+      "cat": "cable",
+      "code": "CAB-HDMI-5M",
+      "name": "HDMI 5m",
+      "unit": "本",
+      "price": 5500,
+      "notes": "当日持参・現地購入可"
+    },
+    {
+      "cat": "cable",
+      "code": "CAB-HDMI-10M",
+      "name": "HDMI 10m",
+      "unit": "本",
+      "price": 11000,
+      "notes": "当日持参・現地購入可"
+    },
+    {
+      "cat": "cable",
+      "code": "CAB-COAX",
+      "name": "同軸ケーブル",
+      "unit": "本",
+      "price": 2200,
+      "notes": "当日持参・現地購入可"
+    },
+    {
+      "cat": "cable",
+      "code": "CAB-SPLITTER",
+      "name": "分波器",
+      "unit": "個",
+      "price": 1100,
+      "notes": "当日持参・現地購入可"
+    }
+  ]
+}

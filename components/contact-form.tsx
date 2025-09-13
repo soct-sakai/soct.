@@ -20,6 +20,7 @@ const packagePlans = [
   { id: "option", label: "オプションプラン" },
   { id: "consultation", label: "今回は相談" },
   { id: "sns-challenge", label: "#ソクトノカベカケチャレンジ 参加希望" },
+  { id: "configurator", label: "詳細カスタム見積もり" },
 ]
 
 export function ContactForm() {
@@ -38,6 +39,7 @@ export function ContactForm() {
 
   const [isLoading, setIsLoading] = React.useState(false)
   const [fromSNSChallenge, setFromSNSChallenge] = React.useState(false)
+  const [hiddenConfiguratorData, setHiddenConfiguratorData] = React.useState("")
 
   React.useEffect(() => {
     const handleQuoteRequest = () => {
@@ -76,7 +78,32 @@ export function ContactForm() {
       }
     }
 
+    const handleConfiguratorData = () => {
+      const configuratorData = sessionStorage.getItem("configuratorData")
+      if (configuratorData) {
+        try {
+          const { displayText, jsonData } = JSON.parse(configuratorData)
+
+          // Update form with configurator data
+          setFormData((prev) => ({
+            ...prev,
+            packagePlan: [...prev.packagePlan.filter((p) => p !== "configurator"), "configurator"],
+            message: displayText,
+          }))
+
+          // Store hidden JSON data
+          setHiddenConfiguratorData(JSON.stringify(jsonData))
+
+          // Clear the configurator data from sessionStorage
+          sessionStorage.removeItem("configuratorData")
+        } catch (error) {
+          console.error("Error parsing configurator data:", error)
+        }
+      }
+    }
+
     handleQuoteRequest()
+    handleConfiguratorData()
   }, [])
 
   React.useEffect(() => {
@@ -181,12 +208,31 @@ export function ContactForm() {
       return
     }
 
+    if (typeof window !== "undefined" && window.dataLayer) {
+      // Extract total from configurator data if available
+      let total = 0
+      if (hiddenConfiguratorData) {
+        try {
+          const jsonData = JSON.parse(hiddenConfiguratorData)
+          total = jsonData.total || 0
+        } catch (error) {
+          console.error("Error parsing hidden configurator data:", error)
+        }
+      }
+
+      window.dataLayer.push({
+        event: "lead_submit",
+        total: total,
+      })
+    }
+
     const packagePlanLabels = formData.packagePlan
       .map((id) => packagePlans.find((plan) => plan.id === id)?.label)
       .join(", ")
 
     const subject = encodeURIComponent("壁掛けテレビ施工のお問い合わせ")
-    const body = encodeURIComponent(`
+
+    let emailBody = `
 名前: ${formData.name}
 郵便番号: ${formData.postalCode}
 住所: ${formData.address}
@@ -195,7 +241,14 @@ export function ContactForm() {
 希望する連絡の手段: ${formData.preferredContact}
 希望パッケージプラン: ${packagePlanLabels}
 その他ご要望: ${formData.message || "なし"}
-    `)
+    `
+
+    // Add hidden configurator JSON data if available
+    if (hiddenConfiguratorData) {
+      emailBody += `\n\n【詳細カスタム設定データ】\n${hiddenConfiguratorData}`
+    }
+
+    const body = encodeURIComponent(emailBody)
 
     window.location.href = `mailto:kabekaketv@soct.jp.net?subject=${subject}&body=${body}`
 
@@ -231,6 +284,8 @@ export function ContactForm() {
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
+        {hiddenConfiguratorData && <input type="hidden" name="configuratorData" value={hiddenConfiguratorData} />}
+
         <div>
           <label className="block text-sm font-medium mb-2">
             氏名 <span className="text-red-500">*</span>

@@ -1,7 +1,8 @@
 "use client"
 
 import { SiteHeader } from "@/components/site-header"
-import { HeroUnified } from "@/components/hero-unified"
+import { HeroRedesigned } from "@/components/hero-redesigned"
+import { PathSelection } from "@/components/path-selection"
 import { LargeTVSpecialistSection } from "@/components/large-tv-specialist-section"
 import { SNSChallengeSection } from "@/components/sns-challenge-section"
 import { BeforeAfterSlider } from "@/components/before-after-slider"
@@ -20,6 +21,9 @@ import { IntroductionSection } from "@/components/introduction-section"
 import { CustomerReasons } from "@/components/customer-reasons"
 import { TVMountBrackets } from "@/components/tv-mount-brackets"
 import { WarrantyBanner } from "@/components/warranty-banner"
+import { DiagnosticTool } from "@/components/diagnostic-tool"
+import { MethodComparisonTable } from "@/components/method-comparison-table"
+import { DetailedConfigurator } from "@/components/detailed-configurator"
 
 const RoomSimulatorIcon = () => {
   const emailTemplate = `【お客様情報】
@@ -70,15 +74,39 @@ const RoomSimulatorIcon = () => {
     return `mailto:kabekaketv@soct.jp.net?subject=${subject}&body=${body}`
   }
 
+  const handlePhoneClick = () => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "call_60s",
+      })
+    }
+  }
+
+  const handleLineClick = () => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "line_click",
+      })
+    }
+  }
+
+  const handleEmailClick = () => {
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "email_click",
+      })
+    }
+  }
+
   return (
     <>
       {/* スマホ用固定フッターCTA - リッチメニュー形式 */}
       <nav className="soct-fixed-cta md:hidden" role="navigation" aria-label="主要アクション">
-        <a className="cta-btn phone" href="tel:0524332799" aria-label="電話で相談">
+        <a className="cta-btn phone" href="tel:0524332799" aria-label="電話で相談" onClick={handlePhoneClick}>
           <span className="ico">📞</span>
           <span className="label">電話相談</span>
         </a>
-        <a className="cta-btn email" href={createMailtoLink()} aria-label="メールで相談">
+        <a className="cta-btn email" href={createMailtoLink()} aria-label="メールで相談" onClick={handleEmailClick}>
           <span className="ico">✉️</span>
           <span className="label">メール相談</span>
         </a>
@@ -88,6 +116,7 @@ const RoomSimulatorIcon = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LINEで相談"
+          onClick={handleLineClick}
         >
           <span className="ico">💬</span>
           <span className="label">LINEで相談</span>
@@ -102,19 +131,25 @@ const RoomSimulatorIcon = () => {
       <div className="hidden md:block fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50">
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 max-w-md luxury-grid-bg-fine">
           <div className="grid grid-cols-2 gap-3">
-            <a href="tel:0524332799" className="group">
+            <a href="tel:0524332799" className="group" onClick={handlePhoneClick}>
               <div className="bg-red-50 hover:bg-red-100 text-red-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
                 <span className="text-lg">📞</span>
                 <span className="text-sm font-medium">電話相談</span>
               </div>
             </a>
-            <a href={createMailtoLink()} className="group">
+            <a href={createMailtoLink()} className="group" onClick={handleEmailClick}>
               <div className="bg-gray-50 hover:bg-gray-100 text-gray-700 px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
                 <span className="text-lg">✉️</span>
                 <span className="text-sm font-medium">メール相談</span>
               </div>
             </a>
-            <a href="https://lin.ee/4pVYnlI" target="_blank" rel="noopener noreferrer" className="group col-span-2">
+            <a
+              href="https://lin.ee/4pVYnlI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group col-span-2"
+              onClick={handleLineClick}
+            >
               <div className="bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                 <span className="text-lg">💬</span>
                 <span className="text-sm font-medium">LINEで相談（おすすめ）</span>
@@ -153,8 +188,16 @@ export default function Page() {
       <SiteHeader />
       <main>
         <section id="hero">
-          <HeroUnified />
+          <HeroRedesigned />
         </section>
+
+        <PathSelection />
+
+        <DiagnosticTool />
+
+        <MethodComparisonTable />
+
+        <DetailedConfigurator />
 
         {/* 1. 株式会社速人の代表取締役 坂井より */}
         <CEOMessage />
