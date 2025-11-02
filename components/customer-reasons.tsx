@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Shield, ThumbsUp, Clock, PenTool as Tool, PiggyBank, Zap, UserCheck, Award } from "lucide-react"
+import Image from "next/image"
 
 const reasons = [
   {
@@ -54,9 +55,29 @@ export function CustomerReasons() {
     <section className="py-12">
       {/* タイトル部分 - 背景画像の外に配置 */}
       <div className="container px-4 md:px-6 mb-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">ソクトがお客様に選ばれる9つの理由</h2>
-          <p className="text-lg text-gray-700 font-medium">プロの技術者による確かな施工品質</p>
+        <div className="text-center relative">
+          {/* Character with speech bubble */}
+          <div className="flex justify-center items-center mb-6">
+            <div className="flex items-center gap-4">
+              {/* Character image */}
+              <div className="w-24 h-24 relative flex-shrink-0">
+                <Image
+                  src="/images/character-icon.png"
+                  alt="キャラクター"
+                  fill
+                  className="object-cover rounded-full border-2 border-blue-300"
+                />
+              </div>
+              {/* Speech bubble */}
+              <div className="bg-white border-2 border-blue-300 rounded-2xl p-4 shadow-lg relative max-w-md">
+                <div className="text-xl font-bold text-blue-800 mb-2">ソクトがお客様に選ばれる9つの理由</div>
+                <div className="text-lg text-gray-700">プロの技術者による確かな施工品質</div>
+                {/* Speech bubble arrow pointing left */}
+                <div className="absolute left-[-12px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[12px] border-r-blue-300 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent"></div>
+                <div className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[10px] border-r-white border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -79,11 +100,11 @@ export function CustomerReasons() {
             {reasons.map((reason, index) => (
               <Card
                 key={index}
-                className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-white/40 backdrop-blur-sm border border-white/30 shadow-lg hover:bg-white/50"
+                className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 bg-white/80 backdrop-blur-sm border border-white/50 shadow-lg hover:bg-white/90"
               >
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-gradient-to-br from-blue-500 to-blue-600 p-3 rounded-full shadow-lg border border-white/40">
+                    <div className="bg-primary p-3 rounded-full shadow-lg border border-white/40">
                       <reason.icon className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">

@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ScrollLink } from "@/components/scroll-link"
 import Image from "next/image"
@@ -9,19 +8,86 @@ export function CampaignSection() {
     <section className="py-12 bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="container px-4 md:px-6">
         <div className="text-center mb-8">
-          <Badge className="mb-4 bg-blue-500 text-white">新品テレビ販売</Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">新品テレビ75インチ85インチも用意可能です！</h2>
-          <p className="text-xl text-gray-600">高品質な超大型テレビも是非ご検討ください！</p>
-          <p className="text-sm text-gray-500 mt-2">
-            ※テレビは販売時期によって内容が異なる場合がございます。現調時かお問い合わせ時にご相談くださいませ。
+          <div
+            className="inline-block mb-4 px-3 py-1 rounded-full text-sm font-medium"
+            style={{
+              backgroundColor: "#1f2937 !important",
+              color: "#ffffff !important",
+              border: "2px solid #1f2937",
+              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+            }}
+          >
+            新品テレビ販売
+          </div>
+
+          <div className="flex items-center justify-center gap-6 mb-6 flex-wrap">
+            <div className="relative">
+              <Image
+                src="/images/character-icon.png"
+                alt="キャラクターアイコン"
+                width={120}
+                height={120}
+                className="rounded-full border-4 border-blue-300 shadow-lg"
+              />
+            </div>
+            <div className="relative bg-white rounded-2xl p-6 shadow-lg border-2 border-blue-200 max-w-md">
+              <div className="absolute -left-3 top-6 w-0 h-0 border-t-[15px] border-t-transparent border-b-[15px] border-b-transparent border-r-[20px] border-r-white"></div>
+              <div className="absolute -left-4 top-6 w-0 h-0 border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent border-r-[21px] border-r-blue-200"></div>
+              <h2 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">
+                新品テレビ75インチ85インチ、最上位の98インチや100インチも用意可能です！
+              </h2>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg p-4 shadow-md mb-6 max-w-2xl mx-auto">
+            <h3 className="font-semibold text-lg mb-3 text-gray-800">取り扱いブランド</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+              <div className="text-blue-600 font-medium">
+                ・SONY BRAVIA
+                <br />
+                （ソニー ブラビア）
+              </div>
+              <div className="text-blue-600 font-medium">
+                ・Panasonic VIERA
+                <br />
+                （パナソニック ビエラ）
+              </div>
+              <div className="text-blue-600 font-medium">
+                ・SHARP AQUOS
+                <br />
+                （シャープ アクオス）
+              </div>
+              <div className="text-blue-600 font-medium">
+                ・TOSHIBA REGZA
+                <br />
+                （東芝 レグザ）
+              </div>
+              <div className="text-blue-600 font-medium">・LG</div>
+              <div className="text-blue-600 font-medium">・TCL</div>
+              <div className="text-blue-600 font-medium">・Hisense</div>
+              <div className="text-blue-600 font-medium">・Xiaomi</div>
+              <div className="text-blue-600 font-medium">・etc</div>
+            </div>
+          </div>
+
+          <p className="text-lg text-blue-600 mt-2 font-semibold">
+            98インチや100インチといった超大型テレビも取り扱っています！
           </p>
+          <p className="text-sm text-gray-500 mt-2">詳細はお問い合わせください</p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
           {/* TCL 75インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！198,000円
               </div>
             </div>
@@ -55,7 +121,14 @@ export function CampaignSection() {
           {/* TCL 85インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！298,000円
               </div>
             </div>
@@ -74,12 +147,12 @@ export function CampaignSection() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-semibold">施工内容</h4>
+                  <h4 className="font-semibold">特徴</h4>
                   <ul className="list-disc list-inside text-sm space-y-1">
-                    <li>VESA規格対応の専用金具使用</li>
-                    <li>十分な強度を持つ下地補強工事</li>
-                    <li>配線を目立たなくする壁内配線工事</li>
-                    <li>美しく安全な取り付けを実現</li>
+                    <li>85V型MiniLED量子ドット技術</li>
+                    <li>AiPQ Proプロセッサー搭載</li>
+                    <li>120Hzのゲームモード & HDMI2.1対応</li>
+                    <li>Google TV、Netflix、YouTube対応</li>
                   </ul>
                 </div>
               </div>
@@ -91,7 +164,14 @@ export function CampaignSection() {
           {/* TCL 98インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！598,000円
               </div>
             </div>
@@ -128,7 +208,14 @@ export function CampaignSection() {
           {/* 100インチ */}
           <Card className="relative overflow-hidden">
             <div className="absolute top-4 left-4 z-10">
-              <div className="bg-red-500 text-white px-4 py-2 rounded-lg font-bold text-lg shadow-lg">
+              <div
+                className="px-4 py-2 rounded-lg font-bold text-lg shadow-lg"
+                style={{
+                  backgroundColor: "#dc2626 !important",
+                  color: "#ffffff !important",
+                  border: "1px solid #dc2626",
+                }}
+              >
                 衝撃の！770,000円
               </div>
             </div>
@@ -165,8 +252,10 @@ export function CampaignSection() {
 
         <div className="mt-8 text-center">
           <ScrollLink href="#contact-form">
-            <Button size="lg" className="bg-blue-500 hover:bg-blue-600">
-              新品テレビについて問い合わせる
+            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white font-bold text-lg px-8 py-4">
+              新品テレビのお問い合わせ
+              <br />
+              <span className="text-sm">詳細はお問い合わせください</span>
             </Button>
           </ScrollLink>
         </div>

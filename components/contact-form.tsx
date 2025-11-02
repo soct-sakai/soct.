@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Checkbox } from "@/components/ui/checkbox"
+import { usePlanSelection } from "@/context/plan-selection-context"
 
 const packagePlans = [
   { id: "tcl75", label: "TCL 75インチ施工セットプラン" },
@@ -18,9 +19,12 @@ const packagePlans = [
   { id: "premium", label: "プレミアムプラン" },
   { id: "option", label: "オプションプラン" },
   { id: "consultation", label: "今回は相談" },
+  { id: "sns-challenge", label: "#ソクトノカベカケチャレンジ 参加希望" },
 ]
 
 export function ContactForm() {
+  const planSelection = usePlanSelection()
+
   const [formData, setFormData] = React.useState({
     name: "",
     postalCode: "",
@@ -33,11 +37,145 @@ export function ContactForm() {
   })
 
   const [isLoading, setIsLoading] = React.useState(false)
+  const [fromSNSChallenge, setFromSNSChallenge] = React.useState(false)
+
+  React.useEffect(() => {
+    const handleQuoteRequest = () => {
+      const quoteRequestData = sessionStorage.getItem("quoteRequest")
+      if (quoteRequestData) {
+        try {
+          const { planName, planDetails } = JSON.parse(quoteRequestData)
+
+          // Update package plan selection based on quote request
+          const updatedPackagePlans = [...formData.packagePlan]
+          const planMapping: { [key: string]: string } = {
+            スターター: "starter",
+            オプション: "option",
+            ダイヤモンド: "diamond",
+            プラチナ: "platinum",
+            プレミアム: "premium",
+          }
+
+          const planId = planMapping[planName]
+          if (planId && !updatedPackagePlans.includes(planId)) {
+            updatedPackagePlans.push(planId)
+          }
+
+          // Update form with quote request details
+          setFormData((prev) => ({
+            ...prev,
+            packagePlan: updatedPackagePlans,
+            message: planDetails,
+          }))
+
+          // Clear the quote request from sessionStorage
+          sessionStorage.removeItem("quoteRequest")
+        } catch (error) {
+          console.error("Error parsing quote request:", error)
+        }
+      }
+    }
+
+    handleQuoteRequest()
+  }, [])
+
+  React.useEffect(() => {
+    const updateFormFromPlanSelection = () => {
+      const updatedPackagePlans = [...formData.packagePlan]
+      let updatedMessage = formData.message
+
+      if (planSelection.selectedSizes.length > 0) {
+        if (!updatedPackagePlans.includes("starter")) {
+          updatedPackagePlans.push("starter")
+        }
+      }
+
+      if (planSelection.selectedOptions.length > 0) {
+        if (!updatedPackagePlans.includes("option")) {
+          updatedPackagePlans.push("option")
+        }
+      }
+
+      let selectionDetails = ""
+
+      if (planSelection.selectedSizes.length > 0) {
+        selectionDetails += "\n\n【選択されたスタータープラン】\n"
+        planSelection.selectedSizes.forEach((size) => {
+          selectionDetails += `・${size.size} ${size.quantity}台 (${size.price})\n`
+        })
+
+        if (planSelection.selectedMount) {
+          selectionDetails += `・金具: ${planSelection.selectedMount.name} (${planSelection.selectedMount.price})\n`
+        }
+
+        if (planSelection.totalPrice > 0) {
+          selectionDetails += `スタータープラン合計: ${planSelection.totalPrice.toLocaleString()}円\n`
+        }
+      }
+
+      if (planSelection.selectedOptions.length > 0) {
+        selectionDetails += "\n【選択されたオプション】\n"
+        planSelection.selectedOptions.forEach((option) => {
+          selectionDetails += `・${option.name} ${option.quantity > 1 ? `${option.quantity}個` : ""} (${option.price})\n`
+        })
+
+        if (planSelection.optionsTotalPrice > 0) {
+          selectionDetails += `オプション合計: ${planSelection.optionsTotalPrice.toLocaleString()}円\n`
+        }
+      }
+
+      const grandTotal = planSelection.totalPrice + planSelection.optionsTotalPrice
+      if (grandTotal > 0) {
+        selectionDetails += `\n【総合計金額】\n${grandTotal.toLocaleString()}円\n`
+      }
+
+      if (selectionDetails) {
+        // Remove existing selection details before adding new ones
+        const cleanMessage = updatedMessage
+          .replace(/\n\n【選択されたスタータープラン】[\s\S]*?(?=\n\n【|$)/g, "")
+          .replace(/\n【選択されたオプション】[\s\S]*?(?=\n\n【|$)/g, "")
+          .replace(/\n【総合計金額】[\s\S]*?(?=\n\n|$)/g, "")
+
+        updatedMessage = cleanMessage + selectionDetails
+      }
+
+      setFormData((prev) => ({
+        ...prev,
+        packagePlan: updatedPackagePlans,
+        message: updatedMessage,
+      }))
+    }
+
+    updateFormFromPlanSelection()
+  }, [
+    planSelection.selectedSizes,
+    planSelection.selectedMount,
+    planSelection.selectedOptions,
+    planSelection.totalPrice,
+    planSelection.optionsTotalPrice,
+  ])
+
+  React.useEffect(() => {
+    const checkSNSChallenge = () => {
+      const urlParams = new URLSearchParams(window.location.search)
+      if (urlParams.get("from") === "sns-challenge" || window.location.hash === "#contact-form") {
+        setFromSNSChallenge(true)
+        setFormData((prev) => ({
+          ...prev,
+          packagePlan: ["sns-challenge"],
+          message: "#ソクトノカベカケチャレンジ に参加希望です。美しい壁掛けテレビ設置をお願いします。",
+        }))
+      }
+    }
+
+    checkSNSChallenge()
+    window.addEventListener("hashchange", checkSNSChallenge)
+    return () => window.removeEventListener("hashchange", checkSNSChallenge)
+  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // 基本的なバリデーション
     if (!formData.name || !formData.email || !formData.phone) {
       alert("必須項目を入力してください")
       return
@@ -59,7 +197,6 @@ export function ContactForm() {
 その他ご要望: ${formData.message || "なし"}
     `)
 
-    // メーラーを開く
     window.location.href = `mailto:kabekaketv@soct.jp.net?subject=${subject}&body=${body}`
 
     alert("メーラーが開きます。送信を完了してください。")
@@ -81,6 +218,16 @@ export function ContactForm() {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">お問い合わせ</h2>
         <p className="text-gray-600">壁掛けテレビの施工やご相談について、お気軽にお問い合わせください。</p>
+        {fromSNSChallenge && (
+          <div className="mt-4 p-4 bg-pink-50 border border-pink-200 rounded-lg animate-pulse">
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-2xl">✨</span>
+              <span className="text-pink-800 font-bold">
+                #ソクトノカベカケチャレンジ から来ていただきありがとうございます！
+              </span>
+            </div>
+          </div>
+        )}
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -149,7 +296,7 @@ export function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-2">
+          <label className="block text-sm font-medium mb-3">
             希望する連絡の手段 <span className="text-red-500">*</span>
           </label>
           <Select onValueChange={(value) => handleInputChange("preferredContact", value)}>
@@ -166,7 +313,6 @@ export function ContactForm() {
             </SelectContent>
           </Select>
 
-          {/* 注意書きを追加 */}
           <div className="mt-2 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
             <p className="text-sm text-yellow-800">
               <span className="font-semibold">⚠️ 重要なお知らせ</span>
@@ -222,6 +368,18 @@ export function ContactForm() {
           </p>
         </div>
       </form>
+
+      <div className="mt-8 text-center">
+        <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6 rounded-2xl shadow-2xl animate-pulse max-w-2xl mx-auto">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="text-3xl">🎁</div>
+            <div className="text-2xl font-black text-white">9月中に成約のお客様にスティック型SSD1TBプレゼント！</div>
+          </div>
+          <div className="text-lg font-bold leading-tight text-white">
+            録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

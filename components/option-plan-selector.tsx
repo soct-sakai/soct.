@@ -15,6 +15,8 @@ export function OptionPlanSelector() {
   const [selectedOptions, setSelectedOptions] = useState<{ [key: number]: boolean }>({})
   const [totalPrice, setTotalPrice] = useState(0)
   const [quantities, setQuantities] = useState<{ [key: number]: number }>({})
+  const [showAnimation, setShowAnimation] = useState(false)
+  const [hasTriggeredAnimation, setHasTriggeredAnimation] = useState(false)
 
   // コンテキストを取得
   const planSelection = usePlanSelection()
@@ -215,6 +217,14 @@ export function OptionPlanSelector() {
     const newSelectedOptions = { ...selectedOptions, [index]: checked }
     setSelectedOptions(newSelectedOptions)
 
+    if (checked && !hasTriggeredAnimation && Object.values(selectedOptions).every((val) => !val)) {
+      setShowAnimation(true)
+      setHasTriggeredAnimation(true)
+      setTimeout(() => {
+        setShowAnimation(false)
+      }, 3500) // Extended duration to match SNS challenge animation
+    }
+
     // チェックが外れた場合は数量をリセット
     if (!checked && quantities[index]) {
       const newQuantities = { ...quantities }
@@ -300,6 +310,14 @@ export function OptionPlanSelector() {
 
   return (
     <div className="space-y-6">
+      {showAnimation && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+          <div className="bg-green-500 text-white px-8 py-4 rounded-2xl shadow-2xl animate-bounce text-xl font-bold">
+            問い合わせフォームに反映されたよ！
+          </div>
+        </div>
+      )}
+
       {/* 一般オプション */}
       <div>
         <h4 className="font-semibold mb-3">一般オプション：</h4>

@@ -3,7 +3,6 @@
 import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
 
 interface BeforeAfterSliderProps {
   beforeImage: string
@@ -22,16 +21,51 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
 
   const currentAfterImage = afterImages[currentAfterIndex]
 
+  const caseStudies = [
+    {
+      title: "施工事例　施工 Before → After",
+      content:
+        "SHARPのAQUOS65インチ。実は、もともとスタンド式で設置されていたのを壁掛けに。人気のエコカラット、ストーングレース柄の壁面へのTV取り付けスタイリッシュでモダンは壁は、しっかりとテレビを固定して安全バッチリ！お客様希望で隠ぺい配線はなしでモール仕上げ。隠ぺい配線ならより高級感のある仕上がりに。基本料金とエコカラットへの取付、モールの金額で約81000円でした！",
+    },
+    {
+      title: "施工事例　施工 Before → After",
+      content:
+        "SONY BRAVIA 75インチの大型テレビを美しく設置。ふかし壁(アクセントウォール)と空中テレビボード(フロートボード)の収納を組み合わせた、上質なリビング空間を実現。配線は全て隠蔽し、スマートな仕上がりに。この壁とテレビと施工セットで100万円コースですね！",
+    },
+    {
+      title: "施工事例　施工 Before → After",
+      content:
+        "SONY BRAVIA75インチも、広いリビングで主役になれる。ベニヤの壁に大理石調のリブパネルへの設置高級感ある大理石調の壁面に、配線を完全に隠蔽した美しい仕上がり。壁裏は収納スペースになっていてBlu-rayレコーダーやゲーム機も完全に見えないよ。バックの収納棚数の多さも必見ですが、この壁は吹き抜けホールにもなっていてお金掛かってます。",
+    },
+    {
+      title: "施工事例　施工 Before → After",
+      content:
+        "65インチのPanasonic VIERA。空中テレビボード(フロートボード)と調和する観葉植物で眼に優しいデザイン。壁もテレビもとっても素敵！夜はムーディな映画を大好きな人とみていたくなる。Blu-rayレコーダーやゲーム機もフロートボード内に完全収納。エコカラットと空中テレビボードで施工費も含めるとこちらも50万掛かりますね！",
+    },
+    {
+      title: "施工事例　施工 Before → After",
+      content:
+        "寝室にも、ミドルクラスのテレビを壁掛けに。クールなライトグレークロス×石膏ボードの壁面にTOSHIBA REGZA 55インチを設置。寝ながらYouTube動画を楽しむだけじゃない！？ってどぉいうこと？アクセントクロスと壁掛けのみのセットでも、25万円。睡眠が楽しくなるなら安い投資になるのかな！？",
+    },
+  ]
+
+  const getCaseStudyIndex = (id: string): number => {
+    const match = id.match(/case-(\d+)/)
+    return match ? Number.parseInt(match[1]) - 1 : 0
+  }
+
+  const currentCaseStudy = caseStudies[getCaseStudyIndex(caseId)] || caseStudies[0]
+
   // 次のAfter画像に切り替え（3秒間隔）
-  useEffect(() => {
-    if (afterImages.length <= 1) return
+  // useEffect(() => {
+  //   if (afterImages.length <= 1) return
 
-    const interval = setInterval(() => {
-      setCurrentAfterIndex((prev) => (prev + 1) % afterImages.length)
-    }, 3000)
+  //   const interval = setInterval(() => {
+  //     setCurrentAfterIndex((prev) => (prev + 1) % afterImages.length)
+  //   }, 3000)
 
-    return () => clearInterval(interval)
-  }, [afterImages.length])
+  //   return () => clearInterval(interval)
+  // }, [afterImages.length])
 
   // 初回操作時のイベント送信
   const fireInteractionEvent = () => {
@@ -107,9 +141,27 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <h3 className="text-2xl md:text-3xl font-bold">施工 Before → After</h3>
-        <h4 className="text-xl font-semibold">{title}</h4>
-        <p className="text-gray-600">{description}</p>
+        <div className="flex justify-center items-center mb-6">
+          {/* Character image */}
+          <div className="w-24 h-24 relative flex-shrink-0 mr-4">
+            <Image
+              src="/images/character-icon-installation.png"
+              alt="キャラクター"
+              fill
+              className="object-cover rounded-full border-2 border-green-300"
+            />
+          </div>
+          {/* Speech bubble with dynamic content */}
+          <div className="bg-white border-2 border-green-300 rounded-2xl p-4 shadow-lg relative max-w-2xl">
+            <div className="text-2xl md:text-3xl font-bold text-green-800 mb-4">{currentCaseStudy.title}</div>
+            <div className="text-sm text-gray-700 space-y-3 text-left">
+              <div>{currentCaseStudy.content}</div>
+            </div>
+            {/* Speech bubble arrow pointing left */}
+            <div className="absolute left-[-12px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[12px] border-r-green-300 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent"></div>
+            <div className="absolute left-[-10px] top-1/2 transform -translate-y-1/2 w-0 h-0 border-r-[10px] border-r-white border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent"></div>
+          </div>
+        </div>
       </div>
 
       <div
@@ -158,10 +210,10 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
         />
 
         {/* ラベル */}
-        <div className="absolute bottom-4 left-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-sm font-bold tracking-wider">
+        <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-full text-sm font-bold tracking-wider !bg-black !text-white !border-2 !border-black z-[9999]">
           BEFORE
         </div>
-        <div className="absolute bottom-4 right-4 bg-black/80 text-white px-3 py-1.5 rounded-full text-sm font-bold tracking-wider">
+        <div className="absolute bottom-4 right-4 px-3 py-1.5 rounded-full text-sm font-bold tracking-wider !bg-black !text-white !border-2 !border-black z-[9999]">
           AFTER
         </div>
 
@@ -184,20 +236,29 @@ export function BeforeAfterSlider({ beforeImage, afterImages, title, description
 
       {/* CTA */}
       <div className="text-center space-y-3">
-        <Button
-          size="lg"
-          className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-lg"
-          onClick={() => window.open("https://lin.ee/pL2yRZ7", "_blank")}
-        >
-          📱 LINEで「壁チェック」を予約
-        </Button>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          作業時間約2時間/見積無料/施工日から3年保証付き/
-          <br className="md:hidden" />
-          <span className="text-orange-600 font-semibold">
-            9月限定　TV録画用スティック型SSD
-            1TBプレゼント！録りためた番組や、スマホの中の家族の動画や写真を、新しい大画面テレビで楽しみ尽くそう！
-          </span>
+        {afterImages.length > 1 && (
+          <div className="flex justify-center items-center gap-4 mb-4">
+            <span className="text-sm font-medium text-gray-600">アフター画像:</span>
+            <div className="flex gap-2">
+              {afterImages.map((_, index) => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                    index === currentAfterIndex
+                      ? "bg-blue-600 text-white shadow-md"
+                      : "bg-gray-100 text-gray-800 hover:bg-gray-200 border border-gray-300"
+                  }`}
+                  onClick={() => setCurrentAfterIndex(index)}
+                >
+                  {index + 1}枚目
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <p className="text-sm text-gray-600 leading-relaxed font-semibold">
+          作業時間約2時間/見積無料/施工日から3年保証付き
         </p>
       </div>
     </div>

@@ -4,7 +4,6 @@ import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const brackets = [
@@ -142,7 +141,7 @@ export function TVMountBrackets() {
                     className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full"
                     onClick={prevBracket}
                   >
-                    <ChevronLeft className="h-6 w-6" />
+                    <span className="text-white text-xl">‹</span>
                   </Button>
 
                   <Button
@@ -151,7 +150,7 @@ export function TVMountBrackets() {
                     className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full"
                     onClick={nextBracket}
                   >
-                    <ChevronRight className="h-6 w-6" />
+                    <span className="text-white text-xl">›</span>
                   </Button>
 
                   {/* タイプバッジ */}
@@ -273,7 +272,7 @@ export function TVMountBrackets() {
             </p>
             <a
               href="#contact-form"
-              className="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors border-2 border-blue-600 hover:border-blue-700"
             >
               無料相談・見積もりはこちら
             </a>

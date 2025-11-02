@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CaravanIcon as Campground, MountainIcon as Marble, Speaker, Tv, Fan } from "lucide-react"
+import { Ampersand as Campground, Cable as Marble, Speaker, Tv, Fan } from "lucide-react"
 import Image from "next/image"
 
 export function CustomizationOptions() {

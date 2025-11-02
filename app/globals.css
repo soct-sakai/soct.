@@ -18,24 +18,27 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+    /* Updated primary color to unified blue scheme */
+    --primary: 221 83% 53%; /* blue-600 */
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    /* Updated accent to unified green for success states */
+    --accent: 142 76% 36%; /* green-600 */
+    --accent-foreground: 0 0% 98%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* Updated chart colors to match unified scheme */
+    --chart-1: 221 83% 53%; /* primary blue */
+    --chart-2: 142 76% 36%; /* accent green */
+    --chart-3: 220 14% 96%; /* light gray */
+    --chart-4: 220 9% 46%; /* medium gray */
+    --chart-5: 220 13% 18%; /* dark gray */
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -45,7 +48,15 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Added custom properties for unified color scheme */
+    --luxury-primary: 221 83% 53%; /* blue-600 for primary actions */
+    --luxury-success: 142 76% 36%; /* green-600 for positive elements */
+    --luxury-neutral: 220 9% 46%; /* gray-600 for text hierarchy */
+    --luxury-light: 220 14% 96%; /* gray-50 for backgrounds */
+    --luxury-dark: 220 13% 18%; /* gray-900 for dark text */
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -88,6 +99,36 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Added luxury service typography hierarchy */
+  .luxury-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900;
+  }
+
+  .luxury-subheading {
+    @apply text-xl md:text-2xl lg:text-3xl font-semibold text-gray-800;
+  }
+
+  .luxury-emphasis {
+    @apply text-lg md:text-xl font-medium text-primary;
+  }
+
+  .luxury-body {
+    @apply text-base text-gray-600 leading-relaxed;
+  }
+
+  /* Added subtle grid pattern background utility */
+  .luxury-grid-bg {
+    background-image: linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .luxury-grid-bg-fine {
+    background-image: linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.02) 1px, transparent 1px);
+    background-size: 10px 10px;
   }
 
   /* 大見出し間の余白を1.2〜1.6remに調整（スマホ読みやすさ向上） */

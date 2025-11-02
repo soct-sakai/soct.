@@ -9,7 +9,7 @@ export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full border-b bg-white luxury-grid-bg-fine">
       <div className="container px-4 md:px-6 flex h-16 items-center justify-between">
         <ScrollLink href="#hero" className="flex items-center space-x-2">
           <Image
@@ -75,7 +75,7 @@ export function SiteHeader() {
 
       {/* モバイル用ドロップダウンメニュー */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-md">
+        <div className="md:hidden bg-white border-t border-gray-100 shadow-md luxury-grid-bg-fine">
           <div className="container px-4 py-2 space-y-1">
             <ScrollLink
               href="#hero"
